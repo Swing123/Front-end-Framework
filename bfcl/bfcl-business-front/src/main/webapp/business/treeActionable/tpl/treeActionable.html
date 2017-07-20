@@ -1,0 +1,89 @@
+<div>
+    <table class="table dist-tree-actionable">
+        <thead>
+            <tr>
+                <th>名称</th>
+                <th width="100">上传时间</th>
+                <th width="100">文件大小</th>
+                <th width="100">操作</th>
+            </tr>
+        </thead>
+    </table>
+
+    <div class="tree tree-no-line">
+        <div class="tree-folder" ng-init="treeData.$$isExpend=true;">
+            <div class="tree-folder-header">
+                <div class="tree-folder-name">
+                    <span ng-click="expendItem(treeData,$event)">
+                        <i class="fa" ng-class="{'fa-caret-down':treeData.$$isExpend,'fa-caret-right':!treeData.$$isExpend}"></i>
+                        <i class="fa" ng-class="{'fa-folder-open':treeData.$$isExpend,'fa-folder':!treeData.$$isExpend}"></i>
+                    </span> {{treeData.name}}
+                </div>
+
+                <div class="tree-actions">
+                    <i class="fa fa-folder-add" title="添加目录" ng-click="treeFolderAdd(treeData, $event);"></i>
+                </div>
+            </div>
+            <div class="tree-folder-content" ng-show="treeData.$$isExpend">
+                <div ng-repeat="item in treeData.children" ng-include="'business/treeActionable/tpl/treeItem.html'">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--上传文件-->
+    <form id="uploadFileForm" name="uploadFileForm" enctype="multipart/form-data">
+        <input type="file" multiple="multiple" name="uploadfileInput" id="uploadfileInput" file-read="uploadFiles" />
+    </form>
+
+    <wi-progress ng-repeat="file in uploadFile.fileList" width="220" height="20" label="progressLabel" value="progressValue" maxValue="50" labelplacement="'top'"></wi-progress>
+
+    <!--添加目录弹出层开始-->
+    <div tabindex="-1" class="modal dialog-add-folder" ng-init="isDialogFolderAddShow = false" ng-show="dialogFolderAdd.isDialogFolderAddShow">
+        <div class="modal-backdrop"></div>
+        <div class="modal-dialog">
+            <form class="modal-content" name="folderAddForm">
+                <div class="modal-header">
+                    <button aria-hidden="true" data-dismiss="modal" class="close" type="button" ng-click="dialogFolderAdd.close()">×</button>
+                    <h4 class="modal-title">添加/编辑材料目录</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label class="col-sm-3 col-sm-3 control-label">目录名称</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name="name" ng-model="dialogFolderAdd.name">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 col-sm-3 control-label">所需材料份数</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" name="materialCount" ng-model="dialogFolderAdd.materialCount">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 col-sm-3 control-label">目录顺序</label>
+                        <div class="col-sm-9">
+                            <input type="number" class="form-control" name="order" ng-model="dialogFolderAdd.order">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 col-sm-3 control-label">备注</label>
+                        <div class="col-sm-9">
+                            <textarea class="form-control" name="remark" ng-model="dialogFolderAdd.remark"></textarea>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" ng-click="dialogFolderAdd.close()">取消</button>
+                    <button type="button" class="btn btn-success" ng-click="dialogFolderAdd.submit()">确定</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--添加目录弹出层结束-->
+</div>

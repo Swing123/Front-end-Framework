@@ -1,0 +1,66 @@
+<h1><code ng:non-bindable="">wiTree</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">dist.ui.tree</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="dist-ui-tree-directive-page dist-ui-tree-directive-witree-page"><p>树</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;wi-tree
+       dataprovider="{array}"
+       [idfield="{string}"]
+       [pidfield="{string}"]
+       [labelfield="{string}"]
+       [multiselect="{boolean}"]
+       [pcls="{string}"]
+       [ccls="{string}"]
+       [istree="{boolean}"]
+       [cascade="{bool}"]
+       [itemrenderer="{string}"]
+       [filterby="{string}"]
+       [wid="{object}"]
+       [onitemclick="{function}"]
+       [onloadbranch="{function}"]
+       [onbeforeexpand="{function}"]
+       [onexpand="{function}"]
+       [onbeforecollapse="{function}"]
+       [oncollapse="{function}"]
+       [onbeforeselect="{function}"]
+       [onselect="{function}"]
+       [oncancelselect="{function}"]&gt;
+&lt;/wi-tree&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>dataprovider</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="dist-ui-tree-directive-page dist-ui-tree-directive-witree-page"><p>数据源.<br />
+id: id字段，可通过 idfield 指定<br />
+pid: parentid 字段，可通过 pidfield 指定<br />
+text: 显示字段，可通过 labelfield 指定<br />
+isbranch: 是否为分支字段，若指定 isbranch=true，则其拥有子节点，需要延迟加载 - 多选且级联选中时不支持<br />
+selected: 初始时是否选中，默认为 false<br />
+closed: 是否折叠，默认为 false<br />
+cls: 节点图标的 class</p>
+</div></td></tr><tr><td>idfield <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-tree-directive-page dist-ui-tree-directive-witree-page"><p>id字段，默认&#39;id&#39;.</p>
+</div></td></tr><tr><td>pidfield <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-tree-directive-page dist-ui-tree-directive-witree-page"><p>parentid字段，默认&#39;pid&#39;.</p>
+</div></td></tr><tr><td>labelfield <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-tree-directive-page dist-ui-tree-directive-witree-page"><p>显示字段，默认&#39;text&#39;.</p>
+</div></td></tr><tr><td>multiselect <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-tree-directive-page dist-ui-tree-directive-witree-page"><p>多选，false|true，默认 false.</p>
+</div></td></tr><tr><td>pcls <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-tree-directive-page dist-ui-tree-directive-witree-page"><p>父节点图标 class</p>
+</div></td></tr><tr><td>ccls <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-tree-directive-page dist-ui-tree-directive-witree-page"><p>叶子节点图标 class</p>
+</div></td></tr><tr><td>istree <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-tree-directive-page dist-ui-tree-directive-witree-page"><p>数据源是否为树形，默认为 false.</p>
+</div></td></tr><tr><td>cascade <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-bool">bool</a></td><td><div class="dist-ui-tree-directive-page dist-ui-tree-directive-witree-page"><p>支持多选时，是否级联父子节点的选中状态，默认为 false.</p>
+</div></td></tr><tr><td>itemrenderer <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-tree-directive-page dist-ui-tree-directive-witree-page"><p>自定义节点渲染.</p>
+</div></td></tr><tr><td>filterby <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-tree-directive-page dist-ui-tree-directive-witree-page"><p>过滤.</p>
+</div></td></tr><tr><td>wid <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="dist-ui-tree-directive-page dist-ui-tree-directive-witree-page"><p>若定义了此属性，可供调用接口。调用方法参见：wid.</p>
+</div></td></tr><tr><td>onitemclick <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-tree-directive-page dist-ui-tree-directive-witree-page"><p>点击节点时的回调函数:onitemclick(node).</p>
+</div></td></tr><tr><td>onloadbranch <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-tree-directive-page dist-ui-tree-directive-witree-page"><p>加载延迟节点（isbranch=true 的节点）时的回调函数: onloadbranch(node,success,error).<br /></p>
+<ul>
+<li>success(children) 延迟加载成功后的回调函数，参数为要添加到 node 下的子节点;<br /></li>
+<li>error() 延迟加载失败后的回调函数.</li>
+</ul>
+</div></td></tr><tr><td>onbeforeexpand <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-tree-directive-page dist-ui-tree-directive-witree-page"><p>节点展开前的回调函数,返回 false 时阻止展开:onbeforeexpand(node).</p>
+</div></td></tr><tr><td>onexpand <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-tree-directive-page dist-ui-tree-directive-witree-page"><p>节点展开时的回调函数:onexpand(node).</p>
+</div></td></tr><tr><td>onbeforecollapse <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-tree-directive-page dist-ui-tree-directive-witree-page"><p>节点折叠前的回调函数,返回 false 时阻止折叠:onbeforecollapse(node).</p>
+</div></td></tr><tr><td>oncollapse <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-tree-directive-page dist-ui-tree-directive-witree-page"><p>节点折叠时的回调函数:oncollapse(node).</p>
+</div></td></tr><tr><td>onbeforeselect <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-tree-directive-page dist-ui-tree-directive-witree-page"><p>节点选中前的回调函数:onbeforeselect(node).</p>
+</div></td></tr><tr><td>onselect <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-tree-directive-page dist-ui-tree-directive-witree-page"><p>节点选中时的回调函数:onselect(node).</p>
+</div></td></tr><tr><td>oncancelselect <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-tree-directive-page dist-ui-tree-directive-witree-page"><p>取消节点选中时的回调函数:oncancelselect(node).</p>
+</div></td></tr></tbody></table></div>
+</div>

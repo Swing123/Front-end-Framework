@@ -1,0 +1,31 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<prerequisites>
+		<maven>3.0.0</maven>
+	</prerequisites>
+
+	<parent>
+		<groupId>com.dist</groupId>
+		<artifactId>bfcl-parent</artifactId>
+		<version>0.0.3-SNAPSHOT</version>
+		<relativePath>../bfcl-parent/pom.xml</relativePath>
+	</parent>
+
+	<artifactId>bfcl-business-front</artifactId>
+	<packaging>war</packaging>
+
+	<!-- 依赖项定义 -->
+	<dependencies>
+		<!-- bfcl 模块间依赖 -->
+		<!-- bff 依赖 -->
+		<dependency>
+			<groupId>com.dist</groupId>
+			<artifactId>bff-framework-front</artifactId>
+			<type>war</type>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>bfcl-business-front</finalName>
+	</build>
+</project>

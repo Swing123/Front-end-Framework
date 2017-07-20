@@ -1,0 +1,8 @@
+{
+    "cname":"wiForm",
+    "discribe":"wiForm(表单)",
+    "demos":[
+        {"demoDiscribe":"element","html":"wiForm/docs/demo1.html","js":"wiForm/docs/demo1.js"},
+        {"demoDiscribe":"button(按钮)","html":"wiForm/docs/demo2.html","js":"wiForm/docs/demo2.js"}
+    ]
+}

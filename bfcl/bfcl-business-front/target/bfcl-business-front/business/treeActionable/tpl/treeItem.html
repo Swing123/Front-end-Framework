@@ -1,0 +1,34 @@
+<div class="tree-folder" ng-if="!isLeaf(item)" ng-init="item.$$isExpend=true;">
+    <div class="tree-folder-header">
+        <div class="tree-folder-name">
+            <span ng-click="expendItem(item,$event)">
+                <i class="fa" ng-class="{'fa-caret-down':item.$$isExpend,'fa-caret-right':!item.$$isExpend}"></i>
+                <i class="fa" ng-class="{'fa-folder-open':item.$$isExpend,'fa-folder':!item.$$isExpend}"></i>
+            </span>
+             {{item.name}}
+        </div>
+        <div class="file-upload-date">&nbsp;</div>
+        <div class="file-size">&nbsp;</div>
+        <div class="tree-actions">
+            <i class="fa fa-plus" title="添加文件" ng-click="treeFileAdd(item, $event)"></i>
+            <i class="fa fa-folder-add" title="添加子目录" ng-click="treeFolderAdd(item, $event);"></i>
+            <i class="fa fa-trash-o" title="删除目录" ng-click="treeFolderDelete(item, $event)"></i>
+        </div>
+    </div>
+    <div class="tree-folder-content" ng-show="item.$$isExpend">
+        <div ng-repeat="item in item.children" ng-include="'business/treeActionable/tpl/treeItem.html'"></div>
+    </div>
+</div>
+<div class="tree-item" ng-if="isLeaf(item)">
+    <i class="tree-dot"></i>
+    <div class="tree-item-name">
+        <i class="fa fa-user"></i> {{item.name}}
+    </div>
+    <div class="file-upload-date">{{item.date}}</div>
+    <div class="file-size">{{item.size}}</div>
+    <div class="tree-actions">
+        <i class="fa fa-eye" title="预览文件"></i>
+        <i class="fa fa-download" title="下载文件"></i>
+        <i class="fa fa-trash-o" title="删除文件" ng-click="treeFileDelete(item, $event)"></i>
+    </div>
+</div>

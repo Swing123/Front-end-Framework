@@ -1,0 +1,13 @@
+{
+  "translate":{
+    "lang":{
+      "isopen": false
+    },
+    "langs":{
+      "en":"English",
+      "de_DE":"German",
+      "it_IT":"Italian",
+      "cn":"简体中文"
+    }
+  }
+}

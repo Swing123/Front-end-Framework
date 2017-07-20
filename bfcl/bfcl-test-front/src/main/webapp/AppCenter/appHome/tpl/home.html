@@ -1,0 +1,167 @@
+<!--<div ng-controller="homeController" class="container homePage">
+    <div class="row">
+        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+            <div class="item navigation">
+                <h5 class="text-info">快捷导航</h5>
+                <div class="button-group">
+                    <button type="button" class="btn btn-info"><i class="fa fa-file-o"></i>&nbsp;&nbsp;新建</button>
+                    <button type="button" class="btn btn-info"><i class="fa fa-file-o"></i>&nbsp;&nbsp;预审箱</button>
+                    <button type="button" class="btn btn-info"><i class="fa fa-file-o"></i>&nbsp;&nbsp;再办箱</button>
+                    <button type="button" class="btn btn-info"><i class="fa fa-file-o"></i>&nbsp;&nbsp;我的会议</button>
+                    <button type="button" class="btn btn-info"><i class="fa fa-file-o"></i>&nbsp;&nbsp;传阅公文</button>
+                </div>
+            </div>
+            <div class="item projectTable">
+                <h5 class="text-info">待办项目</h5>
+                <div ui-grid="vm.gridOptions" class="grid"></div>
+            </div>
+            <div class="item chart">
+                <h5 class="item text-info">收发件统计</h5>
+                <div style="width: 100%;margin: auto">
+                    <div class="dropdown pull-right">
+                        <button type="button" class="btn btn-xs dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i></button>
+                        <ul class="dropdown-menu">
+                            <li><a>打印</a></li>
+                            <li class="divider"></li>
+                            <li><a>下载原图</a></li>
+                        </ul>
+                    </div>
+                    <canvas id="bar" class="chart chart-bar"
+                            chart-data="vm.statistics.data"
+                            chart-labels="vm.statistics.labels"
+                            chart-series="vm.statistics.series"
+                            chart-colors="vm.statistics.colors"
+                            chart-dataset-override="vm.statistics.datasets"
+                            chart-options="vm.statistics.options">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            <div class="item meeting">
+                <h5 class="text-info">会议安排</h5>
+            </div>
+            <div class="item announcement">
+                <h5 class="text-info">局内公告</h5>
+                <dist-board board-config="vm.announcementList" single-click=""></dist-board>
+            </div>
+            <div class="item news">
+                <h5 class="text-info">图片新闻</h5>
+                &lt;!&ndash;<dist-carousel carouselConfig="vm.slides"></dist-carousel>&ndash;&gt;
+                &lt;!&ndash; <wi-carousel interval="2000">
+                     <wi-slide ng-repeat="slide in vm.slides" active="slide.active">
+                         <img ng-src="{{slide.image}}" class="img-responsive" style="margin: auto">
+                         <div class="carousel-caption">
+                             <p>{{slide.title}}</p>
+                         </div>
+                     </wi-slide>
+                 </wi-carousel>&ndash;&gt;
+            </div>
+        </div>
+    </div>
+</div>-->
+<!--
+<div ng-controller="homeController" class="app-content-full " style="overflow-x: hidden">
+    <div class="homePage row">
+        <div class="col-md-12">
+        <div class="content-left col-md-7">
+            <div class="panel matter">
+                <div class="panel-heading">
+                    <h5 class="panel-title">
+                        待办事项
+                        <a ng-click=""><span class="badge pull-right">更多</span></a>
+                    </h5>
+                </div>
+                <div class="panel-body">
+                    <div ui-grid="vm.matter_gridOptions" class="grid"></div>
+                </div>
+            </div>
+        </div>
+        <div class="content-right col-md-5">
+            <div class="panel meeting">
+                <div class="panel-heading">
+                    <h5 class="panel-title">
+                        待办会议
+                        <a ng-click=""><span class="badge pull-right">更多</span></a>
+                    </h5>
+                </div>
+                <div class="panel-body">
+                    <div ui-grid="vm.meeting_gridOptions" class="grid"></div>
+                </div>
+            </div>
+            <div class="panel announcement" style="overflow: hidden">
+                <div class="panel-heading">
+                    <h5 class="panel-title">
+                        局内公告
+                        <a ng-click=""><span class="badge pull-right">更多</span></a>
+                    </h5>
+                </div>
+                <div class="panel-body" style="overflow: hidden">
+                    <ul>
+                        <li ng-repeat="items in vm.announcementList" class="">
+                            <div class="white-space-overflow text-muted pull-right" style="width: 150px">
+                                <div class="pull-left" style="width: 50px">
+                                    <span ng-if="items.label==1" class="badge bg-success">new</span>
+                                </div>
+                                <div class="pull-right" style="width: 100px">
+                                    {{items.date}}
+                                </div>
+                            </div>
+                            <div class="white-space-overflow" ng-class="{'latest':items.label==1}" style="margin-right: 150px">
+                                <div class="icon pull-left bg-info">
+                                    {{$index+1}}
+                                </div>
+                                <a href ng-click="" title="{{items.title}}">
+                                    {{items.title}}
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel news">
+                <div class="panel-heading">
+                    <h5 class="panel-title">
+                        图片新闻
+                        <a ng-click=""><span class="badge pull-right">更多</span></a>
+                    </h5>
+                </div>
+                <div class="panel-body" style="padding: 10px 5px">
+                    <div class="clearfix">
+                        <div class="pull-left" style="width: 60%">
+                            <wi-carousel interval="2000">
+                                <wi-slide ng-repeat="slide in vm.slides" active="slide.active">
+                                    <a ng-click=""><img ng-src="{{slide.image}}" class="img-responsive" style="margin: auto">
+                                        <div class="carousel-caption">
+                                            <p>{{slide.title}}</p>
+                                        </div>
+                                    </a>
+                                </wi-slide>
+                            </wi-carousel>
+                        </div>
+                        <div class="pull-right" style="width: 40%;padding-left: 10px">
+                            <ul>
+                                <li ng-repeat="slide in vm.slides">
+                                    <div ng-if="$index==0" style="margin-bottom: 10px">
+                                        <h4 class="white-space-overflow">
+                                            <a ng-click="" title="{{slide.title}}">
+                                                {{slide.title}}
+                                            </a>
+                                        </h4>
+                                        <p>&emsp;&emsp;{{slide.content}}</p>
+                                    </div>
+                                    <div ng-if="$index!=0" class="white-space-overflow">
+                                        <a ng-click="" title="{{slide.title}}">
+                                            {{slide.title}}
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>-->

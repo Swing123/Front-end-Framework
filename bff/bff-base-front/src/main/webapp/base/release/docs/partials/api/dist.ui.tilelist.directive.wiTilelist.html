@@ -1,0 +1,36 @@
+<h1><code ng:non-bindable="">wiTilelist</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">dist.ui.tilelist</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="dist-ui-tilelist-directive-page dist-ui-tilelist-directive-witilelist-page"><p>Tilelist网格流布局组件标签</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;wi-tilelist
+       dataprovider="{array}"
+       itemrender="{string}"
+       [direction="{string}"]
+       [width="{number|length}"]
+       [height="{number|length}"]
+       [colcount="{number}"]
+       [colwidth="{number}"]
+       [rowcount="{number}"]
+       [rowheight="{number}"]&gt;
+&lt;/wi-tilelist&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>dataprovider</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="dist-ui-tilelist-directive-page dist-ui-tilelist-directive-witilelist-page"><p>数据源</p>
+</div></td></tr><tr><td>itemrender</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-tilelist-directive-page dist-ui-tilelist-directive-witilelist-page"><p>自定义单元格内容 text/ng-template 的 id，其中 data 为该单元格数据源</p>
+</div></td></tr><tr><td>direction <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-tilelist-directive-page dist-ui-tilelist-directive-witilelist-page"><p>排列方向，h为横向排列，v为纵向排列，默认为 h。</p>
+</div></td></tr><tr><td>width <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a><a href="" class="label type-hint type-hint-length">length</a></td><td><div class="dist-ui-tilelist-directive-page dist-ui-tilelist-directive-witilelist-page"><p>组件宽度，默认为 100%。<br />
+number 将自动添加单位 px。<br />
+length 为 number 接长度单位（相对单位和绝对单位）。<br />
+相对单位：em, ex, ch, rem, vw, vh, vm, %<br />
+绝对单位：cm, mm, in, pt, pc, px</p>
+</div></td></tr><tr><td>height <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a><a href="" class="label type-hint type-hint-length">length</a></td><td><div class="dist-ui-tilelist-directive-page dist-ui-tilelist-directive-witilelist-page"><p>组件高度，默认为 100%。<br />
+说明同 width。</p>
+</div></td></tr><tr><td>colcount <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="dist-ui-tilelist-directive-page dist-ui-tilelist-directive-witilelist-page"><p>列数，direction=&quot;h&quot;时，此属性失效。</p>
+</div></td></tr><tr><td>colwidth <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="dist-ui-tilelist-directive-page dist-ui-tilelist-directive-witilelist-page"><p>列宽，direction=&quot;v&quot;时，若同时定义了 colcount，且横向超出显示范围，此属性将由组件重新计算。</p>
+</div></td></tr><tr><td>rowcount <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="dist-ui-tilelist-directive-page dist-ui-tilelist-directive-witilelist-page"><p>行数，direction=&quot;v&quot;时，此属性失效。</p>
+</div></td></tr><tr><td>rowheight <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="dist-ui-tilelist-directive-page dist-ui-tilelist-directive-witilelist-page"><p>行高，direction=&quot;h&quot;时，若同时定义了 rowcount，且纵向超出显示范围，此属性将由组件重新计算。</p>
+</div></td></tr></tbody></table></div>
+</div>

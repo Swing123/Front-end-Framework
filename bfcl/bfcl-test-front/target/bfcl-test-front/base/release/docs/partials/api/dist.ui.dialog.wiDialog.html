@@ -1,0 +1,48 @@
+<h1><code ng:non-bindable="">wiDialog</code>
+<div><span class="hint">service in module <code ng:non-bindable="">dist.ui.dialog</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="dist-ui-dialog-widialog-page"><p>wiDialog 用来弹出模态的窗口service，常见的简单提示框、confirm对话框以及更复杂的弹出框都可以使用wiDialog。</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_closeall">closeAll(value)</h3>
+<div class="closeall"><div class="dist-ui-dialog-widialog-closeall-page"><p>用来关闭通过wiDialog弹出的所有的dialog.</p>
+</div><h5 id="methods_closeall_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>value <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="dist-ui-dialog-widialog-closeall-page"><p>关闭窗口时要返回的值，每个dialog的都可以通过promise可以获取该值。</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_closeone">closeOne(id, value)</h3>
+<div class="closeone"><div class="dist-ui-dialog-widialog-closeone-page"><p>关闭一个dialog。</p>
+</div><h5 id="methods_closeone_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="dist-ui-dialog-widialog-closeone-page"><p>要关闭的dialog的ID，如果没有指定ID，则关闭所有的dialog。</p>
+</div></td></tr><tr><td>value <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="dist-ui-dialog-widialog-closeone-page"><p>关闭窗口时要返回的值，dialog可以通过promise可以获取该值。</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_open">open(options)</h3>
+<div class="open"><div class="dist-ui-dialog-widialog-open-page"><p>打开dialog的最基本的方法。</p>
+</div><h5 id="methods_open_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>options</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="dist-ui-dialog-widialog-open-page"><p>{<br>
+template : String类型，值可以为ng-template的ID, html片段的URL  或者 直接使用字符串(需要将plain设为true)<br>
+plain  : Boolean类型，开启字符串作为模板，默认false<br>
+scope  : Object类型。如果传递了scope,该scope将作为弹出框的父scope。<br>
+controller  : String类型，指定弹出框使用的controller名称<br>
+showClose  : Boolean类型，显示关闭按钮，默认 true<br>
+closeByEscape  : Boolean类型，通过ESC关闭dialog,默认 true<br>
+closeByDocument  : Boolean类型，通过点击页面关闭dialog,默认 true<br>
+overlay: Boolean类型，指定是否模态弹出，默认为true<true>
+dialogInIframe  : 是否在iframe中居中显示，默认情况下所有的弹出框都是在最外层的页面中弹出（开发时一般不采用单一APP，所以应用功能实际上会被放在iframe中）<br>
+}</p>
+</div></td></tr></tbody></table><h5 id="methods_open_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="dist-ui-dialog-widialog-open-page"><p>{
+id: 弹出框的id.<br>
+closePromise: 关闭窗口的promise，通过该promise可以监听弹出框关闭。<br>
+close: 关闭当前弹出框
+}</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_openconfirm">openConfirm(options)</h3>
+<div class="openconfirm"><h5 id="methods_openconfirm_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>options</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="dist-ui-dialog-widialog-openconfirm-page"><p>见open方法的options。</p>
+</div></td></tr></tbody></table><h5 id="methods_openconfirm_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="dist-ui-dialog-widialog-openconfirm-page"><p>promise,返回一个promise,如果使用 .confirm() 方法来关闭dialog，则该promise被resolved，否则被 rejected.</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

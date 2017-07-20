@@ -1,0 +1,158 @@
+<div simple-object-modify
+     id="id"
+     ok="ok()"
+     cancel="cancel()"
+     preparedata="preparedata"
+     newdata="newdata"
+     config='
+        {
+            "title": "增加同步任务"
+            , "properties": [
+                {
+                    "name": "name",
+                    "type": "input",
+                    "label": "任务名称",
+                    "placeholder": "：请输入",
+                    "defaultValue": ""
+                }
+                , {
+                    "name": "syncType",
+                    "type": "list",
+                    "label": "同步类型",
+                    "placeholder": "：请选择",
+                    "data": "syncTypes",
+                    "dataMap": {
+                        "id": "type",
+                        "label": "name"
+                    },
+                    "defaultValue": ""
+                }
+                , {
+                    "name": "syncDirection",
+                    "type": "list",
+                    "label": "同步方向",
+                    "placeholder": "：请选择",
+                    "data": "syncDirections",
+                    "dataMap": {
+                        "id": "type",
+                        "label": "name"
+                    },
+                    "defaultValue": ""
+                }
+                , {
+                    "name": "syncConflitStrategy",
+                    "precondition": {
+                        "name": "syncDirection"
+                        , "value": "3"
+                    },
+                    "type": "list",
+                    "label": "冲突记录解决策略",
+                    "placeholder": "：请选择",
+                    "data": "syncConflitStrategies",
+                    "dataMap": {
+                        "id": "type",
+                        "label": "name"
+                    },
+                    "defaultValue": ""
+                }
+                , {
+                    "name": "dbTable",
+                    "type": "input",
+                    "label": "数据库表名",
+                    "defaultValue": ""
+                }
+                , {
+                    "name": "ldapEntityClass",
+                    "type": "input",
+                    "label": "ldap实体的类名",
+                    "defaultValue": ""
+                }
+                , {
+                    "name": "ldapEntityContainerDn",
+                    "type": "input",
+                    "label": "ldap实体的容器dn",
+                    "defaultValue": ""
+                }
+                , {
+                    "name": "ldapEntityRdnAttr",
+                    "type": "input",
+                    "label": "ldap实体的rdn属性名",
+                    "defaultValue": ""
+                }
+                , {
+                    "name": "entityMatchFieldsMap",
+                    "type": "textarea",
+                    "label": "实体匹配映射",
+                    "placeholder": "：ldap实体与数据库记录进行匹配的属性与字段映射表,格式：ldap属性名1[+ldap属性名2...][+ldap属性名m]=数据库字段名1[+数据库字段名2...][+数据库字段名n]",
+                    "defaultValue": ""
+                }
+                , {
+                    "name": "syncFieldMaps",
+                    "type": "textarea",
+                    "label": "同步字段映射",
+                    "placeholder": "：ldap条目与数据库记录需同步的字段映射：ldap属性名1=数据库字段名1[,ldap属性名2=数据库字段名2]...[,ldap属性名p=数据库字段名p]",
+                    "defaultValue": ""
+                }
+                , {
+                    "name": "ldapEntityMemberAttr",
+                    "type": "input",
+                    "label": "ldap实体的成员属性名",
+                    "defaultValue": ""
+                }
+                , {
+                    "name": "ldapMemberClass",
+                    "type": "input",
+                    "label": "ldap成员的对象类名",
+                    "placeholder": "：ldap成员的对象类名",
+                    "defaultValue": ""
+                }
+                , {
+                    "name": "ldapMemberContainerDn",
+                    "type": "input",
+                    "label": "ldap成员的容器dn",
+                    "defaultValue": ""
+                }
+                , {
+                    "name": "ldapMemberRdnAttr",
+                    "type": "input",
+                    "label": "ldap成员的rdn属性名",
+                    "defaultValue": ""
+                }
+                , {
+                    "name": "memberMatchFieldsMap",
+                    "type": "textarea",
+                    "label": "成员匹配映射",
+                    "placeholder": "：ldap成员与数据库记录进行匹配的属性与字段映射表,格式：ldap属性名1[+ldap属性名2...][+ldap属性名m]=数据库字段名1[+数据库字段名2...][+数据库  字段名n]",
+                    "defaultValue": ""
+                }
+                , {
+                    "name": "ldapSpecialAttrs",
+                    "type": "textarea",
+                    "label": "ldap独有属性设置",
+                    "placeholder": "：生成或更新ldap条目时必需的但又在数据库中没有对应字段的属性,通常用于设置属性的默认值,格式：属性名1=属性值1[,属性名2=属性值2]...[,属性名x=属性值x],其中属性值如果为@uuid,则系统将自动生成uuid进行填充，每个@uuid都会生成不同的uuid",
+                    "defaultValue": ""
+                }
+                , {
+                    "name": "dbSpecialColumns",
+                    "type": "textarea",
+                    "label": "数据库独有字段设置",
+                    "placeholder": "：：生成或更新数据库记录时必需的但又在ldap中没有对应的属性字段,通常用于设置字段的默认值,格式：字段名1=字段值1[,字段名2=字段值2]...[,字段名y=字段值y],其中字段值如果为@uuid,则系统将自动生成uuid进行填充，每个@uuid都会生成不同的uuid",
+                    "defaultValue": ""
+                }
+                , {
+                    "name": "displayOrder",
+                    "type": "input",
+                    "label": "显示顺序",
+                    "placeholder": "：值越大,显示越靠前",
+                    "defaultValue": "999"
+                }
+                , {
+                    "name": "isEnabled",
+                    "type": "radio",
+                    "label": "是否启用",
+                    "defaultValue": "false"
+                }
+            ]
+       }
+'>
+</div>

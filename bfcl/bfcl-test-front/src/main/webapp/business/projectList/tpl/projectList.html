@@ -1,0 +1,66 @@
+<section class="project-list bg-white">
+    <!-- search form -->
+    <div class="project-toolBar project-inline-block">
+        <form class="form " ui-shift="prependTo" target=".navbar-collapse" role="search">
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" ng-model="key" class="form-control input-sm bg-white padder" placeholder="Search projects...">
+                <span class="input-group-btn">
+                    <button type="submit" class="btn btn-sm" style="background-color: deepskyblue" ng-click="vm.search(key,selectedState,vm.administrative,vm.businessType);"><i class="fa fa-search"></i></button>
+                </span>
+                </div>
+            </div>
+        </form>
+        <!-- / search form -->
+        <div class="col-md-12 no-padder">
+            <div class="col-md-3">
+                <label class="font-bold" style="color:deepskyblue">{{::config.title}}</label>
+            </div>
+            <div class="col-md-9 no-padder">
+                <di class="col-md-6">
+                    <select id="select" ng-model="selectedState" ng-change="vm.search(key,selectedState,vm.administrative,vm.businessType)"  ng-options="state.value as state.text for state in config.state" style="width:130px;height:25px">
+                    </select>
+                </di>
+                <div class="col-md-6">
+                    <button id="citySel" ng-click="vm.toggleMenu();" type="button" style="width:130px;height: 25px;background: white;border: solid 1px rgb(169, 169, 169);">{{vm.zNodes[0].name}}<span class="caret"></span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="project-body" >
+        <ul id="projectList" class="projectList">
+            <li class="no-padder project-inline-block" ng-class="{selected:vm.selectedItem==$index}" ng-repeat="item in vm.projectList track by $index" ng-click="vm.setSelectedItem($index,item)" ng-dblclick="vm.openItem(item)" >
+                <div>
+                    <span class="absolute">{{item.projectName}}</span>
+                    <span class="fixed">{{item.company}}</span>
+                    <span class="fixed">{{item.projectNo}}</span>
+                    <button class="pull-right superviseButton" title="查看督办信息" ng-class="{'noSupervise':!item.isSupervise}" ng-click="vm.showSuperviseInfo(item)">
+                        <span class="fa fa-exclamation-triangle"></span>
+                    </button>
+                </div>
+                <div>
+                    <span >{{item.activityName}}</span>
+                    <button class="pull-right loveButton" title="{{item.isLove?'取消收藏':'收藏'}}" ng-class="{'noLove':!item.isLove}" ng-click="vm.toggleLove(item)">
+                        <span class="fa" ng-class="{'fa-heart':item.isLove,'fa-heart-o':!item.isLove}"></span>
+                    </button>
+                    <span class="item-hjjs pull-right" ng-class="{'item-hjjs-danger':item.hjjs.indexOf('超')>=0,'item-hjjs-urgent':item.hjjs.indexOf('余1天')>=0||item.hjjs.indexOf('余2天')>=0,
+                        'item-hjjs-safety':item.hjjs.indexOf('余')>=0&&item.hjjs.indexOf('余1天')<0&&item.hjjs.indexOf('余2天')<0,'item-hjjs-none':item.hjjs=='不计时'}">{{item.hjjs}}</span>
+                </div>
+
+            </li>
+        </ul>
+        <!--<ul class="bottom-toolbar pagination " >
+            <li ng-class="{disabled:vm.currentPage==1}">
+                <a ng-click="vm.prePage()">上一页</a>
+            </li>
+            <li ng-class="{disabled:vm.currentPage==vm.page}">
+                <a ng-click="vm.postPage()">下一页</a>
+            </li>
+            <li>{{vm.currentPage}}/{{vm.page}}</li>
+        </ul>-->
+    </div>
+
+    <div id="menuContent" class="menuContent" style="display:none;position: absolute;">
+        <ul id="treeDemo" class="ztree" style=""></ul>
+    </div>
+</section>

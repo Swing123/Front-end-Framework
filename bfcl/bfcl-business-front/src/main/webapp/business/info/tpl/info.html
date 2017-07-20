@@ -1,0 +1,26 @@
+<div class="dist-info">
+    <div class="content itemInfo" ng-class="{'green':infoConfig.itemInfo.label==0,'yellow':infoConfig.itemInfo.label==1,'red':infoConfig.itemInfo.label==2}">
+        <div class="row">
+            <div class="col-md-10 col-xs-12 white-space-overflow">
+                <ul>
+                    <li class="white-space-overflow" title="{{infoConfig.itemInfo.title}}">
+                        <span>{{infoConfig.itemInfo.projectName}}</span>
+                        <span>({{infoConfig.itemInfo.state}})&nbsp</span>
+                        <span>{{infoConfig.itemInfo.projectCode}}&nbsp</span>
+                        <span>{{infoConfig.itemInfo.processCode}}&nbsp</span>
+                        <span>{{infoConfig.itemInfo.processDate}}&nbsp</span>
+                        <span>{{infoConfig.itemInfo.limitTime}}&nbsp</span>
+                    </li>
+                    <!--<li class="projectInfo white-space-overflow" title="{{infoConfig.itemInfo.projectInfo}}">{{infoConfig.itemInfo.projectInfo}}</li>-->
+                    <li class="white-space-overflow" title="{{infoConfig.itemInfo.extraInfo}}">
+                       <span>{{infoConfig.itemInfo.currentLink}}</span>
+                       <span>{{infoConfig.itemInfo.currentHandlePerson}}</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-2 col-xs-12 clearfix">
+                <button ng-click="vmEvents.singleClick(itemInfo)" class="btn btn-info btn-sm pull-right button">打开项目</button>
+            </div>
+        </div>
+    </div>
+</div>

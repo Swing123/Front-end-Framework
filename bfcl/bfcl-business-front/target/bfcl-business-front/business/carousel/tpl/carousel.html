@@ -1,0 +1,20 @@
+<div class="dist-carousel">
+    <div id="myCarousel" class="carousel slide">
+        <!-- 轮播（Carousel）指标 -->
+        <ol class="carousel-indicators" ng-repeat="item in carouselConfig.slides">
+            <li data-target="#myCarousel" data-slide-to="{{item.$index}}" ng-class="{'active':item.$index==0}"></li>
+        </ol>
+        <!-- 轮播（Carousel）项目 -->
+        <div class="carousel-inner" ng-repeat="item in carouselConfig.slides">
+            <div class="item" ng-class="{'active':item.$index==0}">
+                <img ng-src="{{item.image}}" class="img-responsive" alt="slide{{item.$index+1}}">
+                <div class="carousel-caption">{{item.title}}</div>
+            </div>
+        </div>
+        <!-- 轮播（Carousel）导航 -->
+        <a class="carousel-control left" href="#myCarousel"
+           data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#myCarousel"
+           data-slide="next">&rsaquo;</a>
+    </div>
+</div>

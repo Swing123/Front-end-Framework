@@ -1,0 +1,129 @@
+<div sync-log-mnt
+     config='
+    {
+        "messages": [
+            {
+                  "type": "in"
+                , "name": "openLogDetailMnt"
+                , "id": "f37e6562-8f75-4725-ae99-e7ec0739eb74"
+                , "handler": "_handleMessage_openLogMnt"
+            }
+        ]
+    }'
+     param='
+    {
+        "openLogDetailMnt": {
+            "title": "详细日志管理"
+            , "type": "page"
+            , "param": ""
+            , "templateUrl": "ldapSync/syncLogDetailMnt.html"
+        }
+    }'
+>
+    <div simple-object-mnt
+     param='
+        {
+            "title": "汇总日志管理"
+            , "stateParamNames": ["appId", "taskId"]
+            , "serviceUrls": {
+                "list": "ldapSync/logs?appId=:appId&taskId=:taskId"
+                , "load": "ldapSync/logs"
+            }
+            , "buttons": {
+                  "modify": {
+                    "type": "modify",
+                    "name": "查看",
+                    "icon": "",
+                    "css": "",
+                    "title": "汇总日志",
+                    "templateUrl": "ldapSync/syncLogView.html"
+                }
+            }
+            , "grid": {
+                "css": ""
+                , "idfield": "id"
+                , "messageButtons": [
+                    {
+                        "name": "详细日志"
+                        , "messageName": "openDetailMnt"
+                        , "messageId": "f37e6562-8f75-4725-ae99-e7ec0739eb74"
+                    }
+                ]
+                , "columns": [
+                      {
+                        "css": "width:10%;text-align:center;",
+                        "header": {
+                            "name": "序号",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "$index",
+                            "css": "align:left"
+                        }
+                    }
+                    , {
+                        "css": "width:20%;text-align:center;",
+                        "header": {
+                            "name": "应用名称",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "appName",
+                            "css": "align:left"
+                        }
+                    }
+                    , {
+                        "css": "width:20%;text-align:center;",
+                        "header": {
+                            "name": "任务名称",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "taskName",
+                            "css": "align:left"
+                        }
+                    }
+                    , {
+                        "css": "width:20%;text-align:center;",
+                        "header": {
+                            "name": "启动时间",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "startTime",
+                            "css": "align:right"
+                        }
+                    }
+                    , {
+                        "css": "width:20%;text-align:center;",
+                        "header": {
+                            "name": "执行时间",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "elapsedTime",
+                            "css": "align:right"
+                        }
+                    }
+                    , {
+                        "css": "width:20%;text-align:center;",
+                        "header": {
+                            "name": "失败信息",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "statusName",
+                            "css": "align:left"
+                        }
+                    }
+                ]
+                , "pagination": {
+                    "total": 5,
+                    "pageNo": 0,
+                    "pageSize": 10
+                }
+            }
+
+        }
+'>
+</div>

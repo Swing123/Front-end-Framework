@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+@green: #00B050; // 0-时间充裕
+@yellow: #fad733; // 1-紧急
+@red: #FF0000; // 2-超时
+@projectColor: #23B7E5; //项目材料字体和按钮颜色
+
+.dist-info{
+  .green{
+    border-left: 4px solid @green;
+  }
+  .yellow{
+    border-left: 4px solid @yellow;
+  }
+  .red{
+    border-left: 4px solid @red;
+  }
+  .projectInfo{
+    font-weight: 700;
+    color: @projectColor;
+  }
+  .white-space-overflow {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .content{
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .itemInfo{
+    padding-left: 5px;
+  }
+  .button{
+    background: @projectColor;
+  }
+}

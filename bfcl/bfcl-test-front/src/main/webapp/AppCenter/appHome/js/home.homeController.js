@@ -1,0 +1,493 @@
+/**
+ * Created by Swing on 2016/11/29 .
+ */
+/*
+define([
+
+],function(){
+    'use strict';
+    function homeController($scope){
+
+        var vm=$scope.vm={};
+
+        vm.announcementList={
+            "itemList":[
+                {
+                    "color":"danger",
+                    "title":"第十届规划信息化实务论坛“一号通知”",
+                    "date":"2016-05-12"
+                },
+                {
+                    "color":"success",
+                    "title":"会",
+                    "date":"2016-05-12"
+                },
+                {
+                    "color":"info",
+                    "title":"2016第十届规划信息化实务论坛",
+                    "date":"2016-05-12"
+                },
+                {
+                    "color":"",
+                    "title":"2016第十届规划信息化实务论坛邀请函...",
+                    "date":"2016-05-12"
+                }
+            ]
+        };
+
+        vm.slides=[
+            {
+                "image":"AppCenter/appHome/img/1.jpg",
+                "title":""
+            },
+            {
+                "image":"AppCenter/appHome/img/2.jpg",
+                "title":" 第十届规划信息化实务论坛“一号通知”"
+            }
+        ];
+
+        vm.statistics={
+            series:['收件','发件','退件'],
+            labels:['2016-06','2016-07','2016-08','2016-09','2016-10','2016-11'],
+            data:[[20,28,16,9,7,28], [11,9,6,15,9,19], [2,1,4,0,2,6]],
+            datasets:[
+                {
+                    backgroundColor:"#19a9d5",
+                    borderColor:"#19a9d5"
+                },
+                {
+                    backgroundColor:"#6254b2",
+                    borderColor:"#6254b2"
+                },
+                {
+                    backgroundColor:"#fad733",
+                    borderColor:"#fad733"
+                }
+            ],
+            options: {
+                legend:{
+                    display: true,
+                    labels: {
+                        fontColor: 'rgb(255, 99, 132)',
+                        boxWidth:25
+                    }
+                },
+                title:{
+                    display:true,
+                    text:"收发件统计",
+                    fontSize:16
+                },
+                scales: {
+                    xAxes: [{
+                        //categoryPercentage: 0.5,
+                        //barPercentage: 1.0,
+                        //gridLines:{},
+                    }],
+                    yAxes: [{
+                        scaleLabel:{
+                            display:true,
+                            labelString:"项目文件数量"
+                        },
+                        ticks: {
+                        }
+                    }]
+                }
+            }
+        };
+
+        vm.gridOptions={
+            columnDefs:[
+                {name:'项目编号',headerTooltip:true,cellTooltip:true,headerCellClass:"textAlign"},
+                {name:'项目名称',headerTooltip:true,cellTooltip:true,enableSorting:false,headerCellClass:"textAlign"},
+                {name:'当前环节',headerTooltip:true,cellTooltip:true,headerCellClass:"textAlign"},
+                {name:'建设单位',headerTooltip:true,cellTooltip:true,headerCellClass:"textAlign"},
+                {name:'承诺办结日期',headerTooltip:true,cellTooltip:true,headerCellClass:"textAlign"},
+                {name:'剩余时间',headerTooltip:true,cellTooltip:true,headerCellClass:"textAlign",
+                    cellClass:function(grid){
+                        console.log(grid.appScope);
+                    }},
+                {name:'操作',headerTooltip:true,enableColumnMenu:false,enableSorting:false,headerCellClass:"textAlign",
+                    cellTemplate:'<div class="edit-btn"><button class="btn " ng-click="grid.appScope.edit()"><i class="fa fa-edit"></i>&nbsp;&nbsp;办理</button></div>' }
+            ],
+            data:[
+                {
+                    "项目编号":"嘉测索（2016）006",
+                    "项目名称":"测绘资质批后监管测试",
+                    "当前环节":"校核归档",
+                    "建设单位":"嘉兴市秀洲新区开...",
+                    "承诺办结日期":"2016-11-18",
+                    "剩余时间":"超期10天3.8小时",
+                    "color":"danger"
+                },
+                {
+                    "项目编号":"嘉测索（2016）006",
+                    "项目名称":"测绘资质批后监管测试",
+                    "当前环节":"校核归档",
+                    "建设单位":"嘉兴市秀洲新区开...",
+                    "承诺办结日期":"2016-11-18",
+                    "剩余时间":"超期10天3.8小时",
+                    "color":"danger"
+                },
+                {
+                    "项目编号":"嘉测索（2016）006",
+                    "项目名称":"测绘资质批后监管测试",
+                    "当前环节":"校核归档",
+                    "建设单位":"嘉兴市秀洲新区开...",
+                    "承诺办结日期":"2016-11-18",
+                    "剩余时间":"超期10天3.8小时",
+                    "color":"danger"
+                },
+                {
+                    "项目编号":"嘉测索（2016）006",
+                    "项目名称":"测绘资质批后监管测试",
+                    "当前环节":"校核归档",
+                    "建设单位":"嘉兴市秀洲新区开...",
+                    "承诺办结日期":"2016-11-18",
+                    "剩余时间":"超期10天3.8小时",
+                    "color":"danger"
+                },
+                {
+                    "项目编号":"嘉测索（2016）006",
+                    "项目名称":"测绘资质批后监管测试",
+                    "当前环节":"校核归档",
+                    "建设单位":"嘉兴市秀洲新区开...",
+                    "承诺办结日期":"2016-11-18",
+                    "剩余时间":"超期10天3.8小时",
+                    "color":"danger"
+                },
+                {
+                    "项目编号":"嘉测索（2016）006",
+                    "项目名称":"测绘资质批后监管测试",
+                    "当前环节":"校核归档",
+                    "建设单位":"嘉兴市秀洲新区开...",
+                    "承诺办结日期":"2016-11-18",
+                    "剩余时间":"超期10天3.8小时",
+                    "color":"danger"
+                },
+                {
+                    "项目编号":"嘉测索（2016）006",
+                    "项目名称":"测绘资质批后监管测试",
+                    "当前环节":"校核归档",
+                    "建设单位":"嘉兴市秀洲新区开...",
+                    "承诺办结日期":"2016-11-18",
+                    "剩余时间":"超期10天3.8小时",
+                    "color":"danger"
+                },
+                {
+                    "项目编号":"嘉测索（2016）006",
+                    "项目名称":"测绘资质批后监管测试",
+                    "当前环节":"校核归档",
+                    "建设单位":"嘉兴市秀洲新区开...",
+                    "承诺办结日期":"2016-11-18",
+                    "剩余时间":"超期10天3.8小时",
+                    "color":"danger"
+                },
+                {
+                    "项目编号":"嘉测索（2016）006",
+                    "项目名称":"测绘资质批后监管测试",
+                    "当前环节":"校核归档",
+                    "建设单位":"嘉兴市秀洲新区开...",
+                    "承诺办结日期":"2016-11-18",
+                    "剩余时间":"超期10天3.8小时",
+                    "color":"danger"
+                },
+                {
+                    "项目编号":"嘉测索（2016）006",
+                    "项目名称":"测绘资质批后监管测试",
+                    "当前环节":"校核归档",
+                    "建设单位":"嘉兴市秀洲新区开...",
+                    "承诺办结日期":"2016-11-18",
+                    "剩余时间":"超期10天3.8小时",
+                    "color":"danger"
+                },
+                {
+                    "项目编号":"嘉测索（2016）006",
+                    "项目名称":"测绘资质批后监管测试",
+                    "当前环节":"校核归档",
+                    "建设单位":"嘉兴市秀洲新区开...",
+                    "承诺办结日期":"2016-11-18",
+                    "剩余时间":"超期10天3.8小时",
+                    "color":"danger"
+                },
+                {
+                    "项目编号":"嘉测索（2016）006",
+                    "项目名称":"测绘资质批后监管测试",
+                    "当前环节":"校核归档",
+                    "建设单位":"嘉兴市秀洲新区开...",
+                    "承诺办结日期":"2016-11-18",
+                    "剩余时间":"超期10天3.8小时",
+                    "color":"danger"
+                },
+                {
+                    "项目编号":"嘉测索（2016）006",
+                    "项目名称":"测绘资质批后监管测试",
+                    "当前环节":"校核归档",
+                    "建设单位":"嘉兴市秀洲新区开...",
+                    "承诺办结日期":"2016-11-18",
+                    "剩余时间":"超期10天3.8小时",
+                    "color":"danger"
+                }
+            ]
+        }
+    }
+    homeController.$inject=["$scope"];
+    return homeController;
+});*/
+define([
+
+],function(){
+    'use strict';
+    function homeController($scope){
+
+        var vm=$scope.vm={};
+
+        vm.announcementList=[
+            {
+                "color":"danger",
+                "title":"第十届规划信息化实务论坛“一号通知”",
+                "date":"2016-05-12",
+                "label":1
+            },
+            {
+                "color":"success",
+                "title":"会",
+                "date":"2016-05-12",
+                "label":1
+            },
+            {
+                "color":"info",
+                "title":"2016第十届规划信息化实务论坛",
+                "date":"2016-05-12",
+                "label":1
+            },
+            {
+                "color":"info",
+                "title":"2016第十届规划信息化实务论坛邀请函函函函函函函函函函函函函",
+                "date":"2016-05-12"
+            },
+            {
+                "color":"info",
+                "title":"2016第十届规划信息化实务论坛",
+                "date":"2016-05-12"
+            },
+            {
+                "color":"info",
+                "title":"2016第十届规划信息化实务论坛",
+                "date":"2016-05-12"
+            },
+            {
+                "color":"info",
+                "title":"2016第十届规划信息化实务论坛",
+                "date":"2016-05-12"
+            },
+        ];
+        vm.slides=[
+            {
+                "image":"AppCenter/appHome/img/2.jpg",
+                "title":"新闻标题1新闻标题1",
+                "content":"2016第十届规划信息化实务论坛2016第十届规划信息化实务论坛"
+            },
+            {
+                "image":"AppCenter/appHome/img/2.jpg",
+                "title":"新闻标题2新闻标题2",
+                "content":""
+            },
+            {
+                "image":"AppCenter/appHome/img/2.jpg",
+                "title":"新闻标题3新闻标题3新闻标题3新闻标题3",
+                "content":""
+            }
+        ];
+
+        vm.statistics={
+            series:['收件','发件','退件'],
+            labels:['2016-06','2016-07','2016-08','2016-09','2016-10','2016-11'],
+            data:[[20,28,16,9,7,28], [11,9,6,15,9,19], [2,1,4,0,2,6]],
+            datasets:[
+                {
+                    backgroundColor:"#19a9d5",
+                    borderColor:"#19a9d5"
+                },
+                {
+                    backgroundColor:"#6254b2",
+                    borderColor:"#6254b2"
+                },
+                {
+                    backgroundColor:"#fad733",
+                    borderColor:"#fad733"
+                }
+            ],
+            options: {
+                legend:{
+                    display: true,
+                    labels: {
+                        fontColor: 'rgb(255, 99, 132)',
+                        boxWidth:25
+                    }
+                },
+                title:{
+                    display:true,
+                    text:"收发件统计",
+                    fontSize:16
+                },
+                scales: {
+                    xAxes: [{
+                        //categoryPercentage: 0.5,
+                        //barPercentage: 1.0,
+                        //gridLines:{},
+                    }],
+                    yAxes: [{
+                        scaleLabel:{
+                            display:true,
+                            labelString:"项目文件数量"
+                        },
+                        ticks: {
+                        }
+                    }]
+                }
+            }
+        };
+
+        vm.matter_gridOptions={
+            enableHorizontalScrollbar:0,
+            enableVerticalScrollbar:0,
+            columnDefs:[
+                {name:'事项名称',headerTooltip:true,cellTooltip:true,enableColumnMenu:false,enableSorting:false},
+                {name:'事项编号',headerTooltip:true,cellTooltip:true,enableColumnMenu:false,enableSorting:false},
+                {name:'业务类型',headerTooltip:true,cellTooltip:true,enableColumnMenu:false,enableSorting:false},
+                {name:'流程剩余时间',headerTooltip:true,cellTooltip:true,enableColumnMenu:false,enableSorting:false}
+            ],
+            data:[
+                {
+                    "事项编号":"嘉测索（2016）006",
+                    "事项名称":"测绘资质批后监管测试",
+                    "业务类型":"建设选址意见核发",
+                    "流程剩余时间":"超期10天3.8小时",
+                    "color":"danger"
+                },
+                {
+                    "事项编号":"嘉测索（2016）006",
+                    "事项名称":"测绘资质批后监管测试",
+                    "业务类型":"建设选址意见核发",
+                    "流程剩余时间":"超期10天3.8小时",
+                    "color":"danger"
+                },
+                {
+                    "事项编号":"嘉测索（2016）006",
+                    "事项名称":"测绘资质批后监管测试",
+                    "业务类型":"建设选址意见核发",
+                    "流程剩余时间":"超期10天3.8小时",
+                    "color":"danger"
+                },
+                {
+                    "事项编号":"嘉测索（2016）006",
+                    "事项名称":"测绘资质批后监管测试",
+                    "业务类型":"建设选址意见核发",
+                    "流程剩余时间":"超期10天3.8小时",
+                    "color":"danger"
+                },
+                {
+                    "事项编号":"嘉测索（2016）006",
+                    "事项名称":"测绘资质批后监管测试",
+                    "业务类型":"建设选址意见核发",
+                    "流程剩余时间":"超期10天3.8小时",
+                    "color":"danger"
+                },
+                {
+                    "事项编号":"嘉测索（2016）006",
+                    "事项名称":"测绘资质批后监管测试",
+                    "业务类型":"建设选址意见核发",
+                    "流程剩余时间":"超期10天3.8小时",
+                    "color":"danger"
+                },
+                {
+                    "事项编号":"嘉测索（2016）006",
+                    "事项名称":"测绘资质批后监管测试",
+                    "业务类型":"建设选址意见核发",
+                    "流程剩余时间":"超期10天3.8小时",
+                    "color":"danger"
+                },
+                {
+                    "事项编号":"嘉测索（2016）006",
+                    "事项名称":"测绘资质批后监管测试",
+                    "业务类型":"建设选址意见核发",
+                    "流程剩余时间":"超期10天3.8小时",
+                    "color":"danger"
+                },
+                {
+                    "事项编号":"嘉测索（2016）006",
+                    "事项名称":"测绘资质批后监管测试",
+                    "业务类型":"建设选址意见核发",
+                    "流程剩余时间":"超期10天3.8小时",
+                    "color":"danger"
+                },
+                {
+                    "事项编号":"嘉测索（2016）006",
+                    "事项名称":"测绘资质批后监管测试",
+                    "业务类型":"建设选址意见核发",
+                    "流程剩余时间":"超期10天3.8小时",
+                    "color":"danger"
+                },
+                {
+                    "事项编号":"嘉测索（2016）006",
+                    "事项名称":"测绘资质批后监管测试",
+                    "业务类型":"建设选址意见核发",
+                    "流程剩余时间":"超期10天3.8小时",
+                    "color":"danger"
+                },
+
+            ]
+        };
+        vm.meeting_gridOptions={
+            enableHorizontalScrollbar:0,
+            enableVerticalScrollbar:0,
+            height:100,
+            columnDefs:[
+                {name:'会议名称',headerTooltip:true,cellTooltip:true,enableColumnMenu:false,enableSorting:false},
+                {name:'会议地点',headerTooltip:true,cellTooltip:true,enableColumnMenu:false,enableSorting:false},
+                {name:'会议时间',headerTooltip:true,cellTooltip:true,enableColumnMenu:false,enableSorting:false},
+                {name:'主持人',headerTooltip:true,cellTooltip:true,enableColumnMenu:false,enableSorting:false}
+            ],
+            data:[
+                {
+                    "会议名称":"BPM建模研讨会",
+                    "会议地点":"数慧主会议室",
+                    "会议时间":"2016-12-7",
+                    "主持人":"王亮亮"
+                },
+                {
+                    "会议名称":"BPM建模研讨会",
+                    "会议地点":"数慧主会议室",
+                    "会议时间":"2016-12-7",
+                    "主持人":"王亮亮"
+                }, {
+                    "会议名称":"BPM建模研讨会",
+                    "会议地点":"数慧主会议室",
+                    "会议时间":"2016-12-7",
+                    "主持人":"王亮亮"
+                },
+                {
+                    "会议名称":"BPM建模研讨会",
+                    "会议地点":"数慧主会议室",
+                    "会议时间":"2016-12-7",
+                    "主持人":"王亮亮"
+                },
+                {
+                    "会议名称":"BPM建模研讨会",
+                    "会议地点":"数慧主会议室",
+                    "会议时间":"2016-12-7",
+                    "主持人":"王亮亮"
+                },
+
+                {
+                    "会议名称":"BPM建模研讨会",
+                    "会议地点":"数慧主会议室",
+                    "会议时间":"2016-12-7",
+                    "主持人":"王亮亮"
+                }
+            ]
+        };
+    }
+    homeController.$inject=["$scope"];
+    return homeController;
+});

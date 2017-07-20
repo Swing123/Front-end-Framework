@@ -1,0 +1,27 @@
+<div>
+    {{title}}
+    <div class="tree {{class}}">
+        <div ng-repeat="item in model" ng-init="item.show = !fold" class="tree-folder">
+            <div class="tree-folder-header" ng-class="{'tree-selected': item.selected}" ng-click="toggleFolder(item)">
+
+                <i class="fa tree-fold-arrow" ng-class="{'fa-caret-right': !item.show, 'fa-caret-down': item.show}"></i>
+
+                <dist-tree-icon icon-model="item" icon-config="config.root"></dist-tree-icon>
+
+                <div class="tree-folder-name">{{item.name}}<div class="tree-actions"><i class="fa fa-plus"></i><i class="fa fa-trash-o"></i><i class="fa fa-refresh"></i></div></div>
+            </div>
+            <div class="tree-folder-content" ng-show="item.show">
+                <div class="tree-item" ng-repeat="subItem in item.children" ng-class="{'tree-selected': subItem.selected}" ng-click="onClickItem(subItem)" ng-dblclick="onDblClickItem(subItem)">
+                    <i class="tree-dot"></i>
+                    <div class="tree-item-name">
+
+                        <dist-tree-icon icon-model="subItem" icon-config="config.children"></dist-tree-icon>
+
+                        {{subItem.name}}
+                        <div class="tree-actions"><i class="fa fa-plus"></i><i class="fa fa-trash-o"></i><i class="fa fa-refresh"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

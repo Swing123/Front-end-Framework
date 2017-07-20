@@ -1,0 +1,80 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<prerequisites>
+		<maven>3.0.0</maven>
+	</prerequisites>
+
+	<groupId>com.dist</groupId>
+	<artifactId>bff-bom</artifactId>
+	<packaging>pom</packaging>
+	<!-- 注意：当版本修改后，需要同步修改所有级别的module的版本 -->
+	<version>0.0.3-SNAPSHOT</version>
+
+	<modules>
+		<module>../bff-parent</module>
+	</modules>
+
+	<properties>
+		<!-- bff各模块采用统一的版本 -->
+		<bff.version>${project.version}</bff.version>
+	</properties>
+
+	<!-- 因为下面的artifacts之间可能存在特定版本的依赖关系，如果在不同的project或module中引用了不同的版本，就可能发生包冲突 -->
+	<!-- 依赖此bom可以保证对下面的artifacts都是按照固定的版本进行依赖，即不会因为依赖传递而对以下artifacts产生不同版本的依赖 -->
+	<dependencyManagement>
+		<!-- bff各模块版本定义 -->
+		<dependencies>
+			<dependency>
+				<groupId>com.dist</groupId>
+				<artifactId>bff-base-front</artifactId>
+				<type>war</type>
+				<version>${bff.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.dist</groupId>
+				<artifactId>bff-framework-front</artifactId>
+				<type>war</type>
+				<version>${bff.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<repositories>
+		<repository>
+			<id>DistNexus</id>
+			<url>http://58.246.138.178:22280/nexus/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>warn</checksumPolicy>
+			</snapshots>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>DistNexus</id>
+			<url>http://58.246.138.178:22280/nexus/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>warn</checksumPolicy>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+	<distributionManagement>
+		<repository>
+			<id>nexus-releases</id>
+			<url>http://58.246.138.178:22280/nexus/content/repositories/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<url>http://58.246.138.178:22280/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+</project>

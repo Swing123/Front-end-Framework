@@ -1,0 +1,28 @@
+/*
+*@import() 导入指令配置，需要要输出到最终输出的css文件（包括插件类库）则添加inline配置项,默认为css
+*@import() 需要对同一资源引入多次时则添加multiple配置，默认为once
+*/
+/*<%--平台插件类--%>*/
+@import (less) './library/bootstrap/less/bootstrap.less';
+@import (less) './library/font-awesome/less/font-awesome.less';//图标标签
+@import (less) './library/simple-line-icons/less/simple-line-icons.less';//图标标签
+@import (inline) './library/animate.css/animate.css';//animate.css,是实现动画效果
+@import (css) './library/layer/layer/skin/layer.css';//弹出框 不能配置为inline
+@import (inline) './library/jquery-linedtextarea/jquery-linedtextarea.css';//jQuery行编辑框类
+
+
+
+
+
+
+
+/*<%--项目拓展类--%>*/
+@import (less)'common/common.app.less';
+@import (less)'authentication/auth.app.less';
+
+
+/*<%--平台插件类--%>*/
+@import (css) './library/angular-ui-grid/ui-grid.min.css';
+@import (css) './library/bootstrap/dist/css/bootstrap-theme.min.css';
+@import (css) './library/angular-ui-layout/ui-layout.css';//第三方布局插件layout库类名
+//@import (css) './library/angular-ui-grid/ui-grid.bootstrap.css';//图标标签

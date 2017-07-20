@@ -1,0 +1,51 @@
+<h1><code ng:non-bindable="">wiAlert</code>
+<div><span class="hint">service in module <code ng:non-bindable="">dist.ui.alert</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="dist-ui-alert-wialert-page"><p>wiAlert 用来弹出常用的五种提醒弹出框：info,warning,error,success,confirm，它们有固定的图标和默认的标题，使用时仅需要指定提醒内容，当然你也可以自己指定标题。
+wiAlert的弹出框都是模态的，它会中断用户的其它操作，请在适当的场景中使用。</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_confirm">confirm(options)</h3>
+<div class="confirm"><div class="dist-ui-alert-wialert-confirm-page"><p>需要用户同意后才能进行其他操作的提示框。</p>
+</div><h5 id="methods_confirm_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>options</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="dist-ui-alert-wialert-confirm-page"><p>可以仅指定提示内容，也可以修改默认属性，可以修改的参数如下：<br>
+{<br>
+width： 提示框的宽度，默认为300<br>
+title：提示框的标题，支持html值。各种alert的默认标题 {info:&#39;提示&#39;,warn:&#39;警告&#39;,error:&#39;失败&#39;,success:&#39;成功&#39;,&#39;confirm&#39;:&#39;提示&#39;}<br>
+content：提示内容，支持html值，如：<span class="alertTitle">确定删除吗？</span><br>
+iconClass：提示框内容区域的图标样式。<br>
+yesLabel：按钮名称，默认为：确定<br>
+noLabel：按钮名称，默认为：取消<br>
+ }</p>
+</div></td></tr></tbody></table><h5 id="methods_confirm_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="dist-ui-alert-wialert-confirm-page"><p>返回一个promise,可以直接在返回对象的.yes()或.no()中对确定或取消进行处理。</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_error">error(options)</h3>
+<div class="error"><div class="dist-ui-alert-wialert-error-page"><p>失败信息提示框</p>
+</div><h5 id="methods_error_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>options</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="dist-ui-alert-wialert-error-page"><p>参见confirm的参数说明。</p>
+</div></td></tr></tbody></table><h5 id="methods_error_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="dist-ui-alert-wialert-error-page"><p>返回一个promise,可以直接在返回对象的.yes()中进行点击确定后的处理。</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_info">info(options)</h3>
+<div class="info"><div class="dist-ui-alert-wialert-info-page"><p>一般信息提示框</p>
+</div><h5 id="methods_info_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>options</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="dist-ui-alert-wialert-info-page"><p>参见confirm的参数说明。</p>
+</div></td></tr></tbody></table><h5 id="methods_info_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="dist-ui-alert-wialert-info-page"><p>返回一个promise,可以直接在返回对象的.yes()中进行点击确定后的处理。</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_success">success(options)</h3>
+<div class="success"><div class="dist-ui-alert-wialert-success-page"><p>操作成功信息提示框</p>
+</div><h5 id="methods_success_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>options</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="dist-ui-alert-wialert-success-page"><p>参见confirm的参数说明。</p>
+</div></td></tr></tbody></table><h5 id="methods_success_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="dist-ui-alert-wialert-success-page"><p>返回一个promise,可以直接在返回对象的.yes()中进行点击确定后的处理。</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_warn">warn(options)</h3>
+<div class="warn"><div class="dist-ui-alert-wialert-warn-page"><p>警告信息提示框</p>
+</div><h5 id="methods_warn_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>options</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="dist-ui-alert-wialert-warn-page"><p>参见confirm的参数说明。</p>
+</div></td></tr></tbody></table><h5 id="methods_warn_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="dist-ui-alert-wialert-warn-page"><p>返回一个promise,可以直接在返回对象的.yes()中进行点击确定后的处理。</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

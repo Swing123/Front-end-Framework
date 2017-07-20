@@ -1,0 +1,22 @@
+@import (reference) "less-nameset";
+/* ---------- popup ---------- */
+.wi-popup {}
+.wi-popup:focus {
+    outline: 0;
+}
+.wi-popup-open { /* 聚焦样式 */
+    .outline;
+}
+.wi-popup-menu {
+    display: none;
+    visibility: hidden;// 避免改变位置时发生闪烁，默认隐藏
+    position: absolute;
+    min-width: 160px;
+    padding: @popup-menu-padding 0;
+    background: @bg;
+    border: @popup-menu-bsize solid @border-c;
+//    border-radius: @border-radius;
+    .box-shadow();
+    background-clip: padding-box;
+}
+.wi-popup-menu-open { display: block; }

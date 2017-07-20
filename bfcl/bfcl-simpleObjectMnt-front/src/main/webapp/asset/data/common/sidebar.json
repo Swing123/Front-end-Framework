@@ -1,0 +1,53 @@
+{
+  "root": [
+    {
+      "icon": "fa fa-edit",
+      "templateUrl":"orgMnt/orgMnt.html",
+      "params":"{'name':'system.orgMnt','title':'机构管理'}",
+      "level-1": true
+    }
+  , {
+      "icon": "fa fa-edit",
+      "templateUrl":"userMnt/userMnt.html",
+      "params":"{'name':'system.userMnt','title':'人员管理'}",
+      "level-1": true
+    }
+  , {
+      "icon": "fa fa-edit",
+      "templateUrl":"orgMnt/orgUserSetter.html",
+      "params":"{'name':'system.orgUserMnt','title':'机构人员管理'}",
+      "level-1": true
+    }
+  , {
+      "icon": "fa fa-edit",
+      "templateUrl":"ldapSync/appMnt.html",
+      "params":"{'name':'ldapSync.appMnt','title':'应用管理'}",
+      "level-1": true
+    }
+  ,{
+      "icon": "fa fa-edit",
+      "templateUrl":"ldapSync/appTaskMnt.html",
+      "params":"{'name':'ldapSync.appTaskMnt','title':'任务管理'}",
+      "level-1": true
+    }
+  , {
+      "icon": "fa fa-edit",
+      "templateUrl":"ldapSync/syncLogMnt.html",
+      "params":"{'name':'ldapSync.syncLogMnt','title':'汇总日志管理'}",
+      "level-1": true
+    }
+  , {
+      "icon": "fa fa-edit",
+      "templateUrl":"ldapSync/syncLogDetailMnt.html",
+      "params":"{'name':'ldapSync.syncLogMnt','title':'明细日志管理'}",
+      "level-1": true
+    }
+  ],
+  "config":{
+    "minimized":false,
+    "hover":false,
+    "highlight":false,
+    "fixed":false,
+    "compact":false
+  }
+}

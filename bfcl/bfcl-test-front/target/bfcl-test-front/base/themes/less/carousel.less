@@ -1,0 +1,100 @@
+@import (reference) "less-nameset";
+/* ---------- carousel ---------- */
+.wi-carousel {
+    position: relative;
+    height: 100%;
+}
+.wi-carousel-inner {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    height: 100%;
+}
+/* wi-carousel-ctrl ： 上一张、下一张 */
+.wi-carousel > a {
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    width: 15%;
+    color: @carousel-ctrl-color;/* 箭头颜色 */
+    .opacity(50);
+    text-decoration: none;
+}
+.wi-carousel > a:hover,
+.wi-carousel > a:focus {
+    text-decoration: none;
+    outline: none;
+    .opacity(90);
+}
+a.wi-carousel-ctrl-left {
+    text-align: left;
+    left: 0;
+    .carousel-ctrl-left-bg;
+}
+a.wi-carousel-ctrl-right {
+    text-align: right;
+    right: 0;
+    .carousel-ctrl-right-bg;
+}
+.wi-carousel > a > span {
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    font-size: @carousel-ctrl-size;
+    width: @carousel-ctrl-size;
+    height: @carousel-ctrl-size;
+    margin-top: 0 - floor(@carousel-ctrl-size / 2);
+}
+a.wi-carousel-ctrl-left > span { left: 50%; margin-left: 0 - floor(@carousel-ctrl-size / 2); }
+a.wi-carousel-ctrl-right > span { right: 50%; margin-right: 0 - floor(@carousel-ctrl-size / 2); }
+ul.wi-carousel-ul {
+    margin-left: -30%;
+    position: absolute;
+    left: 50%;
+    z-index: 1;
+    width: 60%;
+    text-align: center;
+    bottom: 20px;
+}
+.wi-carousel-ul > li {
+    margin: @carousel-li-border-size;// 同 border-size
+    width: @carousel-li-size;
+    height: @carousel-li-size;
+    border-radius: @carousel-li-size;
+    border: @carousel-li-border-size solid @carousel-li-color;
+    display: inline-block;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: @carousel-li-light-color;
+}
+.wi-carousel-ul > li.wi-carousel-active {
+    margin: 0;
+    width: @carousel-li-size + 2 * @carousel-li-border-size;// 普通尺寸 + 2 * border-size
+    height: @carousel-li-size + 2 * @carousel-li-border-size;
+    background-color: @carousel-li-color;
+}
+/* ---------- slide ---------- */
+.wi-slide {
+    position: relative;
+    display: none;
+    -webkit-transition: .6s ease-in-out left;
+    transition: .6s ease-in-out left;
+}
+.wi-slide-active,
+.wi-slide-next,
+.wi-slide-prev { display: block; }
+.wi-slide-active { left: 0; }
+.wi-slide-next,
+.wi-slide-prev {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.wi-slide-next.wi-slide-left,
+.wi-slide-prev.wi-slide-right { left: 0; }
+.wi-slide-next,
+.wi-slide-active.wi-slide-right { left: 100%; }
+.wi-slide-prev,
+.wi-slide-active.wi-slide-left { left: -100%; }

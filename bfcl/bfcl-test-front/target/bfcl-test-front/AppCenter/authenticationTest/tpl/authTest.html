@@ -1,0 +1,28 @@
+<div ng-controller="comTableController" style="background: #ffffff">
+    <div class="col-md-12">
+        <br/> <h3>第一组权限测试，目标：按钮，a标签，div盒子</h3>
+
+        <br/>  <h5>按钮：</h5>id为：button_authenticationTest_0001权限认证通过后显示，否则隐藏<br/>
+        <button auth-permission="{'id':'button_authenticationTest_0001','groupLabel':'preBox'}" class="btn btn-info btn-sm">测试按钮1</button>
+        <br/> id为：button_authenticationTest_0001权限认证通过后显示，否则隐藏<br/>
+        <button auth-permission="{'id':'button_authenticationTest_0001','groupLabel':'preBox1'}" class="btn btn-info btn-sm">测试按钮2</button>
+        <br/> id为：button_authenticationTest_0008权限认证通过后使能，否则禁止<br/>
+        <button auth-permission="{'id':'button_authenticationTest_0008','action':'disable'}" class="btn btn-info btn-sm">测试按钮3</button>
+
+
+        <br/><br/><br/><h5>a标签：</h5> id为：a_authenticationTest_0001权限认证通过后显示，否则隐藏<br/>
+        <a auth-permission="{'id':'a_authenticationTest_0001'}" >跳转链接1</a>
+        <br/> id为：a_authenticationTest_0008权限认证通过后显示，否则隐藏<br/>
+        <a auth-permission="{'id':'a_authenticationTest_0008'}">跳转链接2</a>
+        <br/> id为：a_authenticationTest_0008权限认证通过后使能，否则禁止<br/>
+        <a auth-permission="{'id':'a_authenticationTest_0008','action':'disable'}">跳转链接3</a>
+
+        <br/><br/><br/><h5>div盒子：</h5> id为：div_authenticationTest_0001权限认证通过后显示，否则隐藏<br/>
+        <div auth-permission="{'id':'div_authenticationTest_0001'}" class="btn-info">我是div1,我的存在说明我具有显示的权限</div>
+        <br/> id为：div_authenticationTest_0008权限认证通过后显示，否则隐藏<br/>
+        <div auth-permission="{'id':'div_authenticationTest_0008','groupLabel':'authenticationTest'}"  class="btn-info">我是div2,我的存在说明我具有显示的权限</div>
+        <br/> id为：div_authenticationTest_0008权限认证通过后使能，否则禁止<br/>
+        <div auth-permission="{'id':'div_authenticationTest_0008','action':'disable'}" class="btn-info">我是div2,我灰掉说明我具有显示的权限</div>
+    </div>
+
+</div>

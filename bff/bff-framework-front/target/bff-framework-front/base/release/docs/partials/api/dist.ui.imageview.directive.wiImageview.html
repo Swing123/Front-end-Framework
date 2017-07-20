@@ -1,0 +1,31 @@
+<h1><code ng:non-bindable="">wiImageview</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">dist.ui.imageview</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="dist-ui-imageview-directive-page dist-ui-imageview-directive-wiimageview-page"><p>图片查看组件</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;wi-imageview
+       width="{pixels}"
+       height="{pixels}"
+       [adaptive="{boolean}"]
+       imageurls="{array}"
+       imagedata="{object}"
+       [openindex="{number}"]
+       [previous="{function}"]
+       [next="{function}"]
+       [close="{function}"]&gt;
+&lt;/wi-imageview&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>width</td><td><a href="" class="label type-hint type-hint-pixels">pixels</a></td><td><div class="dist-ui-imageview-directive-page dist-ui-imageview-directive-wiimageview-page"><p>组件宽度(不含单位：px)。</p>
+</div></td></tr><tr><td>height</td><td><a href="" class="label type-hint type-hint-pixels">pixels</a></td><td><div class="dist-ui-imageview-directive-page dist-ui-imageview-directive-wiimageview-page"><p>组件高度(不含单位：px)。</p>
+</div></td></tr><tr><td>adaptive <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-imageview-directive-page dist-ui-imageview-directive-wiimageview-page"><p>第一次打开图片时是否自适应大小，默认值false</p>
+</div></td></tr><tr><td>imageurls</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="dist-ui-imageview-directive-page dist-ui-imageview-directive-wiimageview-page"><p>支持的第一种数据源：图片地址数组，如果数组中只有一张图片，则没有上一张和下一张按钮</p>
+</div></td></tr><tr><td>imagedata</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="dist-ui-imageview-directive-page dist-ui-imageview-directive-wiimageview-page"><p>支持的第二种数据源：图片数据对象，类型为ImageData</p>
+</div></td></tr><tr><td>openindex <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="dist-ui-imageview-directive-page dist-ui-imageview-directive-wiimageview-page"><p>初始打开图片序号(数据源为imageurls时)，未绑定此属性，则默认值为0</p>
+</div></td></tr><tr><td>previous <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-imageview-directive-page dist-ui-imageview-directive-wiimageview-page"><p>点击上一张图片按钮时回调方法，可与imagedata数据源结合实现上一页功能；如果未设置该回调方法，则无上一页按钮</p>
+</div></td></tr><tr><td>next <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-imageview-directive-page dist-ui-imageview-directive-wiimageview-page"><p>点击下一张图片按钮时回调方法，可与imagedata数据源结合实现下一页功能；如果未设置该回调方法，则无下一页按钮</p>
+</div></td></tr><tr><td>close <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-imageview-directive-page dist-ui-imageview-directive-wiimageview-page"><p>关闭时的回调方法</p>
+</div></td></tr></tbody></table></div>
+</div>

@@ -1,0 +1,160 @@
+{
+  "lists": [
+    {
+      "label": "首页",
+      "header":"业务导航",
+      "icon":"fa fa-list-alt icon text-info-dker",
+      "permission":"{'users':['admin'],'action':'enable'}",
+      "ui_sref": "sidebar.content",
+      "params": "{url:'AppCenter-appApprove-tpl-approveOnHandling',tabName:'首页',tabGroup:''}"
+    },
+    {
+      "label": "业务审批",
+      "icon":"fa fa-th icon text-info-dker",
+      "submenu": [
+        {
+          "label": "新建",
+          "ui_sref": "sidebar.content",
+          "permission":"{'users':['admin'],'action':'enable'}",
+          "params": "{url:'AppCenter-appApprove-tpl-approveNew',tabName:'新建',tabGroup:'businessApproveNew'}"
+        },
+        {
+          "label": "待办箱",
+          "ui_sref": "sidebar.content",
+          "params": "{url:'AppCenter-appApprove-tpl-approveOnHandling',tabName:'待办箱',tabGroup:'businessApproveOnHandling'}"
+        },
+        {
+          "label": "项目查询",
+          "ui_sref": "sidebar.content",
+          "permission":"{'users':['admin'],'action':'show'}",
+          "params": "{url:'AppCenter-appApprove-tpl-approveProjectQuery',tabName:'项目查询',tabGroup:''}"
+        }
+      ]
+    },
+    {
+      "label": "多层目录",
+      "icon":"fa fa-th icon text-info-dker",
+      "submenu": [
+        {
+          "label": "一级目录",
+          "ui_sref": "sidebar.content",
+          "params": "{url:'AppCenter-appApprove-tpl-approveHandled',tabName:'一级在办',tabGroup:'planApprove'}"
+        },
+        {
+          "label": "二级目录",
+          "submenu": [
+            {
+              "label": "三级目录",
+              "ui_sref": "sidebar.content",
+              "permission":"{'users':['admin'],'action':'enable'}",
+              "params": "{url:'AppCenter-appApprove-tpl-approveHandled',tabName:'三级目录',tabGroup:'planApprove'}"
+            },
+            {
+              "label": "三级目录",
+              "ui_sref": "sidebar.content",
+              "params": "{url:'AppCenter-appApprove-tpl-approveHandled',tabName:'三级目录',tabGroup:'planApprove'}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "权限测试",
+      "header":"框架测试",
+      "permission":"{'users':['admin'],'action':'show'}",
+      "icon":"fa fa-th icon text-info-dker",
+      "submenu": [
+        {
+          "label": "权限验证",
+          "ui_sref": "sidebar.content",
+          "permission":"{'users':['admin'],'action':'show'}",
+          "params": "{url:'AppCenter-authenticationTest-tpl-authTest',tabName:'权限认证',tabGroup:'authentication'}"
+        }
+      ]
+    },
+    {
+      "label": "组件测试",
+      "permission":"{'users':['admin'],'action':'show'}",
+      "icon":"fa fa-th icon text-info-dker",
+      "submenu": [
+        {
+          "label": "tab",
+          "ui_sref": "sidebar.content",
+          "permission":"{'users':['admin'],'action':'show'}",
+          "params": "{url:'AppCenter-componentsTest-tpl-comTab',tabName:'tab',tabGroup:'itemList'}"
+        },
+        {
+          "label": "项目树",
+          "ui_sref": "sidebar.content",
+          "permission":"{'users':['admin'],'action':'show'}",
+          "params": "{url:'AppCenter-componentsTest-tpl-comProjectTree',tabName:'项目树',tabGroup:'itemList'}"
+        },
+        {
+          "label": "下拉选择+多级树",
+          "ui_sref": "sidebar.content",
+          "permission":"{'users':['admin'],'action':'show'}",
+          "params": "{url:'AppCenter-componentsTest-tpl-comTreeSelect',tabName:'下拉选择+多级树',tabGroup:'itemList'}"
+        },
+        {
+          "label": "按钮组",
+          "ui_sref": "sidebar.content",
+          "permission":"{'users':['admin'],'action':'show'}",
+          "params": "{url:'AppCenter-componentsTest-tpl-comButtonGroup',tabName:'按钮组',tabGroup:'itemList'}"
+        },
+        {
+          "label": "Tables",
+          "submenu": [
+            {
+              "label": "ui-grid",
+              "ui_sref": "sidebar.content",
+              "permission":"{'users':['admin'],'action':'enable'}",
+              "params": "{url:'AppCenter-componentsTest-tpl-comTableUiGrid',tabName:'ui-grid',tabGroup:'tableTest'}"
+            },
+            {
+              "label": "others",
+              "ui_sref": "sidebar.content",
+              "params": "{url:'AppCenter-componentsTest-tpl-comTableOther',tabName:'other',tabGroup:'tableTest'}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "快捷窗口",
+      "icon":"fa fa-th icon text-info-dker",
+      "permission":"{'users':['admin'],'action':'show'}",
+      "submenu": [
+        {
+          "label": "登录",
+          "ui_sref": "access.signin",
+          "permission":"{'users':['admin'],'action':'show'}",
+          "params": ""
+        },
+        {
+          "label": "忘记密码",
+          "ui_sref": "access.forgotpwd",
+          "permission":"{'users':['admin'],'action':'show'}",
+          "params": ""
+        },
+        {
+          "label": "404",
+          "ui_sref": "access.404",
+          "permission":"{'users':['admin'],'action':'show'}",
+          "params": ""
+        },
+        {
+          "label": "屏幕锁定",
+          "ui_sref": "access.lockme",
+          "permission":"{'users':['admin'],'action':'show'}",
+          "params": ""
+        },
+        {
+          "label": "登出",
+          "ui_sref": "access.login",
+          "permission":"{'users':['admin'],'action':'show'}",
+          "params": ""
+        }
+      ]
+    }
+  ]
+}

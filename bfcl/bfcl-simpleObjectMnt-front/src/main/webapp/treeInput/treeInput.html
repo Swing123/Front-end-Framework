@@ -1,0 +1,15 @@
+<div >
+    <input ng-hide="true" ng-model="returnvalue" type="text" class="form-control" />
+    <input ng-click="visible=!visible" readonly value="{{displayvalue}}" type="text" class="form-control" placeholder="{{placeholder}}" />
+    <p ng-show="visible" style="border:1px solid #CCC; width:92%; height: 250px;">
+        <wi-tree dataProvider="treedata"
+                 idfield="{{::treeidfield}}"
+                 pidfield="{{::treepidfield}}"
+                 labelfield="{{::treelabelfield}}"
+                 multiselect="false"
+                 onSelect="onSelect"
+                 onItemClick="onClick"
+                wid="mytree">
+        </wi-tree>
+    </p>
+</div>

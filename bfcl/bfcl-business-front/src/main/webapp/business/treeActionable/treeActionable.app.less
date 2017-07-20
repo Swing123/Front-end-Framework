@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+@bg: #fff;
+@primary: #1199c4;
+@fileUploadDateWidth: 120px;
+@fileSizeWidth: 100px;
+@treeActionsWidth: 80px;
+
+//顶部标题栏
+.dist-tree-actionable {
+  background-color: @bg;
+  border:1px solid #e4e4e4;
+  margin-bottom: 0 !important;
+  th {
+    background-color: #f2f2f2;
+  }
+}
+
+//文件树
+.tree {
+  .fa-folder-add {
+    width: 16px;
+    height: 16px;
+    background-image:url('./images/folder_add_48px.png');
+    background-size: 100%;
+    vertical-align: middle;
+  }
+
+  .tree-actions {
+    width:@treeActionsWidth;
+  }
+  .file-upload-date, .file-size, .tree-actions {
+    position: absolute;
+    text-align: left;
+    top:5px;
+  }
+  .file-upload-date {
+    width: @fileUploadDateWidth;
+    right: @treeActionsWidth+@fileSizeWidth;
+  }
+  .file-size {
+    width:@fileSizeWidth;
+    right:@treeActionsWidth;
+  }
+
+}
+
+//添加目录弹出层
+.dialog-add-folder {
+  display:block;
+  >.modal-backdrop {
+    z-index:1;
+    background-color: rgba(33,33,33, .3);
+  }
+  >.modal-dialog {
+    z-index:2;
+  }
+
+  .form-group {
+    overflow: auto;
+  }
+}

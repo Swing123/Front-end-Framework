@@ -1,0 +1,40 @@
+<div simple-object-modify
+     id="id"
+     ok="ok()"
+     cancel="cancel()"
+     preparedata="preparedata"
+     newdata="newdata"
+     config='
+        {
+            "title": "增加角色"
+            , "properties": [
+                {
+                    "name": "name",
+                    "type": "input",
+                    "label": "名称",
+                    "placeholder": "：角色名称",
+                    "defaultValue": ""
+                }
+                , {
+                    "name": "type",
+                    "type": "list",
+                    "label": "类型",
+                    "placeholder": "：请选择",
+                    "data": "types",
+                    "dataMap": {
+                        "id": "type",
+                        "label": "name"
+                    },
+                    "defaultValue": ""
+                }
+                , {
+                    "name": "displayOrder",
+                    "type": "input",
+                    "label": "显示顺序",
+                    "placeholder": "：显示顺序值越大,显示越靠前",
+                    "defaultValue": "999"
+                }
+            ]
+        }
+'>
+</div>

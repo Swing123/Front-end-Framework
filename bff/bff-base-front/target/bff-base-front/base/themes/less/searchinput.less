@@ -1,0 +1,42 @@
+@import (reference) "less-nameset";
+/* ---------- searchinput ---------- */
+.wi-searchinput {
+    position: relative;
+    display: inline-block;
+    background-color: @textinput-bg;
+}
+.wi-searchinput > input[type='text'] {
+    border: @searchinput-border;
+    border-right: none;
+    box-shadow: none;
+    @xx: @searchinput-h - @searchinput-border-size;
+    width: calc(~"100% - @{xx}");
+}
+.wi-searchinput > .fa-search {
+    border: @searchinput-border;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    .btn-bg();
+    color: @btn-font-color;
+    width: @searchinput-h;
+    cursor: pointer;
+    line-height: inherit;
+}
+.wi-searchinput > .fa-search:hover{
+    .btn-hover-bg();
+    color: @btn-hover-font-color;
+}
+.wi-searchinput > .fa-search:active{
+    color: @btn-activer-font-color;
+    .btn-active-bg();
+    .outline();
+}
+.wi-searchinput > .fa-search:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 0 - floor(@font-size*1.5 / 2);// 1.5 为行高
+    margin-left: 0 - floor(@font-size / 2);// 1.5 为行高
+}

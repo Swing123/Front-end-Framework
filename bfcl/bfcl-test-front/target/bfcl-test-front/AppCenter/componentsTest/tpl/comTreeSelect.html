@@ -1,0 +1,19 @@
+<p>下拉列表+多级树</p>
+<div ng-controller="comTreeSelectController as ctrl">
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-2">
+                <dist-tree-select class="treeSelect" tree-data="multiItems" tree-placeholder="请选择业务" tree-confirm-click="confirmClick" ng-disabled="disabled" placeholder="请选择">
+                </dist-tree-select>
+            </div>
+            <div class="col-md-10">
+                <dist-tree-select class="treeSelect" tree-data="items" tree-placeholder="请选择业务" tree-confirm-click="confirmClick" ng-disabled="disabled" placeholder="请选择">
+                </dist-tree-select>
+            </div>
+        </div>
+    </div>
+
+</div>
+

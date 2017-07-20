@@ -1,0 +1,26 @@
+
+
+  <div class="buttonGroup" ng-init="hideMore=true">
+    <div style="float:right;width:50px">
+      <div class="btn-group">
+        <button class="btn btn-default " ng-click="hideMore=!hideMore;">
+          <i class="fa text" aria-hidden="true" ng-class="{'fa-angle-down':hideMore,'display-none':!hideMore}">
+            <span>更多</span>
+          </i>
+          <i class="fa text" aria-hidden="true" ng-class="{'fa-angle-up':!hideMore,'display-none':hideMore}">
+            <span>收起</span>
+          </i>
+        </button>
+      </div>
+    </div>
+    <div style="margin-right:50px;" ng-class="{'hideButtons':hideMore}" hide-overflow>
+      <div class="btn-group">
+        <button ng-repeat="list in conf.buttonLists track by $index " ng-click="vmEvents.singleClick(list)" ng-dblClick="vmEvents.doubleClick(list)" ng-class="[list.style]">
+            <i ng-class="[list.icon]"></i><span class="text">{{list.name}}</span>
+        </button>
+      </div>
+    </div>
+    <div style="clear:both;"></div>
+
+  </div>
+

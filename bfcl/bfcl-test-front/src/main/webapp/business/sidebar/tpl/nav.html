@@ -1,0 +1,55 @@
+<!-- list -->
+<ul class="nav" >
+  <li ng-if="first.header" class="hidden-folded padder m-t m-b-sm text-muted text-xs" ng-repeat-start="first in config.lists">
+    <span auth-permission="{{first.permission}}" >{{first.header}}</span>
+  </li>
+  <li ui-sref-active="active" ng-if="!first.submenu"><!--一级菜单没有子目录时-->
+    <a auth-permission="{{first.permission}}" ui-sref="{{first.ui_sref}}({{first.params}})">
+      <i ng-class="[first.icon]"></i>
+      <span class="font-bold" >{{first.label}}</span>
+    </a>
+  </li>
+  <li ng-repeat-end ng-if="first.submenu">
+    <a auth-permission="{{first.permission}}" href class="auto" >
+        <span class="pull-right text-muted">
+          <i class="fa fa-fw fa-angle-right text"></i>
+          <i class="fa fa-fw fa-angle-down text-active"></i>
+        </span>
+      <i ng-class="[first.icon]"></i>
+      <!--<i class="glyphicon glyphicon-stats icon text-primary-dker" ></i>-->
+      <span class="font-bold" >{{first.label}}</span>
+    </a>
+    <ul class="nav nav-sub dk">
+      <li class="nav-sub-header">
+        <a href>
+          <span >{{first.label}}</span>
+        </a>
+      </li>
+      <li ui-sref-active="active" ng-if="!second.submenu" ng-repeat-start="second in first.submenu">
+        <a  auth-permission="{{second.permission}}" ui-sref="{{second.ui_sref}}({{second.params}})">
+          <span>{{second.label}}</span>
+        </a>
+      </li>
+      <li ng-if="second.submenu" ng-repeat-end>
+        <a auth-permission="{{second.permission}}" href class="auto">
+          <span class="pull-right text-muted">
+            <i class="fa fa-fw fa-angle-right text"></i>
+            <i class="fa fa-fw fa-angle-down text-active"></i>
+          </span>
+          <b class="label bg-info pull-right">2</b>
+          <span>{{second.label}}</span>
+        </a>
+        <ul class="nav dker">
+            <li ui-sref-active="active" ng-repeat="third in second.submenu">
+              <a  auth-permission="{{third.permission}}" ui-sref="{{third.ui_sref}}({{third.params}})">
+                <span >{{third.label}}</span>
+              </a>
+            </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+
+</ul>
+<!-- / list -->
+

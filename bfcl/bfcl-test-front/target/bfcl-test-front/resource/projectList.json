@@ -1,0 +1,13 @@
+{
+  "projectList":[
+    {"projectName":"在办选址","company":"市局","projectNo":"20120223","activityName":"接件","administrative":"市局","businessType":"选址","state":"在办","isSupervise":false,"isLove":false,"startTime":"2016-7-9 12:00:00","theoryEndTime":"2016-9-7 12:00:00"},
+    {"projectName":"在办工程","company":"市局","projectNo":"20120323","activityName":"接件","administrative":"市局","businessType":"工程","state":"在办","isSupervise":false,"isLove":false,"startTime":"2016-7-9 12:00:00","theoryEndTime":"2016-9-10 12:00:00"},
+    {"projectName":"在办度假选址","company":"度假","projectNo":"20120423","activityName":"接件","administrative":"度假区","businessType":"度假区选址","state":"在办","isSupervise":false,"isLove":false,"startTime":"2016-7-9 12:00:00","theoryEndTime":"2016-11-18 12:00:00"},
+    {"projectName":"在办度假工程","company":"度假","projectNo":"20120523","activityName":"接件","administrative":"度假区","businessType":"度假区工程","state":"在办","isSupervise":true,"isLove":false,"startTime":"2016-7-9 12:00:00","theoryEndTime":"2016-11-19 12:00:00"},
+    {"projectName":"在办高新选址","company":"高新","projectNo":"20120623","activityName":"接件","administrative":"高新区","businessType":"高新区选址","state":"在办","isSupervise":false,"isLove":false,"startTime":"2016-7-9 12:00:00","theoryEndTime":"2016-12-8 12:00:00"},
+    {"projectName":"缓办高新选址","company":"高新","projectNo":"20120723","activityName":"接件","administrative":"高新区","businessType":"高新区选址","state":"缓办","isSupervise":false,"isLove":true,"startTime":"2016-7-9 12:00:00","theoryEndTime":"2016-12-9 12:00:00"},
+    {"projectName":"上会高新工程","company":"高新","projectNo":"20120823","activityName":"接件","administrative":"高新区","businessType":"高新区工程","state":"申请上会中","isSupervise":false,"isLove":false,"startTime":"2016-7-9 12:00:00","theoryEndTime":"2016-12-18 12:00:00"},
+    {"projectName":"缓办张浦选址","company":"张浦","projectNo":"20120923","activityName":"接件","administrative":"张浦镇","businessType":"张浦镇选址","state":"缓办","isSupervise":false,"isLove":false,"startTime":"2016-7-9 12:00:00","theoryEndTime":""},
+    {"projectName":"上会张浦工程","company":"张浦","projectNo":"20121023","activityName":"接件","administrative":"张浦镇","businessType":"张浦镇工程","state":"申请上会中","isSupervise":false,"isLove":false,"startTime":"2016-7-9 12:00:00","theoryEndTime":""}
+  ]
+}

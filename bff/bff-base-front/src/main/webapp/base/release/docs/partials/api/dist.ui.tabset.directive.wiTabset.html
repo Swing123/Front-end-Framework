@@ -1,0 +1,44 @@
+<h1><code ng:non-bindable="">wiTabset</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">dist.ui.tabset</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="dist-ui-tabset-directive-page dist-ui-tabset-directive-witabset-page"><p>标签页组件标签，内部可包含wiTab标签页定义</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;wi-tabset
+       [width="{number|length}"]
+       [height="{number|length}"]
+       [vertical="{boolean}"]
+       [tabheadsize="{pixels}"]
+       [closeable="{boolean}"]
+       [enablerightmenu="{boolean}"]
+       [wid="{object}"]
+       [onbeforeclose="{function}"]
+       [onclose="{function}"]
+       [onselect="{function}"]&gt;
+&lt;/wi-tabset&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>width <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a><a href="" class="label type-hint type-hint-length">length</a></td><td><div class="dist-ui-tabset-directive-page dist-ui-tabset-directive-witabset-page"><p>组件宽度，默认为 100%。<br />
+number 将自动添加单位 px。<br />
+length 为 number 接长度单位（相对单位和绝对单位）。<br />
+相对单位：em, ex, ch, rem, vw, vh, vm, %<br />
+绝对单位：cm, mm, in, pt, pc, px</p>
+</div></td></tr><tr><td>height <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a><a href="" class="label type-hint type-hint-length">length</a></td><td><div class="dist-ui-tabset-directive-page dist-ui-tabset-directive-witabset-page"><p>组件高度，默认由内容撑开。<br />
+说明同 width。</p>
+</div></td></tr><tr><td>vertical <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-tabset-directive-page dist-ui-tabset-directive-witabset-page"><p>标签页是否纵向排列，默认为 false。</p>
+</div></td></tr><tr><td>tabheadsize <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-pixels">pixels</a></td><td><div class="dist-ui-tabset-directive-page dist-ui-tabset-directive-witabset-page"><p>标签页头高度（纵向为宽度）(不含单位：px)，默认为 36。</p>
+</div></td></tr><tr><td>closeable <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-tabset-directive-page dist-ui-tabset-directive-witabset-page"><p>所有标签（非固定）支持关闭，默认为 true，此时不支持禁用标签（wi-tab 中 disable 属性失效）。</p>
+</div></td></tr><tr><td>enablerightmenu <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-tabset-directive-page dist-ui-tabset-directive-witabset-page"><p>是否启用标签页右键菜单，默认为 false。若 closeable=false，此属性失效。</p>
+</div></td></tr><tr><td>wid <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="dist-ui-tabset-directive-page dist-ui-tabset-directive-witabset-page"><p>若定义了此属性，可供调用接口。调用方法参见：wid.</p>
+</div></td></tr><tr><td>onbeforeclose <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-tabset-directive-page dist-ui-tabset-directive-witabset-page"><p>关闭标签页前的回调方法名，该方法若返回 false 将阻止关闭，参数为标签对应的 data：</p>
+<ul>
+<li>wiid: 初始化 wi-tab 指令时设置的 wiid 属性值</li>
+<li>src: 初始化 wi-tab 指令时设置的 src 属性值</li>
+<li>icon: 初始化 wi-tab 指令时设置的 src 属性值</li>
+<li>heading: 初始化 wi-tab 指令时设置的 heading 属性值，或 wi-tab-heading 中的html字符串</li>
+</ul>
+</div></td></tr><tr><td>onclose <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-tabset-directive-page dist-ui-tabset-directive-witabset-page"><p>关闭标签页后的回调方法名，参数同 onbeforeclose.</p>
+</div></td></tr><tr><td>onselect <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-tabset-directive-page dist-ui-tabset-directive-witabset-page"><p>标签选中后的回调方法名，返回 false 时将阻止关闭，参数同 onbeforeclose.</p>
+</div></td></tr></tbody></table></div>
+</div>

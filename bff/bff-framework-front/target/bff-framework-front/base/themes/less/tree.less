@@ -1,0 +1,60 @@
+@import (reference) "less-nameset";
+/* ---------- tree ---------- */
+.wi-tree { }
+.wi-tree-root{ }
+.wi-tree > li { cursor: pointer;}
+.wi-tree-item{ height: @tree-item-h;}
+.wi-tree-item:hover{
+    color: @hover-color;
+    background-color: @hover-bg;
+}
+.wi-tree-current,
+.wi-tree-current:hover{
+    color: @sel-color;
+    background-color: @sel-bg;
+}
+
+.wi-tree-pre{
+    display: inline-block;
+    width:@tree-icon-size; height:@tree-icon-size;
+    vertical-align: middle;
+    text-align: center;
+}
+.wi-tree-loading {
+    background:url('images/tree/loading.gif') no-repeat center center;
+}
+.wi-tree-node,
+.wi-tree-node-o,
+.wi-tree-node-f,
+.wi-tree-line,
+.wi-tree-folder,
+.wi-tree-folder-o,
+.wi-tree-file,
+.wi-tree-check,
+.wi-tree-check-semi,
+.wi-tree-check-all{ background:url('images/tree/tree.gif') no-repeat;}
+/* 关闭状态 */
+.wi-tree-node{ background-position:0 -44px;}
+.wi-tree>li:last-child>.wi-tree-item>.wi-tree-node{ background-position:0 -66px;}
+.wi-tree-root>li:first-child>.wi-tree-item>.wi-tree-node{ background-position:0 -22px;}
+.wi-tree-root>li:only-child>.wi-tree-item>.wi-tree-node{ background-position:0 0;}
+/* 打开状态 */
+.wi-tree-node-o{ background-position:-22px -44px;}
+.wi-tree>li:last-child>.wi-tree-item>.wi-tree-node-o{ background-position:-22px -66px;}
+.wi-tree-root>li:first-child>.wi-tree-item>.wi-tree-node-o{ background-position:-22px -22px;}
+.wi-tree-root>li:only-child>.wi-tree-item>.wi-tree-node-o{ background-position:-22px 0;}
+/* 子节点 */
+.wi-tree-node-f{ background-position:-44px -44px;}
+.wi-tree>li:last-child>.wi-tree-item>.wi-tree-node-f{ background-position:-44px -66px;}
+.wi-tree-root>li:first-child>.wi-tree-item>.wi-tree-node-f{ background-position:-44px -22px;}
+.wi-tree-root>li:only-child>.wi-tree-item>.wi-tree-node-f{ background-position:-44px 0;}
+.wi-tree-line{background-position:-88px -66px;}
+.wi-tree-indent{background:none;}
+.wi-tree-lines{ display: inline-block;}
+/* 文件图标、复选框 */
+.wi-tree-folder{ background-position:-88px 0;}
+.wi-tree-folder-o{ background-position:-88px -22px;}
+.wi-tree-file{ background-position:-88px -44px;}
+.wi-tree-check{ background-position:-66px 0;}
+.wi-tree-check-semi{ background-position:-66px -44px;}
+.wi-tree-check-all{ background-position:-66px -22px;}

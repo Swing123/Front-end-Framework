@@ -1,0 +1,53 @@
+<div simple-object-modify
+     id="id"
+     ok="ok()"
+     cancel="cancel()"
+     preparedata="preparedata"
+     newdata="newdata"
+     config='
+        {
+            "title": "修改用户信息"
+            , "properties": [
+                {
+                    "name": "id",
+                    "type": "input",
+                    "label": "id",
+                    "readonly": "true",
+                }
+                , {
+                  "name": "name",
+                  "type": "input",
+                  "label": "姓名",
+                  "placeholder": "：请输入",
+                  "defaultValue": ""
+                }
+                , {
+                  "name": "type",
+                  "type": "list",
+                  "label": "类型",
+                  "placeholder": "：请选择",
+                  "data": "types",
+                  "dataMap": {
+                    "id": "type",
+                    "label": "name"
+                  },
+                  "defaultValue": ""
+                }
+                , {
+                  "name": "displayOrder",
+                  "type": "input",
+                  "label": "显示顺序",
+                  "placeholder": "：在同级中,显示顺序值越大,显示越靠前",
+                  "defaultValue": "999"
+                }
+                , {
+                    "name": "password",
+                    "type": "input",
+                    "label": "登录密码",
+                    "placeholder": "：请输入",
+                    "defaultValue": "123"
+                }
+            ]
+        }
+'>
+</div>

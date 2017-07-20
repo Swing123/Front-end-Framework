@@ -1,0 +1,19 @@
+<div ng-controller="comTabController">
+    <h4>选项卡测试页面</h4>
+    <h4>功能测试：<br/>（1）通过a标签、JS代码实现tab新增、跳转<br/>（2）tab切换、浏览器刷新时tab信息会话存储。<br/>（3）tab点击删除、命令删除</h4>
+
+   <br/>
+   <br/>
+    <a ui-sref="sidebar.content({url:'AppCenter-appApprove-tpl-approveOnHandling',tabName:'新增1',tabGroup:'itemList',params:''})">我是a标签，点击我实现页面新增、跳转</a><br/>
+    <a ui-sref="sidebar.content({url:'AppCenter-appApprove-tpl-approveOnHandling',tabName:'新增1',tabGroup:'businessApprove',params:''})">我是a标签，我还可以实现跨组页面新增、跳转</a><br/>
+    <a ui-sref="sidebar.content({url:'AppCenter-authenticationTest-tpl-authTest',tabName:'权限认证',tabGroup:'authentication',params:''})">我是a标签，点击我实现页面跳转，我将跳向权限验证页面</a><br/>
+   <br/>
+   <button class="btn btn-info btn-sm" ng-click="tabClickTest()">我是按钮，我也可以通过JS实现对tab的操作</button>
+
+   <br/>
+   <br/>
+   <button class="btn btn-info btn-sm" ng-click="clickClose()">我是按钮，我可以关掉指定的tab</button>
+    <br/>
+    <br/>
+
+</div>

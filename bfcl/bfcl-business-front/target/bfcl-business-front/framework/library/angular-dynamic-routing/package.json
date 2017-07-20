@@ -1,0 +1,85 @@
+{
+  "_args": [
+    [
+      "angular-dynamic-routing",
+      "E:\\WebServer\\Apache24\\htdocs\\grunt-test"
+    ]
+  ],
+  "_from": "angular-dynamic-routing@latest",
+  "_id": "angular-dynamic-routing@1.1.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/angular-dynamic-routing",
+  "_nodeVersion": "4.4.4",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/angular-dynamic-routing-1.1.1.tgz_1471916785604_0.0578950981143862"
+  },
+  "_npmUser": {
+    "email": "bsoumakian@gmail.com",
+    "name": "soumak77"
+  },
+  "_npmVersion": "2.15.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "angular-dynamic-routing",
+    "raw": "angular-dynamic-routing",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/angular-dynamic-routing/-/angular-dynamic-routing-1.1.1.tgz",
+  "_shasum": "76da595f4fc7c91324e09cfc7d32c688d5100b74",
+  "_shrinkwrap": null,
+  "_spec": "angular-dynamic-routing",
+  "_where": "E:\\WebServer\\Apache24\\htdocs\\grunt-test",
+  "author": {
+    "name": "Base Apps"
+  },
+  "bugs": {
+    "url": "https://github.com/base-apps/angular-dynamic-routing/issues"
+  },
+  "dependencies": {
+    "gulp-util": "^3.0.4",
+    "through2": "^0.6.3"
+  },
+  "description": "Provides dynamic angular state definitions and animations",
+  "devDependencies": {
+    "vinyl-fs": "^1.0.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "76da595f4fc7c91324e09cfc7d32c688d5100b74",
+    "tarball": "https://registry.npmjs.org/angular-dynamic-routing/-/angular-dynamic-routing-1.1.1.tgz"
+  },
+  "gitHead": "543bb91bff2d811780c4b815af90c05e78332533",
+  "homepage": "https://github.com/base-apps/angular-dynamic-routing",
+  "keywords": [
+    "foundation",
+    "angular",
+    "gulpfriendly"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "email": "bsoumakian@gmail.com",
+      "name": "soumak77"
+    }
+  ],
+  "name": "angular-dynamic-routing",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/base-apps/angular-dynamic-routing.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "version": "1.1.1"
+}

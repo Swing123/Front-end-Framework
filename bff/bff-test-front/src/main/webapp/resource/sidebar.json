@@ -1,0 +1,204 @@
+{
+  "lists": [
+    {
+      "label": "首页",
+      "header":"业务导航",
+      "icon":"fa fa-list-alt icon text-primary-dker",
+      "permission":"{'users':['admin'],'action':'enable'}",
+      "ui_sref": "sidebar.content",
+      "params": "{url:'AppCenter-appHome-tpl-app_home'}"
+
+    },
+    {
+      "label": "行政办公",
+      "icon":"fa fa-align-justify icon text-primary-dker",
+      "submenu": [
+        {
+          "label": "收文",
+          "ui_sref": "sidebar.content",
+          "permission":"{'users':['admin'],'action':'enable'}",
+          "params": "{url:'AppCenter-appApprove-tpl-app_approve_handled'}"
+        },
+        {
+          "label": "发文",
+          "ui_sref": "sidebar.content",
+          "permission":"{'users':['admin'],'action':'enable'}",
+          "params": "{url:'AppCenter-appApprove-tpl-app_approve_onHandling'}"
+        },
+        {
+          "label": "传阅",
+          "ui_sref": "sidebar.content",
+          "params": "{url:'AppCenter-appApprove-tpl-app_approve_handled'}"
+        },
+        {
+          "label": "督办落实",
+          "ui_sref": "sidebar.content",
+          "permission":"{'users':['admin'],'action':'show'}",
+          "params": "{url:'AppCenter-appApprove-tpl-app_approve_handled'}"
+        },
+        {
+          "label": "会议",
+          "ui_sref": "sidebar.content",
+          "permission":"{'users':['admin'],'action':'show'}",
+          "params": "{url:'AppCenter-appApprove-tpl-app_approve_handled'}"
+        },
+        {
+          "label": "网上信访",
+          "ui_sref": "sidebar.content",
+          "params": "{url:'AppCenter-appApprove-tpl-app_approve_handled'}"
+        },
+        {
+          "label": "网上公示",
+          "ui_sref": "sidebar.content",
+          "permission":"{'users':['admin'],'action':'show'}",
+          "params": "{url:'AppCenter-appApprove-tpl-app_approve_handled'}"
+        },
+        {
+          "label": "新闻稿件申请审批",
+          "ui_sref": "sidebar.content",
+          "permission":"{'users':['admin'],'action':'show'}",
+          "params": "{url:'AppCenter-appApprove-tpl-app_approve_handled'}"
+        },
+        {
+          "label": "日程",
+          "ui_sref": "sidebar.content",
+          "params": "{url:'AppCenter-appApprove-tpl-app_approve_handled'}"
+        }
+      ]
+    },
+    {
+      "label": "规划审批",
+      "icon":"fa fa-th icon text-primary-dker",
+      "submenu": [
+        {
+          "label": "一级在办",
+          "ui_sref": "sidebar.content",
+          "params": "{url:'AppCenter-appApprove-tpl-app_approve_handled'}"
+        },
+        {
+          "label": "二级在办",
+          "submenu": [
+            {
+              "label": "三级在办",
+              "ui_sref": "sidebar.content",
+              "permission":"{'users':['admin'],'action':'enable'}",
+              "params": "{url:'AppCenter-appApprove-tpl-app_approve_onHandling'}"
+            },
+            {
+              "label": "三级已办",
+              "ui_sref": "sidebar.content",
+              "params": "{url:'AppCenter-appApprove-tpl-app_approve_handled'}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "机关党建",
+      "icon":"fa fa-th-large icon text-primary-dker",
+      "ui_sref": "sidebar.content",
+      "permission":"{'users':['admin'],'action':'enable'}",
+      "params": "{url:'AppCenter-appApprove-tpl-app_approve_handled'}"
+
+    },{
+      "label": "廉政效能",
+      "icon":"fa fa-th-large icon text-primary-dker",
+      "ui_sref": "sidebar.content",
+      "permission":"{'users':['admin'],'action':'show'}",
+      "params": "{url:'AppCenter-appApprove-tpl-app_approve_handled'}"
+
+    },{
+      "label": "政务公开",
+      "icon":"fa fa-th-large icon text-primary-dker",
+      "ui_sref": "sidebar.content",
+      "permission":"{'users':['admin'],'action':'show'}",
+      "params": "{url:'AppCenter-appApprove-tpl-app_approve_handled'}"
+
+    },{
+      "label": "数据管理",
+      "icon":"fa fa-th-large icon text-primary-dker",
+      "ui_sref": "sidebar.content",
+      "permission":"{'users':['admin'],'action':'show'}",
+      "params": "{url:'AppCenter-appApprove-tpl-app_approve_handled'}"
+
+    },
+    {
+      "label": "专题专栏",
+      "icon":"fa fa-th-large icon text-primary-dker",
+      "ui_sref": "sidebar.content",
+      "permission":"{'users':['admin'],'action':'enable'}",
+      "params": "{url:'AppCenter-appApprove-tpl-app_approve_handled'}"
+
+    },{
+      "label": "统计分析",
+      "icon":"fa fa-th-large icon text-primary-dker",
+      "ui_sref": "sidebar.content",
+      "params": "{url:'AppCenter-appApprove-tpl-app_approve_handled'}"
+
+    },{
+      "label": "办公桌",
+      "icon":"fa fa-th-large icon text-primary-dker",
+      "permission":"{'users':['admin'],'action':'show'}",
+      "ui_sref": "sidebar.content",
+      "params": "{url:'AppCenter-appApprove-tpl-app_approve_handled'}"
+
+    },
+    {
+      "label": "权限测试",
+      "header":"框架测试",
+      "permission":"{'users':['admin'],'action':'show'}",
+      "icon":"fa fa-align-justify icon text-primary-dker",
+      "submenu": [
+        {
+          "label": "权限验证",
+          "ui_sref": "sidebar.content",
+          "permission":"{'users':['admin'],'action':'show'}",
+          "params": "{url:'AppCenter-authentication-tpl-auth_test'}"
+        }
+      ]
+    },
+    {
+      "label": "快捷窗口",
+      "icon":"fa fa-file icon text-primary-dker",
+      "permission":"{'users':['admin'],'action':'show'}",
+      "submenu": [
+        {
+          "label": "系统配置",
+          "permission":"{'users':['admin'],'action':'show'}",
+          "ui_sref": "sys.config",
+          "params": ""
+        },
+        {
+          "label": "登录",
+          "ui_sref": "access.signin",
+          "permission":"{'users':['admin'],'action':'show'}",
+          "params": ""
+        },
+        {
+          "label": "忘记密码",
+          "ui_sref": "access.forgotpwd",
+          "permission":"{'users':['admin'],'action':'show'}",
+          "params": ""
+        },
+        {
+          "label": "404",
+          "ui_sref": "access.404",
+          "permission":"{'users':['admin'],'action':'show'}",
+          "params": ""
+        },
+        {
+          "label": "屏幕锁定",
+          "ui_sref": "access.lockme",
+          "permission":"{'users':['admin'],'action':'show'}",
+          "params": ""
+        },
+        {
+          "label": "登出",
+          "ui_sref": "access.signup",
+          "permission":"{'users':['admin'],'action':'show'}",
+          "params": ""
+        }
+      ]
+    }
+  ]
+}

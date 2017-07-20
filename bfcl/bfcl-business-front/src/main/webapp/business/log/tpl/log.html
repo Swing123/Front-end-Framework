@@ -1,0 +1,34 @@
+<div class="dist-log">
+    <div ng-repeat-start="items in ::logConfig.log_List">
+        <table ng-if="judgeDate(items)" class="tableFixed">
+            <tr>
+                <td class="log-icon">
+                    <div class="log-offset log-rectangle"></div>
+                    <div class="log-circle"></div>
+                    <div class="log-offset log-rectangle"></div>
+                </td>
+                <td class="prefixDate">
+                    {{items[0].split("月")[0]}}月
+                </td>
+                <td ng-repeat="cells in items" ng-if="$index!=0"></td>
+            </tr>
+        </table>
+    </div>
+    <div ng-repeat-end>
+        <table class="table-item tableFixed">
+            <tr>
+                <td class="log-icon">
+                    <div class="log-offset log-rectangle"></div>
+                    <div class="log-circle"></div>
+                    <div class="log-offset log-rectangle"></div>
+                </td>
+                <td ng-repeat="cells in items" ng-if="$index==0" class="date">
+                    {{cells.split("月")[1]}}
+                </td>
+                <td ng-repeat="cells in items" ng-if="$index!=0" title="{{cells}}" class="contents">
+                    {{cells}}
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<h1><code ng:non-bindable="">wiFileupload</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">dist.ui.fileupload</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="dist-ui-fileupload-directive-page dist-ui-fileupload-directive-wifileupload-page"><p>wiFileupload 文件上传组件，用于显示文件上传的进度和状态（IE9 暂未实现）。</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;wi-fileupload
+       wi-url="{string}"
+       wi-trigger="{string}"
+       [wi-max-size="{string|number}"]
+       [wi-mime-types="{string}"]
+       [wi-multisel="{boolean}"]
+       [wi-modal="{boolean}"]
+       [wi-response="{string}"]
+       [wi-swf="{string}"]
+       [remove-fun="{string}"]&gt;
+&lt;/wi-fileupload&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>wiUrl</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-fileupload-directive-page dist-ui-fileupload-directive-wifileupload-page"><p>用于处理上传的 url（若此 url 与当前页面不在同一个域名范围且未在服务端设置 Access-Control-Allow-Origin，可能会被浏览器拦截）。</p>
+</div></td></tr><tr><td>wiTrigger</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-fileupload-directive-page dist-ui-fileupload-directive-wifileupload-page"><p>触发文件选择弹窗的元素 id。</p>
+</div></td></tr><tr><td>wiMaxSize <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="dist-ui-fileupload-directive-page dist-ui-fileupload-directive-wifileupload-page"><p>允许上传的文件的最大 size，可以为形如“4mb，4k”的字符串，也可以为以“b”为单位的数字。</p>
+</div></td></tr><tr><td>wiMimeTypes <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-fileupload-directive-page dist-ui-fileupload-directive-wifileupload-page"><p>允许上传的文件的后缀名，不设置则不限制，格式为：[{ title: &#39;music&#39;, extensions: &#39;mp3,mp4&#39; },{ title: &#39;text&#39;, extensions: &#39;txt&#39; }]。</p>
+</div></td></tr><tr><td>wiMultisel <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-fileupload-directive-page dist-ui-fileupload-directive-wifileupload-page"><p>支持多选时需设置此属性，默认不支持。</p>
+</div></td></tr><tr><td>wiModal <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-fileupload-directive-page dist-ui-fileupload-directive-wifileupload-page"><p>设置此属性时上传进度及状态将模态显示，上传过程中不能进行其他操作。</p>
+</div></td></tr><tr><td>wiResponse <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-fileupload-directive-page dist-ui-fileupload-directive-wifileupload-page"><p>父 scope 中用于获取返回值的变量名。</p>
+</div></td></tr><tr><td>wiSwf <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-fileupload-directive-page dist-ui-fileupload-directive-wifileupload-page"><p>对不支持 html5 上传方式的浏览器使用 flash 上传的 swf 的路径（暂未实现）。</p>
+</div></td></tr><tr><td>removeFun <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-fileupload-directive-page dist-ui-fileupload-directive-wifileupload-page"><p>取消上传某个文件后执行的方法名，此方法传入一个参数 f, f 为被取消的文件的信息对象。</p>
+</div></td></tr></tbody></table></div>
+</div>

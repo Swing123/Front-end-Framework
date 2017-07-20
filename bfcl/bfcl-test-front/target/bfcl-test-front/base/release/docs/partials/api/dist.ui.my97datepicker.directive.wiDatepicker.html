@@ -1,0 +1,49 @@
+<h1><code ng:non-bindable="">wiDatepicker</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">dist.ui.my97datepicker</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="dist-ui-my97datepicker-directive-page dist-ui-my97datepicker-directive-widatepicker-page"><p>日期选择</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;wi-datepicker
+       [isshowweek="{boolean}"]
+       [readonly="{boolean}"]
+       [highlineweekday="{boolean}"]
+       [isshowclear="{boolean}"]
+       [isshowtoday="{boolean}"]
+       [firstdayofweek="{string}"]
+       [startdate="{string}"]
+       [alwaysusestartdate="{boolean}"]
+       [datefmt="{string}"]
+       [vel="{string}"]
+       [skin="{string}"]
+       [mindate="{string}"]
+       [maxdate="{string}"]
+       [disableddays="{array}"]
+       [onpicked="{string}"]
+       [oncleared="{string}"]
+       [qsenabled="{boolean}"]
+       [quicksel="{string}"]&gt;
+&lt;/wi-datepicker&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>isshowweek <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-my97datepicker-directive-page dist-ui-my97datepicker-directive-widatepicker-page"><p>周显示 false|true.</p>
+</div></td></tr><tr><td>readonly <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-my97datepicker-directive-page dist-ui-my97datepicker-directive-widatepicker-page"><p>只读 false|true.</p>
+</div></td></tr><tr><td>highlineweekday <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-my97datepicker-directive-page dist-ui-my97datepicker-directive-widatepicker-page"><p>高亮周末 true|false.</p>
+</div></td></tr><tr><td>isshowclear <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-my97datepicker-directive-page dist-ui-my97datepicker-directive-widatepicker-page"><p>清空按钮 true|false.</p>
+</div></td></tr><tr><td>isshowtoday <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-my97datepicker-directive-page dist-ui-my97datepicker-directive-widatepicker-page"><p>今天按钮 true|false.</p>
+</div></td></tr><tr><td>firstdayofweek <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-my97datepicker-directive-page dist-ui-my97datepicker-directive-widatepicker-page"><p>星期的第一天 0-6(0:星期日 1:星期一).</p>
+</div></td></tr><tr><td>startdate <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-my97datepicker-directive-page dist-ui-my97datepicker-directive-widatepicker-page"><p>默认的起始日期 &#39;1980-05-01&#39;;动态参数(如:%y,%M分别表示当前年和月)&#39;%y-%M-01&#39;.</p>
+</div></td></tr><tr><td>alwaysusestartdate <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-my97datepicker-directive-page dist-ui-my97datepicker-directive-widatepicker-page"><p>无论日期框为何值,始终使用 1980-05-01 做为起始日期.</p>
+</div></td></tr><tr><td>datefmt <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-my97datepicker-directive-page dist-ui-my97datepicker-directive-widatepicker-page"><p>自定义格式 &#39;yyyy年MM月dd日 HH时mm分ss秒&#39;.</p>
+</div></td></tr><tr><td>vel <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-my97datepicker-directive-page dist-ui-my97datepicker-directive-widatepicker-page"><p>指定一个控件或控件的ID,必须具有value属性(如input),用于存储真实值.2014年9月17日 真实值为2014-09-17.</p>
+</div></td></tr><tr><td>skin <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-my97datepicker-directive-page dist-ui-my97datepicker-directive-widatepicker-page"><p>皮肤 &#39;default&#39;|&#39;&#39;whyGreen&#39;.</p>
+</div></td></tr><tr><td>mindate <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-my97datepicker-directive-page dist-ui-my97datepicker-directive-widatepicker-page"><p>限制日期范围，最小日期 &#39;2006-09-10&#39;(配合dateFmt，可设置年月日时分秒).</p>
+</div></td></tr><tr><td>maxdate <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-my97datepicker-directive-page dist-ui-my97datepicker-directive-widatepicker-page"><p>限制日期范围，最大日期 &#39;2008-12-20&#39;.</p>
+</div></td></tr><tr><td>disableddays <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="dist-ui-my97datepicker-directive-page dist-ui-my97datepicker-directive-widatepicker-page"><p>禁用周日至周六所对应的日期 [0,6],0至6 分别代表 周日至周六.</p>
+</div></td></tr><tr><td>onpicked <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-my97datepicker-directive-page dist-ui-my97datepicker-directive-widatepicker-page"><p>选中事件.</p>
+</div></td></tr><tr><td>oncleared <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-my97datepicker-directive-page dist-ui-my97datepicker-directive-widatepicker-page"><p>清空事件.</p>
+</div></td></tr><tr><td>qsenabled <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-my97datepicker-directive-page dist-ui-my97datepicker-directive-widatepicker-page"><p>是否启用快速选择功能, 注意:如果日期格式里不包含 d(天) 这个元素时,快速选择将一直显示,不受此属性控制.</p>
+</div></td></tr><tr><td>quicksel <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-my97datepicker-directive-page dist-ui-my97datepicker-directive-widatepicker-page"><p>快速选择数据,可以传入5个快速选择日期,日期格式同min/maxDate.</p>
+</div></td></tr></tbody></table></div>
+</div>

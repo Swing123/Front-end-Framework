@@ -1,0 +1,75 @@
+<div parent-children-setter-buz
+    parentParam='{
+          "css": ""
+        , "title": "组织机构"
+        , "id": "orgSelector"
+        , "label": "选择机构"
+        , "serviceUrls": {
+
+        }
+        , "buttons": {
+        }
+        , "data": {
+              "url": "orgs"
+            , "idfield": "id"
+            , "pidfield": "parentId"
+            , "labelfield": "name"
+        }
+    }'
+    memberParam='{
+            "title": "用户"
+        , "serviceUrls": {
+              "list": "orgs/:parentId/users"
+            , "prepare": "users"
+            , "add": "orgs/:parentId/users"
+            , "del": "orgs/:parentId/users"
+        }
+        , "buttons": {
+            "add":{
+                  "type": "add"
+                , "name": "增加用户"
+                , "icon": ""
+                , "css": ""
+                , "title": "增加用户"
+                , "templateUrl": "userMnt/userSelector.html"
+            }
+            , "del": {
+                  "type": "delete"
+                , "name": "删除用户"
+                , "icon": ""
+                , "css": ""
+                , "title": "删除用户"
+                , "confirm": {
+                    "message": "确认删除?"
+                }
+                , "success": {
+                     "message": "删除成功!"
+                    , "time": 2000
+                }
+            }
+        }
+        , "grid": {
+              "css": ""
+            , "idfield": "id"
+            , "columns": [
+                {
+                    "css": "width:20%;text-align:center;"
+                    , "header": {
+                       "name": "名称"
+                        , "css": "align:middle"
+                    }
+                    , "data": {
+                        "name": "name"
+                        , "css": "align:middle"
+                    }
+                }
+            ]
+            , "pagination": {
+                "pageNo": 0,
+                "pageSize": 10
+            }
+        }
+    }'
+
+>
+</div>

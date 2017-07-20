@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+@icon-color: #23B7E5; //icon颜色
+
+.dist-log {
+  .tableFixed {
+    width: 100%;
+    table-layout: fixed;
+  }
+  .tableFixed tr td{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .log-icon{
+    width: 40px;
+  }
+  .log-offset {
+    margin-left: 4px;
+  }
+  .log-circle {
+    width: 10px;
+    height: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+  .log-rectangle {
+    width: 2px;
+    height: 8px; //图标上下两侧高度
+  }
+  .log-circle, .log-rectangle {
+    background: @icon-color;
+  }
+  .date{
+    width: 120px;
+    padding-left: 30px;
+  }
+  .prefixDate{
+    width: 120px;
+    font-weight: 900;
+  }
+  .contents{
+    padding: 0 10px;
+  }
+}

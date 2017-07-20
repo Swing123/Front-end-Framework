@@ -1,0 +1,172 @@
+@import (reference) "less-nameset";
+/******************* datagrid 中  *******************/
+.wi-datagrid {
+    position: relative;
+    overflow: hidden;
+    left: 0;
+    border: solid @datagrid-border-size @border-c;
+    background: @bg;
+}
+.wi-datagrid.wi-resizing{ cursor: w-resize;}
+.wi-datagrid-ltop,
+.wi-datagrid-rtop,
+.wi-datagrid-lbottom,
+.wi-datagrid-rbottom {
+    position: absolute;
+    overflow: hidden;
+}
+.wi-datagrid-ltop { top: 0; left: 0; }
+.wi-datagrid-rtop { top: 0; }
+.wi-datagrid-lbottom { left: 0; }
+.wi-datagrid-rbottom {
+    box-sizing: content-box;
+    overflow: scroll;
+}
+/* 滚动条设置-边角 */
+.wi-datagrid-rbottom::-webkit-scrollbar-corner { background: #efefef; }
+.wi-datagrid table {
+    table-layout: fixed;
+    border-spacing: 0;
+    width: 100%;
+}
+.wi-datagrid td[ng-transclude] { border: none; }
+.wi-datagrid td {
+    border-right: @datagrid-td-border;
+    border-bottom: @datagrid-td-border;
+    padding: .3em;
+    overflow: hidden;
+}
+.wi-datagrid-wordWrap td {
+    white-space: nowrap; text-overflow: ellipsis;
+}
+.wi-datagrid td.wi-datagrid-keycol { /* 特殊列（id、复选框） */
+    width: @datagrid-keycol-w;
+    text-align: center
+}
+.wi-datagrid-headdiv {
+    position: relative;
+    font-weight: bold;
+    margin: 0 5px;
+    color: @title-color;
+}
+.wi-datagrid-bottomdiv {
+    margin: 5px;
+}
+.wi-datagrid-resizebar {
+    position: absolute;
+    width: 3px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    cursor: w-resize;
+    z-index: 10;
+}
+.wi-datagrid-ltop table,
+.wi-datagrid-rtop table { height: 100%; }
+
+/* Bottom */
+.wi-datagrid-lbottom tr,
+.wi-datagrid-rbottom tr:nth-child(even){ background: @datagrid-lockcol-bg; color: @datagrid-lockcol-color; }
+.wi-datagrid-rbottom tr:not(.wi-datagrid-row-selected):hover { background: @hover-bg; color: @hover-color; }
+.wi-datagrid-lbottom tr.wi-datagrid-row-selected,
+.wi-datagrid-rbottom tr.wi-datagrid-row-selected { background: @sel-bg; color: @sel-color; }
+.wi-datagrid-lbottom td,
+.wi-datagrid-rbottom td { height: 40px; /*与 datagrid 中 rowheight 相等*/ }
+.wi-datagrid-lbottom tr.wi-datagrid-cover td{
+    background: @bg;
+    border-color: transparent;
+}
+/* Top */
+.wi-datagrid-ltop,
+.wi-datagrid-rtop {
+    .datagrid-head-style();
+}
+.wi-datagrid-ltop td,
+.wi-datagrid-rtop td {
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+}
+.wi-datagrid:not(.wi-resizing)>.wi-datagrid-ltop td,
+.wi-datagrid:not(.wi-resizing)>.wi-datagrid-rtop td { cursor: pointer;}
+/* pagebar */
+div.wi-datagrid-pagebar {
+    clear: left;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    color: @tool-color;
+    background: @tool-bg;
+    border-top: solid @datagrid-border-size @border-c;
+    white-space: nowrap;
+}
+.wi-datagrid-page-left {
+    float: left;
+    height: 100%;
+}
+.wi-datagrid-page-right {
+    float: right;
+    height: 100%;
+}
+.wi-datagrid-page-left > span,
+.wi-datagrid-page-right > span { margin: 0 1em; }
+.wi-datagrid-pagebar a {
+    color: @tool-color;
+    text-decoration: none;
+}
+.wi-datagrid-pagebar a:hover {
+    color: @tool-hover-color;
+    text-decoration: none;
+}
+.wi-datagrid-followbar {/* 拖动改变列宽时跟随的 bar */
+    position: absolute;
+    width: 1px;
+    top: 0;
+    z-index: 10;
+    border: 1px solid @followbar-color;
+    background-color: @followbar-color;
+}
+.wi-datagrid-maskdiv {/* 加载时的遮罩层 */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 11;
+    background: @mask-color url('images/datagrid/loading.gif') no-repeat center center;
+}
+.wi-datagrid-page-num {
+    width: 3em;
+    text-align: center;
+    position: relative;
+    _left: 0;
+    _top: -1px;
+}
+
+.wi-datagrid-node,
+.wi-datagrid-node-o{
+    display: inline-block;
+    width:@tree-icon-size; height:@tree-icon-size;
+    vertical-align: middle;
+    text-align: center;
+    background:url('images/datagrid/tree.gif') no-repeat;
+}
+.wi-datagrid-node{ background-position:0 0;}
+.wi-datagrid-node-o{ background-position:-22px 0;}
+.wi-datagrid-caret1,
+.wi-datagrid-caret-1 {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: .5em;
+    vertical-align: middle;
+    border-right: @datagrid-arrow-size solid transparent;
+    border-left: @datagrid-arrow-size solid transparent;
+}
+.wi-datagrid-caret1 { border-bottom: @datagrid-arrow-size solid @title-color; }
+.wi-datagrid-caret-1 { border-top: @datagrid-arrow-size solid @title-color; }
+.wi-datagrid-loading {
+    width: 15px; height: 15px; position: relative; top: 2px;
+    display: inline-block;
+    background: #fff url("images/tree/loading.gif") no-repeat center center;
+}

@@ -1,0 +1,124 @@
+
+<div ng-controller="appApproveHandledController" class="app-content-full margin-top-45 handled-box">
+
+    <!-- hbox layout -->
+    <div class="hbox hbox-auto-xs bg-light " ng-init="">
+
+        <!-- /column -->
+        <div class="col w-md lter b-l project-list-width">
+            <dist-item-list class="vbox" config="vm.config" item-lists="vm.itemLists" single-list-click="vm.singleListClick" double-list-click="vm.doubleListClick"></dist-item-list>
+        </div>
+        <!-- /column -->
+
+        <!-- column -->
+        <div class="col">
+            <div class="vbox">
+                <div class="row-row">
+                    <div class="cell">
+                        <div class="cell-inner">
+                            <div class="wrapper-md padding-top-0">
+                                <wi-page-tab tab-config="vm.tabConfig" itemclick="vm.tabClick"></wi-page-tab>
+                                <!--<div class="margin-top-15 margin-bottom-15"> <dist-info info-config="vm.projectInfo"></dist-info></div>-->
+                                <div class="tab-content">
+                                    <div class="tab-pane" ng-class="{'active': vm.tabs[0]}" ng-init="accordion.basicInfo={'open':true};accordion.log={'open':true}">
+
+                                        <accordion close-others="false" class="header-panel" ng-init="accordion.simple={'open':true}">
+                                            <accordion-group is-open="accordion.simple.open" class="margin-top-15">
+                                                <accordion-heading>
+                                                    项目简介
+                                                    <i class="pull-right fa fa-angle-right" ng-class="{'fa-angle-down': accordion.simple.open, 'fa-angle-right': !accordion.simple.open}"></i>
+                                                </accordion-heading>
+                                                <dist-info info-config="vm.projectInfo"></dist-info>
+                                            </accordion-group>
+                                        </accordion>
+                                        <accordion close-others="false">
+                                            <accordion-group is-open="accordion.basicInfo.open"  heading="Dynamic body content">
+                                                <accordion-heading>
+                                                    基本信息
+                                                    <i class="pull-right fa fa-angle-right" ng-class="{'fa-angle-down': accordion.basicInfo.open, 'fa-angle-right': !accordion.basicInfo.open}"></i>
+                                                </accordion-heading>
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 basic-info-list">
+                                                        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12" title="{{item.value}}" ng-repeat="item in vm.basicInfo.items">
+                                                            <span>{{item.label}}：</span>
+                                                            <span class="text-{{item.color}}">{{item.value}}</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </accordion-group>
+                                            <accordion-group is-open="accordion.log.open" class="">
+                                                <accordion-heading>
+                                                    流转日志
+                                                    <i class="pull-right fa fa-angle-right" ng-class="{'fa-angle-down': accordion.log.open, 'fa-angle-right': !accordion.log.open}"></i>
+                                                </accordion-heading>
+                                                <dist-circ-log log-config="vm.circleLog"></dist-circ-log>
+                                            </accordion-group>
+                                        </accordion>
+                                    </div>
+                                    <div class="tab-pane" ng-class="{'active': vm.tabs[1]}">
+                                        <accordion close-others="false" ng-init="accordion.businessProcess={'open':true};accordion.log2={'open':true}">
+                                            <accordion-group is-open="accordion.businessProcess.open"  heading="Dynamic body content">
+                                                <accordion-heading>
+                                                    业务流程图
+                                                    <i class="pull-right fa fa-angle-right" ng-class="{'fa-angle-down': accordion.businessProcess.open, 'fa-angle-right': !accordion.businessProcess.open}"></i>
+                                                </accordion-heading>
+                                                <div class="row">
+                                                    业务流程图具体内容区<br/><br/><br/><br/>
+                                                    content
+                                                </div>
+                                            </accordion-group>
+                                            <accordion-group is-open="accordion.log2.open" class="">
+                                                <accordion-heading>
+                                                    流转日志
+                                                    <i class="pull-right fa fa-angle-right" ng-class="{'fa-angle-down': accordion.log2.open, 'fa-angle-right': !accordion.log2.open}"></i>
+                                                </accordion-heading>
+                                                <dist-circ-log log-config="vm.circleLog"></dist-circ-log>
+                                            </accordion-group>
+                                        </accordion>
+                                    </div>
+                                    <div class="tab-pane" ng-class="{'active': vm.tabs[2]}">
+                                        <accordion close-others="false" ng-init="accordion.projectTree={'open':true};">
+                                            <accordion-group is-open="accordion.projectTree.open" class="">
+                                                <accordion-heading>
+                                                    项目树
+                                                    <i class="pull-right fa fa-angle-right" ng-class="{'fa-angle-down': accordion.projectTree.open, 'fa-angle-right': !accordion.projectTree.open}"></i>
+                                                </accordion-heading>
+                                                <dist-tree dist-tree-model="vm.projectTreeList" dist-tree-config="vm.treeConfig " class="tree-arrow" title="" fold="false"></dist-tree>
+                                            </accordion-group>
+                                        </accordion>
+                                    </div>
+                                    <div class="tab-pane" ng-class="{'active': vm.tabs[3]}">
+                                        <accordion close-others="false" ng-init="accordion.materialTree={'open':true};">
+                                            <accordion-group is-open="accordion.materialTree.open" class="">
+                                                <accordion-heading>
+                                                    材料袋
+                                                    <i class="pull-right fa fa-angle-right" ng-class="{'fa-angle-down': accordion.materialTree.open, 'fa-angle-right': !accordion.materialTree.open}"></i>
+                                                </accordion-heading>
+                                                <dist-tree dist-tree-model="vm.materialTreeList" dist-tree-config="vm.materialTreeConfig " class="tree-arrow" title="" fold="false"></dist-tree>
+                                            </accordion-group>
+                                        </accordion>
+                                    </div>
+                                    <div class="tab-pane" ng-class="{'active': vm.tabs[4]}">
+                                        <accordion close-others="false" ng-init="accordion.reportTree={'open':true};">
+                                            <accordion-group is-open="accordion.reportTree.open" class="">
+                                                <accordion-heading>
+                                                    报表
+                                                    <i class="pull-right fa fa-angle-right" ng-class="{'fa-angle-down': accordion.reportTree.open, 'fa-angle-right': !accordion.reportTree.open}"></i>
+                                                </accordion-heading>
+                                                <dist-tree dist-tree-model="vm.reportTreeList" dist-tree-config="vm.reportTreeConfig " class="" title="" fold="false"></dist-tree>
+                                            </accordion-group>
+                                        </accordion>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /column -->
+
+    </div>
+    <!-- /hbox layout -->
+
+</div>

@@ -1,0 +1,124 @@
+<div ng-controller="approveContinueController" class="approve-continue">
+    <div class="row" >
+        <div class="col-md-12 col-lg-12 col-sm-12">
+            <div class="col-md-2 col-lg-2 col-sm-2"></div>
+            <div class="col-md-8 col-lg-8 col-sm-8">
+                <div class="input-group wrapper-md">
+                    <input type="text" class="form-control input-md" placeholder="搜索项目" ng-model="query">
+                    <span class="input-group-addon btn-info input-sm cursor-pointer" style="border-right:solid 1px #39a2c1">搜索</span>
+                    <span class="input-group-addon btn-info input-sm cursor-pointer"  ng-click=" vm.showAdvanceQuery()">
+                        <i class="fa fa-angle-double-down pull-right" aria-hidden="true" ng-class="{'hideAdvance': vm.hideAdvance}"></i>
+                        <i class="fa fa-angle-double-right pull-right" aria-hidden="true" ng-class="{'hideAdvance': !vm.hideAdvance}"></i>
+                        高级&nbsp&nbsp&nbsp
+                    </span>
+
+                </div>
+            </div>
+            <div class="col-md-2 col-lg-2 col-sm-2"></div>
+        </div>
+    </div>
+    <div class="wrapper-md">
+            <div class="row" ng-class="{'hideAdvance': vm.hideAdvance}">
+                <div class="col-md-12 col-lg-12 col-sm-12 padding-left-0">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="col-lg-3 col-md-4 col-sm-6 form-group ">
+                                <span class="col-sm-4 padding-right-0 padding-left-0 control-label">项目名称</span>
+                                <div class="col-sm-8 padding-left-0">
+                                    <input ng-keyup="vm.enterKeyup($event)" type="text" class="form-control input-sm " ng-model="vm.projectName">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 form-group ">
+                                <span class="col-sm-4 padding-right-0 padding-left-0 form-label">项目编号</span>
+                                <div class="col-sm-8 padding-left-0">
+                                    <input ng-keyup="vm.enterKeyup($event)" type="text" class="form-control input-sm " ng-model="vm.projectNo">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 form-group ">
+                                <span class="col-sm-4 padding-right-0 padding-left-0 form-label">案卷编号</span>
+                                <div class="col-sm-8 padding-left-0">
+                                    <input ng-keyup="vm.enterKeyup($event)" type="text" class="form-control input-sm" ng-model="vm.fileCode">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 form-group ">
+                                <span class="col-sm-4 padding-right-0 padding-left-0 form-label">建设地址</span>
+                                <div class="col-sm-8 padding-left-0">
+                                    <input  ng-keyup="vm.enterKeyup($event)"type="text" class="form-control input-sm" ng-model="vm.buildAddress">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 form-group " >
+                                <span class="col-sm-4 padding-right-0 padding-left-0 form-label">业务类型</span>
+                                <div class="col-sm-8 padding-left-0">
+                                    <input  ng-keyup="vm.enterKeyup($event)"type="text" class="form-control input-sm" ng-model="vm.buildAddress">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 form-group ">
+                                <span class="col-sm-4 padding-right-0 padding-left-0 form-label">网办流水号</span>
+                                <div class="col-sm-8 padding-left-0">
+                                    <input ng-keyup="vm.enterKeyup($event)" type="text" class="form-control input-sm" ng-model="vm.wblsh">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 form-group ">
+                                <span class="col-sm-4 padding-right-0 padding-left-0 form-label">市统一编号</span>
+                                <div class="col-sm-8 padding-left-0">
+                                    <input ng-keyup="vm.enterKeyup($event)" type="text" class="form-control input-sm" ng-model="vm.certifyCityCode">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 form-group ">
+                                <span class="col-sm-4 padding-right-0 padding-left-0 form-label">建设单位</span>
+                                <div class="col-sm-8 padding-left-0">
+                                    <input ng-keyup="vm.enterKeyup($event)" type="text" class="form-control input-sm" ng-model="vm.buildUnit">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 form-group ">
+                                <span class="col-sm-4 padding-right-0 padding-left-0 form-label">办理状态</span>
+                                <div class="col-sm-8 padding-left-0">
+                                    <select type="text" class="form-control input-sm" ng-model="vm.projectState"ng-change="vm.initListData()"
+                                            ng-options="item for item in vm.projectStates">
+                                        <option value="">全部</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 form-group ">
+                                <span class="col-sm-4 padding-right-0 padding-left-0 form-label">所属局</span>
+                                <div class="col-sm-8 padding-left-0">
+                                    <select type="text" class="form-control input-sm" ng-model="vm.bureauLists"ng-change="vm.initListData()"
+                                            ng-options="item.text for item in vm.bureauList">
+                                        <option value="">全部</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 form-group ">
+                                <span class="col-sm-4 padding-right-0 padding-left-0 form-label">经办人</span>
+                                <div class="col-sm-8 padding-left-0">
+                                    <input ng-keyup="vm.enterKeyup($event)" type="text" class="form-control input-sm" ng-model="vm.BLPerson">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 form-group ">
+                                <span class=" col-sm-4 padding-right-0 padding-left-0 form-label">审批意见</span>
+                                <div class="col-sm-8 padding-left-0">
+                                    <select type="text" class="form-control input-sm " ng-model="vm.spStates"ng-change="vm.initListData()"
+                                            ng-options="item for item in vm.spState">
+                                        <option value="">全部</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" row">
+                <div class="col-md-12 col-lg-12 col-sm-12 padding-left-0">
+                    <button class="btn m-b-xs btn-sm btn-info btn-addon"><i class="fa fa-refresh" aria-hidden="true"></i>重置</button>
+                    <button class="btn m-b-xs btn-sm btn-info btn-addon" ng-click="vm.continueBtnClick()"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>续办</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-sm-12 padding-left-0">
+                    <div ui-grid="vm.gridOptions" ui-grid-selection ui-grid-resize-columns ui-grid-move-columns ui-grid-pagination class="grid"></div>
+                </div>
+            </div>
+    </div>
+
+</div>

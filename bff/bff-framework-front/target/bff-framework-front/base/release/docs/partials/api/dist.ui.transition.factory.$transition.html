@@ -1,0 +1,21 @@
+<h1><code ng:non-bindable="">$transition</code>
+<div><span class="hint">service in module <code ng:non-bindable="">dist.ui.transition</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="dist-ui-transition-factory-page dist-ui-transition-factory--transition-page"><p>$transition 提供一个接口触发 CSS3 变换（过渡 transition / 动画 animation）并在完成变换时接收通知。</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><pre class="prettyprint linenums">$transition(element, trigger[, options]);</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>element</td><td><a href="" class="label type-hint type-hint-domelement">DOMElement</a></td><td><div class="dist-ui-transition-factory-page dist-ui-transition-factory--transition-page"><p>要产生动画效果的 DOM 元素</p>
+</div></td></tr><tr><td>trigger</td><td><a href="" class="label type-hint type-hint-string">string</a><a href="" class="label type-hint type-hint-object">object</a><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-transition-factory-page dist-ui-transition-factory--transition-page"><p>引起变换的来源：<br /></p>
+<ul>
+<li>string，要加到 element 上的 class。<br /></li>
+<li>object, 要应用到 element 上的 style 哈希表。<br /></li>
+<li>function, 将被调用以使变化发生的函数。</li>
+</ul>
+</div></td></tr><tr><td>options <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="dist-ui-transition-factory-page dist-ui-transition-factory--transition-page"><p>options ={ animation: true } 表示要进行的是动画变换，默认为过渡变换。</p>
+</div></td></tr></tbody></table><h4 id="usage_returns">Returns</h4><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="dist-ui-transition-factory-page dist-ui-transition-factory--transition-page"><p>返回变化完成后的期望。</p>
+</div></td></tr></table></div>
+</div>

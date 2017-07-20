@@ -1,0 +1,23 @@
+<h1><code ng:non-bindable="">wiAccordionGroup</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">dist.ui.accordion</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="dist-ui-accordion-directive-page dist-ui-accordion-directive-wiaccordiongroup-page"><p>wiAccordionGroup是wiAccordion的一个面板，wiAccordionGroup只能作为wiAccordion的子指令来使用，不能单独使用。</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;wi-accordion-group
+       [heading="{string}"]
+       [is-open="{boolean}"]&gt;
+&lt;/wi-accordion-group&gt;</pre>
+as attribute<pre class="prettyprint linenums">&lt;ANY wi-accordion-group
+     [heading="{string}"]
+     [is-open="{boolean}"]&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>heading <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-accordion-directive-page dist-ui-accordion-directive-wiaccordiongroup-page"><p>头部显示文字, heading是单向绑定的，你可以设置为一个确定的字符串，或者设置为scope中的一个变量。</p>
+</div></td></tr><tr><td>isOpen <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-accordion-directive-page dist-ui-accordion-directive-wiaccordiongroup-page"><p>是否展开，设定 wiAccordionGroup 是否展开，isOpen 是双向绑定的，所以应设置为 scope 中的一个变量，而不能直接是 true 或者 false。<br />
+初始化时若未定义，默认为false</p>
+</div></td></tr></tbody></table></div>
+</div>

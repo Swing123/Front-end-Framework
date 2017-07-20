@@ -1,0 +1,49 @@
+<h1><code ng:non-bindable="">wiAccordion</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">dist.ui.accordion</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="dist-ui-accordion-directive-page dist-ui-accordion-directive-wiaccordion-page"><p>wiAccordion是一个折叠面板，如果给定显示区域比较小，就可以考虑使用这个组件。</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;wi-accordion
+       [wiid="{object}"]
+       [width="{number|length}"]
+       [height="{number|length}"]
+       [headheight="{number}"]
+       [oneopen="{boolean}"]
+       [onselect="{function}"]
+       [onunselect="{function}"]&gt;
+&lt;/wi-accordion&gt;</pre>
+as attribute<pre class="prettyprint linenums">&lt;ANY wi-accordion
+     [wiid="{object}"]
+     [width="{number|length}"]
+     [height="{number|length}"]
+     [headheight="{number}"]
+     [oneopen="{boolean}"]
+     [onselect="{function}"]
+     [onunselect="{function}"]&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>wiid <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="dist-ui-accordion-directive-page dist-ui-accordion-directive-wiaccordion-page"><p>若定义了此属性，可供调用接口。<br />
+.element() 获取当前 accordion 对应的 jqlite 元素，<br />
+.options() 获取当前用户设置：{ width,height }，<br />
+.panels() 获取所有面板对应的 scope 集合。<br />
+.getSelect() 获取选中的面板对应的 scope。<br />
+.getGroup(which) 获取指定 heading或index 的面板对应的 scope。<br />
+.toggle(which) 切换指定 heading或index 的面板的选中状态。<br />
+.reCompute() 重新适应尺寸（当其祖先元素由隐藏改为显示时，可能需要手动调用此方法，以重新计算尺寸）。</p>
+</div></td></tr><tr><td>width <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a><a href="" class="label type-hint type-hint-length">length</a></td><td><div class="dist-ui-accordion-directive-page dist-ui-accordion-directive-wiaccordion-page"><p>宽度，用来设定整个accordion的宽度，不指定宽度则面板的宽度是父容器的100%。<br />
+number 将自动添加单位 px。<br />
+length 为 number 接长度单位（相对单位和绝对单位）。<br />
+相对单位：em, ex, ch, rem, vw, vh, vm, %<br />
+绝对单位：cm, mm, in, pt, pc, px</p>
+</div></td></tr><tr><td>height <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a><a href="" class="label type-hint type-hint-length">length</a></td><td><div class="dist-ui-accordion-directive-page dist-ui-accordion-directive-wiaccordion-page"><p>高度, 指定此属性后，每个折叠面板都拥有同样的高度，不指定则每个面板的高度是根据内容自适应的。<br />
+说明同 width。</p>
+</div></td></tr><tr><td>headheight <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="dist-ui-accordion-directive-page dist-ui-accordion-directive-wiaccordion-page"><p>标题栏高度的数值。不带单位“px”，默认为 32。</p>
+</div></td></tr><tr><td>oneopen <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-accordion-directive-page dist-ui-accordion-directive-wiaccordion-page"><p>是否只能打开一个 accordion，默认为 false，若定义了 height，此属性默认为 true，且用户设置不生效。</p>
+</div></td></tr><tr><td>onselect <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-accordion-directive-page dist-ui-accordion-directive-wiaccordion-page"><p>打开面板后的回调方法，参数：index(当前面板索引位置),scope(面板对应的 scope)。</p>
+</div></td></tr><tr><td>onunselect <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-accordion-directive-page dist-ui-accordion-directive-wiaccordion-page"><p>关闭面板后的回调方法，参数：index(当前面板索引位置),scope(面板对应的 scope)。</p>
+</div></td></tr></tbody></table></div>
+</div>

@@ -1,0 +1,75 @@
+@bg-white:#ffffff;
+@border-color:#ddd;
+.on-handling{
+
+  background-color:@bg-white;
+
+  .basic-info-list div{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .dist-tree-select-input input{
+    border-color: #cfdadd;
+    //border-radius: 1px;
+  };
+  .header-panel{
+    .panel-group{
+      margin-bottom:5px;
+    }
+  };
+  .panel-heading{
+    background-image:none;
+    background-color:@bg-white;
+  };
+  .wrapper-md{
+    background-color:@bg-white;
+  }
+  .panel{
+    border:0;
+  };
+  .vbox{
+    background-color:@bg-white;
+  }
+  .border-right{
+    border-right:solid 1px @border-color;
+  };
+  .panel-form:hover .panel-button{
+    display:block;
+  };
+
+  .display-none{
+    display:none;
+  }
+  .panel-form .panel-button a{
+    width:30px;
+    height:30px;
+  }
+  .panel-form .panel-button a i{
+    margin:0px 5px;
+  };
+
+  .is-ie{
+    width:100%\0;//IE识别
+  };
+  .panel-move::before{
+    content:'';
+    position:absolute;
+    left:0;
+    width:5px;
+    height:100%;
+    background-color:@border-color;
+    cursor:e-resize;
+    z-index:1;
+  };
+  .mouse-move{
+    position:absolute;
+    left:0;
+    width:5px;
+    height:100%;
+    background-color:@border-color;
+    cursor:e-resize;
+    z-index:1;
+  }
+
+}

@@ -1,0 +1,24 @@
+{
+  "title":"项目列表",
+  "state":[
+    {"value":"所有状态","text":"所有状态"},
+    {"value":"在办","text":"在办","selected":"selected"},
+    {"value":"缓办","text":"缓办"},
+    {"value":"申请上会中","text":"申请上会中"}
+  ],
+  "businessType":[
+    {"id":1,"pId":0,"name":"所有业务","open":true},
+    {"id":11,"pId":1,"name":"市局","open":true},
+    {"id":111,"pId":11,"name":"选址"},
+    {"id":112,"pId":11,"name":"工程"},
+    {"id":12,"pId":1,"name":"张浦镇","open":true},
+    {"id":121,"pId":12,"name":"张浦镇选址"},
+    {"id":122,"pId":12,"name":"张浦镇工程"},
+    {"id":13,"pId":1,"name":"高新区","open":true},
+    {"id":131,"pId":13,"name":"高新区选址"},
+    {"id":132,"pId":13,"name":"高新区工程"},
+    {"id":14,"pId":1,"name":"度假区","open":true},
+    {"id":141,"pId":14,"name":"度假区选址"},
+    {"id":142,"pId":14,"name":"度假区工程"}
+  ]
+}

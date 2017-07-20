@@ -1,0 +1,42 @@
+<div class = "td-form">
+    <div class = "btn-light btn-sm" style = "width: 100%;">
+        <div class = "uc-border-right">
+            <button ng-if = "param.buttons.add" ng-disable = "_parentId" class = "btn btn-success btn-xs"
+                    ng-click = "toAdd(param.buttons.add)">
+                {{::param.buttons.add.name}}
+            </button>
+            <button class = "btn btn-success btn-xs" ng-click = "list()">刷新</button>
+        </div>
+    </div>
+    <table class = "table table-striped table-bordered table-hover row-border hover">
+        <thead>
+        <tr>
+            <th ng-if = "param.grid.checkbox" class = "center">
+                <label class = "pos-rel">
+                    <input type = "checkbox" class = "ace" ng-model = "selectAll"/>
+                    <span class = "lbl"></span>
+                </label>
+            </th>
+            <th ng-repeat = "column in param.grid.columns" style = "{{column.data.css}}">{{::column.header.name}}</th>
+            <th ng-if = "param.buttons.del">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-if = "_listdata" ng-repeat = "row in _listdata" ng-click = "onSelected(row)">
+            <td ng-if = "param.checkbox" class = "center">
+                <label class = "pos-rel"><input type = 'checkbox' class = "ace" ng-model = "row.selected"/>
+                    <span class = "lbl"></span>
+                </label>
+            </td>
+            <td ng-repeat = "column in param.grid.columns">{{row[column.data.name]}}</td>
+            <td ng-if = "param.buttons.modify || param.buttons.del">
+                <div class = 'hidden-sm hidden-xs action-buttons'>
+                    <button ng-if = "param.buttons.del" class = "btn btn-success btn-xs"
+                            ng-click = "del(row[param.grid.idfield])">{{::param.buttons.del.name}}
+                    </button>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

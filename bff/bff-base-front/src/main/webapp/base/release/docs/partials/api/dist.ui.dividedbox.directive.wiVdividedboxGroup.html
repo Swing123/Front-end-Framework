@@ -1,0 +1,31 @@
+<h1><code ng:non-bindable="">wiVdividedboxGroup</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">dist.ui.dividedbox</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="dist-ui-dividedbox-directive-page dist-ui-dividedbox-directive-wivdividedboxgroup-page"><p>wiVdividedboxGroup 是纵向分屏子容器，其中为用户自定义内容。</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;wi-vdividedbox-group
+       [wi-title="{string}"]
+       [wi-icon="{string}"]
+       [height="{length}"]
+       [collapseto="{string}"]
+       [collapsed="{boolean}"]&gt;
+&lt;/wi-vdividedbox-group&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+<h4 id="usage_directive-info_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>wiTitle <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-dividedbox-directive-page dist-ui-dividedbox-directive-wivdividedboxgroup-page"><p>当前分屏子块的标题，可以为空字符串。</p>
+</div></td></tr><tr><td>wiIcon <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-dividedbox-directive-page dist-ui-dividedbox-directive-wivdividedboxgroup-page"><p>当前分屏字块的标题栏图标的 url，若未设置 wiTitle 属性，此属性无效。</p>
+</div></td></tr><tr><td>height <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-length">length</a></td><td><div class="dist-ui-dividedbox-directive-page dist-ui-dividedbox-directive-wivdividedboxgroup-page"><p>当前分屏子块的高度，从属性字符串直接读取，未定义高度的子块将均分。<br />
+length 为 number 接长度单位（相对单位和绝对单位）。<br />
+相对单位：em, ex, ch, rem, vw, vh, vm, %<br />
+绝对单位：cm, mm, in, pt, pc, px</p>
+</div></td></tr><tr><td>collapseto <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-dividedbox-directive-page dist-ui-dividedbox-directive-wivdividedboxgroup-page"><p>当前分屏子块的折叠方向，未定义则默认不可折叠。<br />
+可选值为&quot;up&quot;/&quot;down&quot;。</p>
+</div></td></tr><tr><td>collapsed <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-dividedbox-directive-page dist-ui-dividedbox-directive-wivdividedboxgroup-page"><p>当前分屏子块若定义了 collapseto 属性，则此属性表示初始的折叠状态，未定义则默认未折叠。</p>
+</div></td></tr></tbody></table></div>
+</div>

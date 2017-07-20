@@ -1,0 +1,27 @@
+@import (reference) "less-nameset";
+/* ---------- accordion ---------- */
+.wi-accordion {
+    border: @accordion-border;
+    border-top: none;
+}
+.wi-accordion-group { background-color: @bg;}
+.wi-accordion-head {
+    padding: 0 .5em;
+    font-size: @accordion-head-font-size;
+    border-top: @accordion-border;
+    .accordion-head-style();
+    color: @title-color;
+    cursor: pointer;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.wi-accordion-head:hover {
+    .accordion-head-hover-style();
+}
+.wi-accordion-disabled { color: @disable-color; }
+.wi-accordion-panel {border-top: @accordion-border; }
+.wi-accordion-cont {
+    padding: @cont-padding;
+    overflow: auto;
+}
+
+

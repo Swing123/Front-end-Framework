@@ -1,0 +1,7 @@
+<div class="nav-tabs-alt">
+    <ul class="nav nav-tabs">
+		<li ng-repeat="list in tabConfig.lists track by $index" ng-class="{'active':$index==currentTab}">
+			<a href ng-click="tab(list,$index)">{{list.name}}</a>
+		</li>
+    </ul>
+</div>

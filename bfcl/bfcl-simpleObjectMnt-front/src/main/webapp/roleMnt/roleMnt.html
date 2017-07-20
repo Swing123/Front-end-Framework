@@ -1,0 +1,127 @@
+<div simple-object-mnt
+     param='
+        {
+            "title": "角色管理"
+            , "serviceUrls": {
+                "list": "roles"
+                , "load": "roles"
+                , "prepare": "roles/prepare"
+                , "add": "roles"
+                , "modify": "roles"
+                , "del": "roles"
+            }
+            , "buttons": {
+                "add":{
+                    "type": "add",
+                    "name": "新建",
+                    "icon": "",
+                    "css": "",
+                    "title": "增加角色",
+                    "templateUrl": "roleMnt/roleAdd.html",
+                    "confirm": {
+                        "message": "确认增加?"
+                    },
+                    "success": {
+                        "message": "新建数据已保存"
+                    }
+                }
+                , "batchDelete": {
+                    "type": "batchDelete",
+                    "name": "批量删除",
+                    "icon": "",
+                    "css": "",
+                    "title": "删除机构",
+                    "confirm": {
+                        "message": "确认删除?"
+                    },
+                    "success": {
+                        "message": "删除成功!",
+                        "time": 3000
+                    }
+                }
+                , "modify": {
+                    "type": "modify",
+                    "name": "修改",
+                    "icon": "",
+                    "css": "",
+                    "title": "修改角色信息",
+                    "templateUrl": "roleMnt/roleModify.html",
+                    "success": {
+                        "message": "修改成功!",
+                        "time": 2000
+                    }
+                }
+                , "del": {
+                    "type": "delete",
+                    "name": "删除",
+                    "icon": "",
+                    "css": "",
+                    "title": "删除角色",
+                    "confirm": {
+                        "message": "确认删除?"
+                    },
+                    "success": {
+                        "message": "删除成功!",
+                        "time": 2000
+                    }
+                }
+            }
+            , "grid": {
+                "css": "",
+                "idfield": "id",
+                "columns": [
+                    {
+                        "css": "width:30%;text-align:center;",
+                        "header": {
+                            "name": "id",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "id",
+                            "css": "align:middle"
+                        }
+                    }
+                    , {
+                        "css": "width:20%;text-align:center;",
+                        "header": {
+                            "name": "名称",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "name",
+                            "css": "align:middle"
+                        }
+                    }
+                    , {
+                        "css": "width:20%;text-align:center;",
+                        "header": {
+                            "name": "拼音首字母",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "pinyinInitials",
+                            "css": "align:middle"
+                        }
+                    }
+                    , {
+                        "css": "width:20%;text-align:center;",
+                        "header": {
+                            "name": "显示顺序",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "displayOrder",
+                            "css": "align:middle"
+                        }
+                    }
+                ]
+                , "pagination": {
+                    "total": 5,
+                    "pageNo": 0,
+                    "pageSize": 10
+                }
+            }
+
+        }
+'>
+</div>

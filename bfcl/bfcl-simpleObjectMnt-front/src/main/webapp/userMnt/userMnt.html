@@ -1,0 +1,127 @@
+<div simple-object-mnt
+     param='
+        {
+            "title": "用户管理"
+            , "serviceUrls": {
+                "list": "users"
+                , "load": "users"
+                , "prepare": "users/prepare"
+                , "add": "users"
+                , "modify": "users"
+                , "del": "users"
+            }
+            , "buttons": {
+                "add":{
+                    "type": "add",
+                    "name": "新建",
+                    "icon": "",
+                    "css": "",
+                    "title": "增加用户",
+                    "templateUrl": "userMnt/userAdd.html",
+                    "confirm": {
+                        "message": "确认增加?"
+                    },
+                    "success": {
+                        "message": "新建数据已保存"
+                    }
+                }
+                , "batchDelete": {
+                    "type": "batchDelete",
+                    "name": "批量删除",
+                    "icon": "",
+                    "css": "",
+                    "title": "删除机构",
+                    "confirm": {
+                        "message": "确认删除?"
+                    },
+                    "success": {
+                        "message": "删除成功!",
+                        "time": 3000
+                    }
+                }
+                , "modify": {
+                    "type": "modify",
+                    "name": "修改",
+                    "icon": "",
+                    "css": "",
+                    "title": "修改用户信息",
+                    "templateUrl": "userMnt/userModify.html",
+                    "success": {
+                        "message": "修改成功!",
+                        "time": 3000
+                    }
+                }
+                , "del": {
+                    "type": "delete",
+                    "name": "删除",
+                    "icon": "",
+                    "css": "",
+                    "title": "删除用户",
+                    "confirm": {
+                        "message": "确认删除?"
+                    },
+                    "success": {
+                        "message": "删除成功!",
+                        "time": 2000
+                    }
+                }
+            }
+            , "grid": {
+                "css": "",
+                "idfield": "id",
+                "columns": [
+                    {
+                        "css": "width:30%;text-align:center;",
+                        "header": {
+                            "name": "id",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "id",
+                            "css": "align:middle"
+                        }
+                    }
+                    , {
+                        "css": "width:20%;text-align:center;",
+                        "header": {
+                            "name": "名称",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "name",
+                            "css": "align:middle"
+                        }
+                    }
+                    , {
+                        "css": "width:20%;text-align:center;",
+                        "header": {
+                            "name": "拼音首字母",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "pinyinInitials",
+                            "css": "align:middle"
+                        }
+                    }
+                    , {
+                        "css": "width:20%;text-align:center;",
+                        "header": {
+                            "name": "显示顺序",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "displayOrder",
+                            "css": "align:middle"
+                        }
+                    }
+                ]
+                , "pagination": {
+                    "total": 5,
+                    "pageNo": 0,
+                    "pageSize": 10
+                }
+            }
+
+        }
+'>
+</div>

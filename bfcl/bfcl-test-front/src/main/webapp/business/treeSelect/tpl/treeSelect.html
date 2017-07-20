@@ -1,0 +1,16 @@
+<div class="dist-tree-select" ng-click="treeSelectClick($event, this)">
+    <div class="dist-tree-select-input" ng-click="selectFocus = !selectFocus">
+        <input type="text" placeholder="{{treePlaceholder}}" class="form-control" ng-model="selectItemNames" />
+        <i class="fa fa-angle-down"></i>
+    </div>
+
+    <div class="dist-tree-select-choices" ng-class="{'show': selectFocus}">
+        <div class="tree tree-no-line">
+            <div ng-repeat="item in treeData" ng-include="'business/treeSelect/tpl/treeItem.html'"></div>
+        </div>
+        <div class="dist-tree-select-choices-control">
+            <button class="btn btn-primary" ng-click="confirmClick($event)">确定</button>
+            <button class="btn btn-default" ng-click="cancelClick($event);">取消</button>
+        </div>
+    </div>
+</div>

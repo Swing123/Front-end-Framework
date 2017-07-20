@@ -1,0 +1,61 @@
+<h1><code ng:non-bindable="">wid</code>
+<div><span class="hint">service in module <code ng:non-bindable="">dist.ui.tabset</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="dist-ui-tabset-wid-page"><p>wiTabset 对外开放的接口，双向绑定，使用前需在指令属性中指定 wid=&quot;xx&quot;，并指定 tabset.xx={}</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_close">close(tab)</h3>
+<div class=""><div class="dist-ui-tabset-wid-close-page"><p>关闭指定的 tab</p>
+</div><h5 id="methods_close_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>tab</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="dist-ui-tabset-wid-close-page"><p>要关闭的 tab 的 scope</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_getactivetab">getActiveTab()</h3>
+<div class="getactivetab"><div class="dist-ui-tabset-wid-getactivetab-page"><p>获取当前选中的 tab 的 scope</p>
+</div><h5 id="methods_getactivetab_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="dist-ui-tabset-wid-getactivetab-page"><p>当前选中的 tab 的 scope，找不到时为 undefined.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_gettab">getTab(key, val)</h3>
+<div class="gettab"><div class="dist-ui-tabset-wid-gettab-page"><p>获取符合条件的第一个 tab 的 scope</p>
+</div><h5 id="methods_gettab_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-tabset-wid-gettab-page"><p>键，可选值：&#39;wiid&#39;,&#39;src&#39;,&#39;icon&#39;,&#39;heading&#39;</p>
+</div></td></tr><tr><td>val</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="dist-ui-tabset-wid-gettab-page"><p>值</p>
+</div></td></tr></tbody></table><h5 id="methods_gettab_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="dist-ui-tabset-wid-gettab-page"><p>第一个符合 tab[key]=val 的 scope，找不到时为 undefined.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_gettabs">getTabs(key, val)</h3>
+<div class="gettabs"><div class="dist-ui-tabset-wid-gettabs-page"><p>获取符合条件的所有 tab 的 scope</p>
+</div><h5 id="methods_gettabs_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-tabset-wid-gettabs-page"><p>键，可选值：&#39;wiid&#39;,&#39;src&#39;,&#39;icon&#39;,&#39;heading&#39;</p>
+</div></td></tr><tr><td>val</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="dist-ui-tabset-wid-gettabs-page"><p>值</p>
+</div></td></tr></tbody></table><h5 id="methods_gettabs_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="dist-ui-tabset-wid-gettabs-page"><p>所有符合 tab[key]=val 的 scope 组成的数组，找不到时为 [].</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_options">options()</h3>
+<div class="options"><div class="dist-ui-tabset-wid-options-page"><p>获取当前tabset的配置</p>
+</div><h5 id="methods_options_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="dist-ui-tabset-wid-options-page"><p>返回一个包含用户自定义设置的对象。<br /></p>
+<ul>
+<li>width 组件宽度.<br /></li>
+<li>height 组件高度.<br /></li>
+<li>vertical 标签页是否纵向排列.<br /></li>
+<li>tabheadsize 标签页头高度（纵向为宽度）(单位：px).<br /></li>
+<li>closeable 所有标签（非固定）支持关闭.<br /></li>
+<li>enablerightmenu 是否启用标签页右键菜单.<br /></li>
+<li>onbeforeclose 关闭标签页前的回调方法.<br /></li>
+<li>onclose 关闭标签页后的回调方法.<br /></li>
+<li>onselect 标签选中后的回调方法.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_recompute">reCompute()</h3>
+<div class="recompute"><div class="dist-ui-tabset-wid-recompute-page"><p>重新根据容器尺寸调整布局，在容器resize或显示时需手动触发</p>
+</div></div>
+</li>
+<li><h3 id="methods_select">select(tab)</h3>
+<div class="select"><div class="dist-ui-tabset-wid-select-page"><p>选中指定的 tab</p>
+</div><h5 id="methods_select_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>tab</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="dist-ui-tabset-wid-select-page"><p>要选中的 tab 的 scope</p>
+</div></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+</div>

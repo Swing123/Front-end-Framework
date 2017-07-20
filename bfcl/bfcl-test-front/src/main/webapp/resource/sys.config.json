@@ -1,0 +1,25 @@
+{
+  "notes":[
+    {
+      "content": "左侧导航栏(sidebar)",
+      "color": "info",
+      "column": "系统配置",
+      "name": "sidebar.json",
+      "url": "modules/_mockServer/resource/sidebar.json"
+    },
+    {
+      "content": "头部导航栏(header)",
+      "color": "primary",
+      "column": "系统配置",
+      "name": "sys.config.json",
+      "url": ""
+    },
+    {
+      "content": "底部栏(footer)",
+      "color": "success",
+      "column": "系统配置",
+      "name": "sys.config.json",
+      "url": ""
+    }
+  ]
+}

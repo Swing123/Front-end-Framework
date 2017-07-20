@@ -1,0 +1,7 @@
+{
+    "cname":"wiTab",
+    "discribe":"wiTab(选项卡)",
+    "demos":[
+        {"demoDiscribe":"tab基础","html":"wiTab/docs/demo1.html","js":"wiTab/docs/demo1.js"}
+    ]
+}

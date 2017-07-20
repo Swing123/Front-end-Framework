@@ -1,0 +1,65 @@
+<h1><code ng:non-bindable="">wiDatagrid</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">dist.ui.datagrid</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="dist-ui-datagrid-directive-page dist-ui-datagrid-directive-widatagrid-page"><p>数据表格</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;wi-datagrid
+       [wiid="{object}"]
+       [dataprovider="{array}"]
+       [dataurl="{string}"]
+       [params="{string}"]
+       [pagemode="{string}"]
+       [itemclick="{function}"]
+       [itemdoubleclick="{function}"]
+       [columns="{object}"]
+       [lockcolumns="{number}"]
+       [rowcolorfunction="{function}"]
+       [showno="{boolean}"]
+       [multiselect="{boolean}"]
+       [treefield="{string}"]
+       [collapse="{boolean}"]
+       [itemopen="{function}"]
+       [width="{number|percent}"]
+       [height="{number|percent}"]
+       [headerheight="{number}"]
+       [rowheight="{number}"]
+       [wordwrap="{boolean}"]
+       [pageselect="{array}"]
+       [showexcel="{boolean}"]
+       [showrefresh="{boolean}"]
+       [pagebar-height="{number}"]
+       [pagebarrenderer="{string}"]&gt;
+&lt;/wi-datagrid&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>wiid <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="dist-ui-datagrid-directive-page dist-ui-datagrid-directive-widatagrid-page"><p>供外部调用.</p>
+</div><table><thead><tr><th>Property</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>getSelectedItems <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-datagrid-directive-page dist-ui-datagrid-directive-widatagrid-page"><p>获取选中条目 多选.</p>
+</div></td></tr><tr><td>getSelectedItem <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-datagrid-directive-page dist-ui-datagrid-directive-widatagrid-page"><p>获取选中条目 单选.</p>
+</div></td></tr></tbody></table></td></tr><tr><td>dataprovider <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="dist-ui-datagrid-directive-page dist-ui-datagrid-directive-widatagrid-page"><p>数据源，若定义了 dataurl，此属性失效.</p>
+</div></td></tr><tr><td>dataurl <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-datagrid-directive-page dist-ui-datagrid-directive-widatagrid-page"><p>请求数据的url，若定义了此属性，dataprovider 失效.</p>
+</div></td></tr><tr><td>params <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-datagrid-directive-page dist-ui-datagrid-directive-widatagrid-page"><p>请求数据的参数（lx, keyword, start, limit）.</p>
+</div></td></tr><tr><td>pagemode <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-datagrid-directive-page dist-ui-datagrid-directive-widatagrid-page"><p>分页模式：client:前台分页 server：后台分页 none:不启用分页(将隐藏分页工具条).</p>
+</div></td></tr><tr><td>itemclick <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-datagrid-directive-page dist-ui-datagrid-directive-widatagrid-page"><p>单击事件.（itemclick和itemdoubleclick不能同时设置）</p>
+</div></td></tr><tr><td>itemdoubleclick <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-datagrid-directive-page dist-ui-datagrid-directive-widatagrid-page"><p>双击事件.（itemclick和itemdoubleclick不能同时设置）</p>
+</div></td></tr><tr><td>columns <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="dist-ui-datagrid-directive-page dist-ui-datagrid-directive-widatagrid-page"><p>通过数据源实现的列定义.</p>
+</div></td></tr><tr><td>lockcolumns <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="dist-ui-datagrid-directive-page dist-ui-datagrid-directive-widatagrid-page"><p>锁定前几列.</p>
+</div></td></tr><tr><td>rowcolorfunction <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-datagrid-directive-page dist-ui-datagrid-directive-widatagrid-page"><p>设置行颜色.</p>
+</div></td></tr><tr><td>showno <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-datagrid-directive-page dist-ui-datagrid-directive-widatagrid-page"><p>显示行序号，默认为 false，不显示序号.</p>
+</div></td></tr><tr><td>multiselect <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-datagrid-directive-page dist-ui-datagrid-directive-widatagrid-page"><p>多选，默认为 false，不显示复选框.</p>
+</div></td></tr><tr><td>treefield <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-datagrid-directive-page dist-ui-datagrid-directive-widatagrid-page"><p>树节点字段.</p>
+</div></td></tr><tr><td>collapse <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-datagrid-directive-page dist-ui-datagrid-directive-widatagrid-page"><p>初始化时树型节点是否折叠，false 时展开，默认为 true。</p>
+</div></td></tr><tr><td>itemopen <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-datagrid-directive-page dist-ui-datagrid-directive-widatagrid-page"><p>节点展开，动态获取子节点数据 children[]。itemopen(data, callback))<br />参数：data 要展开的节点数据，callback 回调函数，获取 children[] 后，需手动执行 callback(data, children[]).</p>
+</div></td></tr><tr><td>width <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a><a href="" class="label type-hint type-hint-percent">percent</a></td><td><div class="dist-ui-datagrid-directive-page dist-ui-datagrid-directive-widatagrid-page"><p>宽度.指令直接从属性值attrs[&#39;width&#39;]获取数字(不含单位：px)或百分比.</p>
+</div></td></tr><tr><td>height <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a><a href="" class="label type-hint type-hint-percent">percent</a></td><td><div class="dist-ui-datagrid-directive-page dist-ui-datagrid-directive-widatagrid-page"><p>高度.指令直接从属性值attrs[&#39;height&#39;]获取数字(不含单位：px)或百分比.</p>
+</div></td></tr><tr><td>headerheight <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="dist-ui-datagrid-directive-page dist-ui-datagrid-directive-widatagrid-page"><p>表头的行高.(不含单位：px),默认为 50.</p>
+</div></td></tr><tr><td>rowheight <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="dist-ui-datagrid-directive-page dist-ui-datagrid-directive-widatagrid-page"><p>表内容的行高.(不含单位：px),默认为 40.</p>
+</div></td></tr><tr><td>wordwrap <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-datagrid-directive-page dist-ui-datagrid-directive-widatagrid-page"><p>单元格内容是否支持自动换行，默认为 false，若定义了 lockcolumn，此属性失效。</p>
+</div></td></tr><tr><td>pageselect <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="dist-ui-datagrid-directive-page dist-ui-datagrid-directive-widatagrid-page"><p>每页显示数量.默认为：[20,30,40,50,60]</p>
+</div></td></tr><tr><td>showexcel <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-datagrid-directive-page dist-ui-datagrid-directive-widatagrid-page"><p>显示excel按钮.</p>
+</div></td></tr><tr><td>showrefresh <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-datagrid-directive-page dist-ui-datagrid-directive-widatagrid-page"><p>显示刷新按钮.</p>
+</div></td></tr><tr><td>pagebarHeight <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="dist-ui-datagrid-directive-page dist-ui-datagrid-directive-widatagrid-page"><p>分页栏高度.(不含单位：px),默认为 30.</p>
+</div></td></tr><tr><td>pagebarrenderer <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-datagrid-directive-page dist-ui-datagrid-directive-widatagrid-page"><p>自定义工具条.</p>
+</div></td></tr></tbody></table></div>
+</div>

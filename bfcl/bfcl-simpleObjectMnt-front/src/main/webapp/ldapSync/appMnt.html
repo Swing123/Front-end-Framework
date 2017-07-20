@@ -1,0 +1,122 @@
+<div simple-object-mnt
+     param='
+        {
+            "title": "应用管理"
+            , "serviceUrls": {
+                "list": "ldapSync/apps"
+                , "load": "ldapSync/apps"
+                , "prepare": "ldapSync/apps/prepare"
+                , "add": "ldapSync/apps"
+                , "modify": "ldapSync/apps"
+                , "del": "ldapSync/apps"
+            }
+            , "buttons": {
+                "add":{
+                    "type": "add",
+                    "name": "新建",
+                    "icon": "",
+                    "css": "",
+                    "title": "增加应用",
+                    "templateUrl": "ldapSync/appAdd.html",
+                    "confirm": {
+                        "message": "确认增加?"
+                    },
+                    "success": {
+                        "message": "新建数据已保存"
+                    }
+                }
+                , "batchDelete": {
+                    "type": "batchDelete",
+                    "name": "批量删除",
+                    "icon": "",
+                    "css": "",
+                    "title": "删除机构",
+                    "confirm": {
+                        "message": "确认删除?"
+                    },
+                    "success": {
+                        "message": "删除成功!",
+                        "time": 3000
+                    }
+                }
+                , "modify": {
+                    "type": "modify",
+                    "name": "修改",
+                    "icon": "",
+                    "css": "",
+                    "title": "修改应用信息",
+                    "templateUrl": "ldapSync/appModify.html",
+                    "success": {
+                        "message": "修改成功!",
+                        "time": 2000
+                    }
+                }
+                , "del": {
+                    "type": "delete",
+                    "name": "删除",
+                    "icon": "",
+                    "css": "",
+                    "title": "删除应用"
+                    , "confirm": {
+                        "message": "确认删除?"
+                    }
+                    , "success": {
+                        "message": "删除成功!",
+                        "time": 2000
+                    }
+                }
+            }
+            , "grid": {
+                "css": "",
+                "idfield": "id",
+                "columns": [
+                    {
+                       "css": "width:20%;text-align:center;",
+                        "header": {
+                            "name": "名称",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "name",
+                            "css": "align:middle"
+                        }
+                    }
+                    , {
+                        "css": "width:30%;text-align:center;",
+                        "header": {
+                            "name": "同步计划",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "syncSchedule",
+                            "css": "align:middle"
+                        }
+                    }
+                    , {
+                        "css": "width:20%;text-align:center;",
+                        "header": {
+                            "name": "最近同步时间",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "lastSyncTime",
+                            "css": "align:middle"
+                        }
+                    }
+                ]
+                , "pagination": {
+                    "total": 5,
+                    "pageNo": 0,
+                    "pageSize": 10
+                }
+                , "buttons": [
+                    {
+                        "name": "测试"
+                        , "click": "test()"
+                    }
+                ]
+            }
+
+        }
+'>
+</div>

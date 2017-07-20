@@ -1,0 +1,121 @@
+@import (reference) "less-nameset";
+/* ---------- camerascanner ---------- */
+.wi-camerascanner{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: @mask-color;
+    overflow: auto;
+    z-index: 1050;
+}
+.wi-camerascanner-hide{
+    top: -110%;
+    left: -110%;
+    right: 110%;
+    bottom: 110%;
+}
+.wi-camerascanner-main{
+    border:@border-size solid @border-c;
+    border-radius: @border-radius;
+    background: @bg;
+    margin: 10px auto;
+    .box-shadow();
+    overflow: hidden;
+}
+.wi-camerascanner-opt{
+    float: left;
+    margin: 10px;
+}
+.wi-camerascanner-toolbar{
+    text-align: center;
+    margin: 10px;
+}
+// toolbar 中的操作按钮
+.wi-camerascanner-toolbar > a{
+    display: inline-block;
+    width: 20px; height: 20px;
+    background-image: url('images/camerascanner/tools.png');
+}
+a.wi-camerascanner-left{
+    background-position: 0 0;
+}
+a.wi-camerascanner-right{
+    background-position: -20px 0;
+    margin-left: 10px;
+}
+a.wi-camerascanner-reset{
+    background-position: -40px 0;
+    margin-left: 10px;
+}
+.wi-camerascanner-btns{
+    text-align: right;
+    margin: 10px;
+}
+.wi-camerascanner-btns > a{
+    display: inline-block;
+    width: 90px; height: 35px; line-height: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: @border-radius;
+    text-decoration: none;
+    color: @btn-font-color;
+    vertical-align: baseline;
+    padding: 0;
+}
+a.wi-camerascanner-btn{// 拍照按钮
+    background: url('images/camerascanner/tools.png') 2px -22px no-repeat @sel-bg;
+    border: solid @border-size @sel-border-c;
+    color: @sel-color;
+    padding-left: 40px;
+}
+a.wi-camerascanner-btn:hover{
+    background-color: @highlight-bg;
+    color: @highlight-bg-c;
+}
+.wi-camerascanner-list{
+    float: left;
+    margin: 10px 10px 10px 0;
+    border:@border-size solid @border-c;
+    overflow-y:auto;
+}
+.wi-camerascanner-wait{// 等待时默认显示的背景
+    background: url('images/camerascanner/wait.gif') #1a1a1a center center no-repeat;
+}
+.wi-camerascanner-photo{
+    float:left;
+    position: relative;
+    border:@border-size solid @border-c;
+    margin: 18px 0 0 18px;// 比滚动条略大
+}
+.wi-camerascanner-photo > a.fa-remove{
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    text-decoration: none;
+    color: @tool-color;
+}
+.wi-camerascanner-photo > a.fa-remove:hover{ color: @tool-hover-color;}
+
+.wi-camerascanner-photo > div {
+    width:220px;
+    height:30px;
+    line-height:30px;
+    color:#fff;
+    font-size:13px;
+    position: absolute;
+    background: #000;
+    bottom:0;
+    right:0;
+    padding-left: 5px;
+    display:none;
+}
+.wi-camerascanner-qulitity {
+    float: right;
+    width: 260px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: right;
+}

@@ -1,0 +1,33 @@
+@import (reference) "less-nameset";
+/* ---------- panel ---------- */
+.wi-panel{}
+.wi-panel-close{ display: none;}
+.wi-panel-head{
+    padding: 1px @title-padding 2px @title-padding;
+    border: @panel-border;
+    .panel-head-style();
+    color: @title-color;
+    position: relative;
+}
+img.wi-panel-icon{ vertical-align: middle;}
+.wi-panel-tools{
+    position: absolute;
+    top: @panel-tool-top; // 头部工具栏 top 位置
+    right: @title-padding;
+}
+.wi-panel-tools > span{
+    color: @tool-color;
+    cursor: pointer;
+}
+.wi-panel-tools > span:not(:first-child){ margin-left:.3em;}
+.wi-panel-tools > span:hover{ color: @tool-hover-color;}
+.wi-panel-box{
+    border: @panel-border;
+    border-top: none;
+    background-color: @bg;
+    overflow: auto;
+}
+.wi-panel-h>.wi-panel-head{
+    height: @panel-head-h;
+    overflow: hidden;
+}

@@ -1,0 +1,55 @@
+<!-- hbox layout -->
+<div class="sys-config" ng-init="
+  app.settings.asideFixed = true;
+  app.settings.asideDock = false;
+  app.settings.container = false;
+  app.hideAside = true;
+  app.hideFooter = true;" ng-controller="SystemConfigController">
+
+  <div class="row">
+    <div class="col-md-12 col-sm-12">
+      <div class="col-md-3 col-sm-3 padding-right-0 border-right">
+        <div class="wrapper">
+            <a href class="pull-right btn btn-sm btn-info m-t-n-xs" ng-click="createNote()">New</a>
+            <div class="h4">Notes</div>
+        </div>
+        <div class="wrapper b-t m-t-xxs padding-right-0 padding-left-0">
+            <div class="input-group">
+                <span class="input-group-addon input-sm"><i class="fa fa-search"></i></span>
+                <input type="text" class="form-control input-sm" placeholder="search" ng-model="query">
+            </div>
+        </div>
+        <div class="list-group">
+          <a ng-repeat="note in notes | filter:query | orderBy:'date':true" class="list-group-item b-l-{{note.color}} b-l-3x hover-anchor" ng-class="{'hover': note.selected }" ng-click="selectNote(note)">
+            <span ng-click='deleteNote(note)' class="pull-right text-muted hover-action"><i class="fa fa-times"></i></span>
+            <span class="block text-ellipsis">{{ note.content ? note.content : 'Empty note' }}</span>
+            <small class="text-muted">{{ note.column  }}</small>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-9 col-sm-9 padding-left-0" ng-init="isDisableTextarea=true;">
+        <div class="wrapper bg-light lt b-b">
+          <div class="m-l inline dropdown" dropdown>
+            <a class="v-middle pos-rlt inline bg-{{note.color}}" dropdown-toggle style="width:16px;height:16px;top:-2px"></a>
+            <div class="dropdown-menu animated fadeInUp w wrapper">
+            </div>
+          </div>
+        </div>
+        <div style="height:380px;width:100%;margin:10px">
+          <textarea class="lined" ng-class="{'sys-warning':isWarning,'sys-correct':isCorrect}" ng-disabled="isDisableTextarea" type="textarea" style="height:380px;width:98%" ng-model="jsonCode"></textarea>
+        </div>
+        <div class="sys-textarea" style="margin-top:10px;">
+          <input type="checkbox" ng-model="isDisableTextarea"/>只读
+          <button class="btn btn-warning btn-sm" ng-click="checkJSON(jsonCode)">校验</button>
+          <button class="btn btn-danger btn-sm">清空</button>
+          <button class="btn btn-info btn-sm">保存</button>
+        </div>
+        <div style="margin:10px;">
+          <textarea rows="4" disabled="disabled" class="" ng-show="isCorrect||isWarning" style="width:100%;vertical-align:middle;" ng-class="{'btn-success':isCorrect,'btn-danger':isWarning}" ng-model="parseMessage"></textarea>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /hbox layout -->

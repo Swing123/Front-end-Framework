@@ -1,0 +1,250 @@
+<div app-task-mnt
+     config='
+    {
+        "messages": [
+            {
+                  "type": "in"
+                , "name": "executeTask"
+                , "id": "9b324402-9cb7-11e6-8b3d-a6df6c7f39a0"
+                , "handler": "_handleMessage_executeTask"
+            }
+            , {
+                  "type": "in"
+                , "name": "duplicateTask"
+                , "id": "0f7878ed-e2c6-4609-9a67-a8e295ca671d"
+                , "handler": "_handleMessage_duplicateTask"
+            }
+            , {
+                  "type": "in"
+                , "name": "openLogMnt"
+                , "id": "00dd9ce9-eeed-4f0c-bded-e20d962b5601"
+                , "handler": "_handleMessage_openLogMnt"
+            }
+        ]
+    }'
+    param='
+    {
+        "executeTask": {
+              "title": "执行任务"
+            , "type": "request"
+            , "serviceUrls": {
+                "start": "ldapSync/tasks/:taskId/sync"
+                , "progress": "ldapSync/tasks/:taskId/progress"
+                , "stop": "ldapSync/tasks/:taskId/stop"
+            }
+            , "templateUrl": "ldapSync/executeTask.html"
+            , "confirm": {
+                "message": "确认执行?"
+            }
+        }
+        , "duplicateTask": {
+              "title": "复制任务"
+            , "type": "request"
+            , "serviceUrls": {
+                "start": "ldapSync/tasks/:taskId"
+            }
+            , "success": {
+                "message": "复制成功"
+                , "time": 2000
+            }
+       }
+        , "openLogMnt": {
+            "title": "汇总日志管理"
+            , "type": "page"
+            , "param": ""
+            , "templateUrl": "ldapSync/syncLogMnt.html"
+        }
+    }'
+>
+    <div parent-child-mnt-buz
+             parentparam='
+        {
+            "title": "应用管理"
+            , "serviceUrls": {
+                "list": "ldapSync/apps"
+                , "load": "ldapSync/apps"
+                , "prepare": "ldapSync/apps/prepare"
+                , "add": "ldapSync/apps"
+                , "modify": "ldapSync/apps"
+                , "del": "ldapSync/apps"
+            }
+            , "buttons": {
+            }
+            , "grid": {
+                "css": ""
+                , "idfield": "id"
+                , "checkbox": false
+                , "columns": [
+                    {
+                        "css": "width:20%;text-align:center;",
+                        "header": {
+                            "name": "名称",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "name",
+                            "css": "align:middle"
+                        }
+                    }
+                ]
+            }
+
+        }'
+             childparam='
+        {
+            "title": "任务管理"
+            , "serviceUrls": {
+                "list": "ldapSync/tasks?appId=:parentId"
+                , "load": "ldapSync/tasks"
+                , "prepare": "ldapSync/tasks/prepare"
+                , "add": "ldapSync/tasks?appId=:parentId"
+                , "modify": "ldapSync/tasks"
+                , "del": "ldapSync/tasks"
+            }
+            , "buttons": {
+                "add":{
+                    "type": "add",
+                    "name": "新建",
+                    "icon": "",
+                    "css": "",
+                    "title": "增加任务",
+                    "templateUrl": "ldapSync/taskAdd.html",
+                    "confirm": {
+                        "message": "确认增加?"
+                    },
+                    "success": {
+                        "message": "新建数据已保存"
+                    }
+                }
+                , "batchDelete": {
+                    "type": "batchDelete",
+                    "name": "批量删除",
+                    "icon": "",
+                    "css": "",
+                    "title": "删除机构",
+                    "confirm": {
+                        "message": "确认删除?"
+                    },
+                    "success": {
+                        "message": "删除成功!",
+                        "time": 2000
+                    }
+                }
+                , "modify": {
+                    "type": "modify"
+                    , "name": "修改"
+                    , "icon": ""
+                    , "css": ""
+                    , "title": "修改任务信息"
+                    , "templateUrl": "ldapSync/taskModify.html"
+                    , "confirm": {
+                        "message": "确认修改?"
+                    }
+                    , "success": {
+                        "message": "修改成功！"
+                        , "time": 2000
+                    }
+                }
+                , "del": {
+                    "type": "delete"
+                    , "name": "删除"
+                    , "icon": ""
+                    , "css": ""
+                    , "title": "删除任务"
+                    , "confirm": {
+                        "message": "确认删除?"
+                    }
+                    , "success": {
+                        "message": "删除成功!"
+                        , "time": 2000
+                    }
+                }
+            }
+            , "grid": {
+                "css": ""
+                , "idfield": "id"
+                , "messageButtons": [
+                    {
+                        "name": "同步"
+                        , "messageName": "executeTask"
+                        , "messageId": "9b324402-9cb7-11e6-8b3d-a6df6c7f39a0"
+                    }
+                    , {
+                        "name": "复制"
+                        , "messageName": "duplicateTask"
+                        , "messageId": "0f7878ed-e2c6-4609-9a67-a8e295ca671d"
+                    }
+                    , {
+                        "name": "日志"
+                        , "messageName": "listDetails"
+                        , "messageId": "00dd9ce9-eeed-4f0c-bded-e20d962b5601"
+                    }
+                ]
+                , "columns": [
+                    {
+                        "css": "width:20%;text-align:center;",
+                        "header": {
+                            "name": "任务名称",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "name",
+                            "css": "align:middle"
+                        }
+                    }
+                    , {
+                        "css": "width:20%;text-align:center;",
+                        "header": {
+                            "name": "同步类型",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "syncType",
+                            "css": "align:middle"
+                        }
+                    }
+                    , {
+                        "css": "width:20%;text-align:center;",
+                        "header": {
+                            "name": "同步方向",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "syncDirection",
+                            "css": "align:middle"
+                        }
+                    }
+                    , {
+                        "css": "width:20%;text-align:center;",
+                        "header": {
+                            "name": "冲突策略",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "syncConflitStrategy",
+                            "css": "align:middle"
+                        }
+                    }
+                    , {
+                        "css": "width:20%;text-align:center;",
+                        "header": {
+                            "name": "是否启用",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "isEnabled",
+                            "css": "align:middle"
+                        }
+                    }
+                ]
+                , "pagination": {
+                    "total": 5,
+                    "pageNo": 0,
+                    "pageSize": 10
+                }
+            }
+
+        }
+        '
+    ></div>
+</div>

@@ -1,0 +1,193 @@
+@import (reference) "less-nameset";
+.wi-tabset{
+    .tabset-style();
+    padding: @tabset-padding;
+    position: relative;
+}
+.wi-tabcont {
+    .tabset-cont-border();
+    background: @bg;
+}
+.wi-tabpane { overflow: auto;}
+.wi-tabctrl-hor,
+.wi-tabctrl-ver {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    color: @tabset-arrow-color;
+}
+.wi-tabctrl-hor:hover,
+.wi-tabctrl-ver:hover {
+    color: @tabset-arrow-hover-color;
+}
+li.wi-tab {
+    overflow: hidden;
+    cursor: default;
+    position: relative; /* 关闭按钮定位参照 */
+    text-align: center;
+    background-clip: padding-box;
+}
+li.wi-tab-disabled{// 禁用标签
+    .tab-disable();
+    cursor: not-allowed;
+}
+/* ---------- 横向 ---------- */
+.wi-tabset-h>.wi-tabhead{
+    position: relative;
+    border-bottom: @tab-active-border;
+}
+.wi-tabctrl-hor {
+    height: 100%;
+    width: @tab-ctrl-size;
+    line-height: inherit;
+}
+.wi-tabctrl-hor.fa-chevron-left{top: 0; left: 0;}
+.wi-tabctrl-hor.fa-chevron-right{top: 0; right: 0;}
+:not(.wi-tabset-h)>.wi-tabhead>.wi-tabctrl-hor{ display: none; /* 非横向不显示 ctrl-hor */}
+.wi-tabset-h>.wi-tabhead>.wi-tabstage{
+    position: absolute;
+    top: 0;
+    bottom: 0 - @tab-bsize;/* 遮挡下边框 */
+    overflow: hidden;
+    left: @tab-ctrl-size; right: @tab-ctrl-size;/* 显示翻页时，留白 */
+}
+.wi-tabset-h>.wi-tabhead>.wi-tabstage:first-child{/* 不翻页时显示 */
+    left: 0; right: 0;
+}
+ul.wi-tabul-hor{
+    height: 100%;
+    position: absolute;/* 翻页时用 left 定位 */
+}
+.wi-tabul-hor>li.wi-tab{
+    .tab-style(top, bottom);
+    float: left;
+    padding: 0 .5em;
+    height: 100%;
+    border-radius: @border-radius @border-radius 0 0;
+    border-bottom-color: transparent;
+}
+.wi-tabul-hor>li.wi-tab:not(:first-child){margin-left: @tab-margin;}
+.wi-tabul-hor>li.wi-tab.wi-tab-hasclose{
+    padding-right: 1.8em;
+}
+.wi-tabul-hor>li.wi-tab.wi-tab-active{
+    .tab-active-style(top, bottom);
+    border-bottom-color: @bg;
+}
+.wi-tabul-hor>li.wi-tab:not(.wi-tab-disabled):not(.wi-tab-active):hover{
+    .tab-hover-style(top, bottom);
+}
+.wi-tabul-hor>.wi-tab>span.fa-remove{
+    position: absolute;
+    cursor: pointer;
+    vertical-align: middle;
+    right: 0;
+    padding-right: .5em;
+    line-height: inherit;
+}
+.wi-tabul-hor>li.wi-tab:not(.wi-tab-hasclose)>span.fa-remove{
+    display: none;
+}
+.wi-tabul-hor>.wi-tab>.wi-tabhead-cont>img.wi-tab-icon{
+    width: 1em; height: 1em;
+    margin-right: .5em;
+    vertical-align: middle;
+}
+.wi-tabset-h>.wi-tabcont{
+    border-top: none;
+}
+/* ---------- 纵向 ---------- */
+.wi-tabset-v>.wi-tabhead{
+    float: left;
+    border-right: @tab-active-border;
+}
+.wi-tabset-vh>.wi-tabhead{
+    position: absolute;
+    left: @tabset-padding;
+    top: @tabset-padding;
+    bottom: @tabset-padding;
+    border-right: @tab-active-border;
+}
+.wi-tabctrl-ver{
+    width: 100%;
+    height: @tab-ctrl-size;
+    line-height: inherit;
+}
+.wi-tabctrl-ver.fa-chevron-up{left: 0; top: 0;}
+.wi-tabctrl-ver.fa-chevron-down{left: 0; bottom: 0;}
+:not(.wi-tabset-vh)>.wi-tabhead>.wi-tabctrl-ver{ display: none;/* 非纵向指定高度不显示 ctrl-hor */}
+.wi-tabset-vh>.wi-tabhead>.wi-tabstage{/* vertical 指定高度需对 stage 定位 */
+    position: absolute;
+    left: 0;
+    right: -1px;/* 遮挡右边框 */
+    overflow: hidden;
+    top: @tab-ctrl-size; bottom: @tab-ctrl-size;/* 显示翻页时，留白 */
+}
+.wi-tabset-vh>.wi-tabhead>.wi-tabstage:first-child{/* 不翻页时显示 */
+    top: 0; bottom: 0;
+}
+ul.wi-tabul-ver{
+    height:200%;/*使后方li不至于换行*/
+    word-wrap: break-word;/* 强制换行 */
+}
+.wi-tabset-v>.wi-tabhead>.wi-tabstage>ul.wi-tabul-ver{
+    width: calc(~"100% + @{tab-bsize}");/* 遮挡右边框 */
+}
+.wi-tabset-vh>.wi-tabhead>.wi-tabstage>ul.wi-tabul-ver{
+    width: 100%;
+    position: absolute;/* 翻页时用 top 定位 */
+}
+.wi-tabul-ver>li.wi-tab{
+    .tab-style(left, right);
+    width: 100%;
+    border-radius: @border-radius 0 0 @border-radius;
+    border-right-color: transparent;
+    padding: .3em 0;
+}
+.wi-tabul-ver>li.wi-tab.wi-tab-hasclose{
+    padding-bottom: 1.8em;
+}
+
+.wi-tabul-ver>li.wi-tab:not(:last-child){margin-bottom: @tab-margin;}
+.wi-tabul-ver>li.wi-tab.wi-tab-active{
+    .tab-active-style(left, right);
+    border-right-color: @bg;
+}
+.wi-tabul-ver>li.wi-tab:not(.wi-tab-disabled):not(.wi-tab-active):hover{
+    .tab-hover-style(left, right);
+}
+.wi-tabul-ver>.wi-tab>span.fa-remove{
+    position: absolute;
+    cursor: pointer;
+    bottom: 0;
+    padding-bottom:.2em;
+    left: 0;
+    right: 0;
+    text-align: center;
+    line-height: inherit;
+}
+.wi-tabul-ver>li.wi-tab:not(.wi-tab-hasclose)>span.fa-remove{
+    display: none;
+}
+.wi-tabul-ver>.wi-tab>.wi-tabhead-cont{
+    width: 1.5em;
+    text-align: center;
+    margin: 0 auto;
+}
+.wi-tabul-ver>.wi-tab>.wi-tabhead-cont>img.wi-tab-icon{
+    width: 1em; height: 1em;
+}
+.wi-tabset-v>.wi-tabcont{
+    position: absolute;
+    left: @tabset-padding;
+    right: @tabset-padding;
+    top: @tabset-padding;
+    bottom: @tabset-padding;
+    border-left: none;
+}
+.wi-tabset-vh>.wi-tabcont{
+    height: 100%;
+    border-left: none;
+}

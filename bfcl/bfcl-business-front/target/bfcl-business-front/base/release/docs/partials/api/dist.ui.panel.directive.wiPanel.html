@@ -1,0 +1,52 @@
+<h1><code ng:non-bindable="">wiPanel</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">dist.ui.panel</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="dist-ui-panel-directive-page dist-ui-panel-directive-wipanel-page"><p>wiPanel 是基本的布局组件，可以自定义标题和按钮，并内置了一些工具按钮。</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;wi-panel
+       [wiid="{object}"]
+       [width="{number|length}"]
+       [height="{number|length}"]
+       [heading="{string}"]
+       [headicon="{string}"]
+       [headtools="{string|array}"]
+       [center="{boolean}"]
+       [is-open="{boolean}"]
+       [collapsible="{boolean}"]
+       [collapsed="{boolean}"]
+       [onopened="{function}"]
+       [onclosed="{function}"]
+       [oncollapse="{function}"]
+       [onexpand="{function}"]&gt;
+&lt;/wi-panel&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>wiid <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="dist-ui-panel-directive-page dist-ui-panel-directive-wipanel-page"><p>若定义了此属性，可供调用接口。<br />
+.options() 获取当前设置：{ heading，isOpen，isCollapse }，<br />
+.element() 获取当前 panel 对应的 jqlite 元素，<br />
+.toggle() 切换当前面板的折叠状态，并返回切换后的状态，true 为折叠。</p>
+</div></td></tr><tr><td>width <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a><a href="" class="label type-hint type-hint-length">length</a></td><td><div class="dist-ui-panel-directive-page dist-ui-panel-directive-wipanel-page"><p>面板宽度，默认为 100%。<br />
+number 将自动添加单位 px。<br />
+length 为 number 接长度单位（相对单位和绝对单位）。<br />
+相对单位：em, ex, ch, rem, vw, vh, vm, %<br />
+绝对单位：cm, mm, in, pt, pc, px</p>
+</div></td></tr><tr><td>height <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a><a href="" class="label type-hint type-hint-length">length</a></td><td><div class="dist-ui-panel-directive-page dist-ui-panel-directive-wipanel-page"><p>面板高度，默认为自适应。若定义了此属性，head 部分高度将自动设置为 30px。
+说明同 width。</p>
+</div></td></tr><tr><td>heading <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-panel-directive-page dist-ui-panel-directive-wipanel-page"><p>头部显示文字, heading是单向绑定的，可以设置为一个确定的字符串，或者设置为scope中的一个变量。</p>
+</div></td></tr><tr><td>headicon <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-panel-directive-page dist-ui-panel-directive-wipanel-page"><p>头部左侧显示图标的 url。</p>
+</div></td></tr><tr><td>headtools <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="dist-ui-panel-directive-page dist-ui-panel-directive-wipanel-page"><p>头部右侧的工具，系统工具：&#39;close&#39;（关闭），collapse&#39;（折叠）。<br />
+string：用“,”连接的系统工具字符串，定义时需加引号，如：headTools=&quot;&#39;close,collapse&#39;&quot;或&quot;&#39;close&#39;&quot;。<br />
+array：数组的每一个元素代表一个工具，系统工具为 string，自定义工具为 Object。如：[&#39;collapse&#39;,&#39;close&#39;,{name:&#39;save&#39;,cls:&#39;icon-save&#39;,opt:saveFun}]。<br />
+其中自定义工具对象的属性说明：name-操作名称,cls-class名称,opt-click的操作（值为函数引用，参数：事件源 event）。</p>
+</div></td></tr><tr><td>center <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-panel-directive-page dist-ui-panel-directive-wipanel-page"><p>true 时居中显示，默认为 false</p>
+</div></td></tr><tr><td>isOpen <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-panel-directive-page dist-ui-panel-directive-wipanel-page"><p>true 时面板显示，双向绑定，应设置为scope中的一个变量。</p>
+</div></td></tr><tr><td>collapsible <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-panel-directive-page dist-ui-panel-directive-wipanel-page"><p>true 时可以通过点击头部进行折叠展开操作，默认为 false。</p>
+</div></td></tr><tr><td>collapsed <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-panel-directive-page dist-ui-panel-directive-wipanel-page"><p>true 时折叠，默认为 false。</p>
+</div></td></tr><tr><td>onopened <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-panel-directive-page dist-ui-panel-directive-wipanel-page"><p>打开面板后的回调方法，参数：无。</p>
+</div></td></tr><tr><td>onclosed <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-panel-directive-page dist-ui-panel-directive-wipanel-page"><p>关闭面板后的回调方法，参数：无。</p>
+</div></td></tr><tr><td>oncollapse <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-panel-directive-page dist-ui-panel-directive-wipanel-page"><p>折叠面板时的回调方法，参数：无。</p>
+</div></td></tr><tr><td>onexpand <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-panel-directive-page dist-ui-panel-directive-wipanel-page"><p>展开面板时的回调方法，参数：无。</p>
+</div></td></tr></tbody></table></div>
+</div>

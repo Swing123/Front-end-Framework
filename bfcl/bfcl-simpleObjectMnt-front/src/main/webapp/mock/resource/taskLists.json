@@ -1,0 +1,49 @@
+{
+  "status":"success",
+  "data":[
+    {
+      "appId": "c12ba16c-9906-11e6-8b3d-a6df6c7f39a0",
+      "dbDriver": "com.mysql.jdbc.Driver",
+      "dbPassword": "distxm",
+      "dbSpecialColumns": "",
+      "dbTable": "ORUP_USER",
+      "dbUrl": "jdbc:mysql://localhost:3306/xmoa?characterEncoding=UTF-8",
+      "dbUser": "distxm",
+      "displayOrder": 999,
+      "id": "66668754-9cd0-11e6-8b3d-a6df6c7f39a0",
+      "isEnabled": false,
+      "ldapObjectClass": "uucPerson",
+      "ldapObjectParentDn": "dc=dist,dc=com",
+      "ldapObjectRdnAttr": "cn",
+      "ldapSpecialAttrs": "uucId=@uuid,uucParentId= ,uucDisplayOrder=0,uucIsDeleted=false,uucPinyinInitials=",
+      "matchFieldsMap": "cn=loginname",
+      "name": "本地：192.168.200.112:用户",
+      "pinyinInitials": "",
+      "syncConflitStrategy": 2,
+      "syncDirection": 3,
+      "syncFieldMaps": "uid=id\n,cn=loginname\n,sn=name\n,userPassword=loginpwd\n,mobile=mobilephone ,sn=name\n,uucState=state\n,uucType=buildinuser\n,description=remark"
+    },
+    {
+      "appId": "c12ba16c-9906-11e6-8b3d-a6df6c7f39a0",
+      "dbDriver": "oracle.jdbc.driver.OracleDriver",
+      "dbPassword": "GXGH_MODEL_TEST",
+      "dbSpecialColumns": "",
+      "dbTable": "GXGH_MODEL_TEST.ORUP_USER",
+      "dbUrl": "jdbc:oracle:thin:@192.168.200.112:1521/orcl",
+      "dbUser": "GXGH_MODEL_TEST",
+      "displayOrder": 999,
+      "id": "92f58754-9cd0-11e6-8b3d-a6df6c7f39a0",
+      "isEnabled": false,
+      "ldapObjectClass": "uucPerson",
+      "ldapObjectParentDn": "dc=dist,dc=com",
+      "ldapObjectRdnAttr": "cn",
+      "ldapSpecialAttrs": "uucId=@uuid,uucParentId= ,uucDisplayOrder=0,uucIsDeleted=false,uucPinyinInitials=",
+      "matchFieldsMap": "cn=loginname",
+      "name": "192.168.200.112:用户",
+      "pinyinInitials": "",
+      "syncConflitStrategy": 0,
+      "syncDirection": 2,
+      "syncFieldMaps": "uid=id\n,cn=loginname\n,sn=name\n,userPassword=loginpwd\n,mobile=mobilephone ,sn=name\n,uucState=state\n,uucType=buildinuser\n,description=remark"
+    }
+  ]
+}

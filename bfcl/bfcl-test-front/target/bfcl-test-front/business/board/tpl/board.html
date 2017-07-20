@@ -1,0 +1,15 @@
+<div class="dist-board">
+    <ul>
+        <li ng-repeat="items in ::boardConfig.itemList">
+            <div class="icon pull-left bg-dark bg-{{items.color}}">{{$index+1}}</div>
+            <a href ng-click="vmEvents.singleClick(items)">
+                {{items.title}}
+            </a>
+            <div class="text-muted clearfix">
+                <span class="pull-left">
+                    {{items.date}}
+                </span>
+            </div>
+        </li>
+    </ul>
+</div>

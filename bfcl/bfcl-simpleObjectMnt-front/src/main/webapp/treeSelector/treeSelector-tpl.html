@@ -1,0 +1,17 @@
+<div>
+    <div class="btn-light btn-sm" style="width: 100%;">
+        <div class="uc-border-right">
+            <button class="btn btn-success btn-xs" ng-click="_refresh()">刷新</button>
+        </div>
+    </div>
+    <div>
+        <wi-tree dataProvider="data"
+                 idfield="{{::idfield}}"
+                 pidfield="{{::pidfield}}"
+                 labelfield="{{::labelfield}}"
+                 multiselect="false"
+                 onItemClick="_onItemClick"
+        >
+        </wi-tree>
+    </div>
+</div>

@@ -1,0 +1,78 @@
+<div simple-object-mnt
+     param='
+        {
+            "title": "明细日志管理"
+            , "stateParamNames": ["appId", "taskId", "logId"]
+            , "serviceUrls": {
+                "list": "ldapSync/logDetails?appId=:appId&taskId=:taskId&logId=:logId"
+                , "load": "ldapSync/logDetails"
+            }
+            , "buttons": {
+                  "modify": {
+                    "type": "modify",
+                    "name": "查看",
+                    "icon": "",
+                    "css": "",
+                    "title": "明细日志详情",
+                    "templateUrl": "ldapSync/syncLogDetailView.html"
+                }
+            }
+            , "grid": {
+                "css": "",
+                "idfield": "id",
+                "columns": [
+                      {
+                        "css": "width:10%;text-align:center;",
+                        "header": {
+                            "name": "序号",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "$index",
+                            "css": "align:left"
+                        }
+                    }
+                    , {
+                        "css": "width:20%;text-align:center;",
+                        "header": {
+                            "name": "类型",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "typeName",
+                            "css": "align:middle"
+                        }
+                    }
+                    , {
+                        "css": "width:20%;text-align:center;",
+                        "header": {
+                            "name": "状态",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "statusName",
+                            "css": "align:middle"
+                        }
+                    }
+                    , {
+                        "css": "width:20%;text-align:center;",
+                        "header": {
+                            "name": "失败信息",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "result",
+                            "css": "align:middle"
+                        }
+                    }
+                ]
+                , "pagination": {
+                    "total": 5,
+                    "pageNo": 0,
+                    "pageSize": 10
+                }
+            }
+
+        }
+'>
+</div>

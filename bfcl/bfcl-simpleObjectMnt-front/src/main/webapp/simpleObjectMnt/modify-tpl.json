@@ -1,0 +1,96 @@
+{
+  "items": [
+    {
+      "type": "input",
+      "label": "名称",
+      "placeholder": "：角色名称",
+      "ID": "UserAdmin",
+      "defaultValue": ""
+    },
+    {
+      "type": "radio",
+      "label": "菜单",
+      "placeholder": "",
+      "ID": "MenuBar",
+      "defaultValue": "yes"
+    },
+    {
+      "type": "input",
+      "label": "URL",
+      "placeholder": "：/sys/role/manage",
+      "ID": "URLName",
+      "defaultValue": ""
+    },
+    {
+      "type": "textarea",
+      "label": "备注",
+      "placeholder": "：对角色进行管理",
+      "ID": "MarkName",
+      "defaultValue": ""
+    },
+    {
+      "type": "select",
+      "label": "上级名称",
+      "list": [
+        {
+          "name": "系统维护"
+        },
+        {
+          "name": "角色管理"
+        },
+        {
+          "name": "其他"
+        }
+      ],
+      "ID": "UpGradeName",
+      "defaultValue": "系统维护"
+    },
+    {
+      "type": "input",
+      "label": "上级ID",
+      "placeholder": "：8888888",
+      "ID": "UpGradeID",
+      "defaultValue": ""
+    },
+    {
+      "type": "tree",
+      "label": "树",
+      "list": [
+        {"id": "2", "text": "node2", "pid": "root", "ID": "UserTree"},
+        {"id": "1", "text": "node1延迟", "pid": "root", "isbranch": true, "ID": "UserTree"},
+        {"id": "3", "text": "node3", "pid": "root", "ID": "UserTree"},
+        {"id": "4", "text": "node4", "pid": "root", "ID": "UserTree"},
+        {"id": "13", "text": "node13", "pid": "1", "ID": "UserTree"},
+        {"id": "12", "text": "node12", "pid": "1", "ID": "UserTree"},
+        {"id": "11", "text": "node11", "pid": "1", "ID": "UserTree"},
+        {"id": "21", "text": "node21", "pid": "2", "ID": "UserTree"},
+        {"id": "22", "text": "node22", "pid": "2", "ID": "UserTree"},
+        {"id": "23", "text": "node23", "pid": "2", "ID": "UserTree"},
+        {"id": "31", "text": "node31", "pid": "3", "ID": "UserTree"},
+        {"id": "32", "text": "node32", "pid": "3", "ID": "UserTree"},
+        {"id": "33", "text": "node33", "pid": "3", "ID": "UserTree"},
+        {"id": "111", "text": "node111", "pid": "11", "ID": "UserTree"},
+        {"id": "113", "text": "node113", "pid": "11", "ID": "UserTree"},
+        {"id": "112", "text": "node112", "pid": "11", "ID": "UserTree"}
+      ],
+      "placeholder": "：",
+      "ID": "UserTree",
+      "defaultValue": ""
+    }
+  ],
+  "buttons": [
+    {
+      "type": "btn-cancel",
+      "label": "取消",
+      "ID": "ButtonCancel",
+      "url": "",
+      "method": ""
+    },
+    {
+      "type": "btn-save",
+      "label": "保存",
+      "ID": "ButtonSave",
+      "url": ""
+    }
+  ]
+}

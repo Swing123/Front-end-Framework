@@ -1,0 +1,336 @@
+@charset "utf-8";
+@primary: #60c1dd; //主体颜色
+@white: #fff;
+@tranWhite: rgba(255, 255, 255, .8); //白色半透明
+@lineBorderColor: #999; //连接目录线条颜色
+
+@iconBgColor: #1199c4;
+@iconTextColor: #fff;
+
+@nodeTextColor: #333;
+@nodeSelectedTextColor: #333;
+
+@treeActionColor: @primary; //控制按钮颜色
+@treeActionHoverColor: #1199c4; //控制按钮hover颜色
+
+@treeItemBgColor: #e4f4f9; //选中、hover条目背景颜色
+@treeItemHoverBgColor: #bee6f2; //选中项 hover颜色
+
+@treeFolderHeaderTextColor: #333; //目录节点文字颜色
+@treeItemIconColor: @primary; //节点icon颜色
+
+
+.tree {
+  padding-left: 14px;
+  overflow:auto;
+  position:relative;
+  background-color: @white;
+
+  .tree-fold-arrow {
+    color: #999 !important;
+    font-size:16px;
+    vertical-align: middle;
+  }
+
+  &.tree-no-line {
+    padding-left: 0;
+    &:before {
+      display: none;
+    }
+    .tree-folder:before,
+    .tree-item:before {
+      display: none;
+    }
+    .tree-folder .tree-folder-content:before {
+      display: none;
+    }
+  }
+
+  &.tree-solid-line {
+    padding-left: 12px;
+    &:before {
+      border-left:1px solid @lineBorderColor;
+    }
+    .tree-item:before,
+    .tree-folder:before {
+      border-top:1px solid @lineBorderColor;
+    }
+    .tree-folder .tree-folder-content:before {
+      border-left:1px solid @lineBorderColor;
+    }
+  }
+
+  &.tree-plus-minus {
+    .tree-folder-header {
+      .fa-folder-open:before {
+        height: 16px;
+        width: 16px;
+        line-height: 16px;
+        vertical-align: middle;
+        display: inline-block;
+        background: url("./images/tree-icons.png") no-repeat;
+        background-position: 0 -23px;
+        content: "";
+      }
+    }
+    .fa-folder:before {
+      height: 16px;
+      width: 16px;
+      line-height: 16px;
+      vertical-align: middle;
+      display: inline-block;
+      background: url("./images/tree-icons.png") no-repeat;
+      background-position: 0 0px;
+      content: "";
+    }
+    .fa-folder:before,
+    .fa-folder-open:before {
+      margin-top: -5px;
+    }
+    .tree-folder-name {
+      margin-left: 0 !important;
+    }
+  }
+
+  &.tree-arrow {
+    .tree-fold-arrow {
+      display: inline-block;
+    }
+  }
+
+  .tree-fold-arrow {
+    display: none;
+  }
+
+  &:before {
+    width: 1px;
+    z-index:1;
+    display:block;
+    content:"";
+    position:absolute;
+    top:-21px;
+    bottom:16px;
+    left:0;
+    border-left:1px dotted @lineBorderColor;
+  }
+
+  .tree-folder{
+    position:relative;
+    width:auto;
+    min-height:20px;
+    cursor:pointer;
+    &:before {
+      display:inline-block;
+      content:"";
+      position:absolute;
+      top:14px;
+      left:-13px;
+      width:18px;
+      height:0;
+      border-top:1px dotted @lineBorderColor;
+      z-index:1;
+    }
+
+    .tree-folder-header{
+      position:relative;
+      min-height:20px;
+      line-height:20px;
+      min-width: 100px;
+
+      &:hover{
+        background-color: @treeItemBgColor;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+      }
+
+      .fa {
+        color: @iconBgColor;
+      }
+
+      .tree-folder-name {
+        margin-left:2px;
+      }
+    }
+
+    img {
+      margin-left: 4px;
+    }
+
+    .tree-folder-content{
+      margin-left:23px;
+      position:relative;
+      &:before{
+        display:inline-block;
+        content:"";
+        position:absolute;
+        width: 1px;
+        z-index:1;
+        top:-9px;
+        bottom:18px;
+        left:-12px;
+        border-left:1px dotted @lineBorderColor;
+      }
+    }
+  }
+
+  .tree-item{
+    position:relative;
+    min-height:20px;
+    line-height:20px;
+    min-width: 100px;
+    cursor:pointer;
+    &:before {
+      display:inline-block;
+      content:"";
+      position:absolute;
+      top:14px;
+      left:-13px;
+      width:18px;
+      height:0;
+      border-top:1px dotted @lineBorderColor;
+      z-index:1;
+    }
+    &:hover{
+      background-color: @treeItemBgColor;
+      border-radius: 4px;
+      -webkit-border-radius: 4px;
+    }
+
+    .tree-item-name{
+      margin-left:2px;
+    }
+
+  }
+
+  .tree-selected{
+    background-color: @treeItemBgColor;
+    color: @nodeSelectedTextColor;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    &:hover{
+      background-color:@treeItemHoverBgColor;
+      border-radius: 4px;
+      -webkit-border-radius: 4px;
+    }
+  }
+
+  .tree-item,
+  .tree-folder{
+    border:1px solid #FFF
+  }
+
+  .tree-item,
+  .tree-folder .tree-folder-header{
+    margin:0;
+    padding:4px 5px 6px 5px;
+    color: @treeFolderHeaderTextColor;
+    -webkit-box-sizing:content-box;
+    -moz-box-sizing:content-box;
+    box-sizing:content-box;
+  }
+
+  .tree-item .tree-item-name > i,
+  .tree-folder .tree-folder-header > i {
+    color: @treeItemIconColor;
+  }
+
+  .tree-item.tree-selected > i,
+  .tree-item .tree-item-name > i{
+    margin-left: -2px;
+    width: 14px;
+    display: inline-block;
+    text-align: center;
+    margin-right: 1px;
+    color: @primary;
+  }
+
+  .tree-actions {
+    display: none !important;
+    position: absolute;
+    margin-top: 1px;
+    right: 4px;
+    > i {
+      font-weight: 300;
+      padding: 1px 3px;
+      text-align: center;
+      font-size: 14px;
+      color: @treeActionColor;
+      margin-right: 6px;
+      margin-top: 0px;
+      display: inline-block;
+      &:hover {
+        color: @treeActionHoverColor;
+      }
+    }
+  }
+
+  .tree-selected .tree-actions,
+  .tree-item:hover .tree-actions,
+  .tree-folder-header:hover .tree-actions {
+    display: inline-block;
+  }
+
+  .tree-folder .tree-folder-header .tree-folder-name,
+  .tree-item .tree-item-name {
+    display:inline;
+    z-index:2;
+    color: @nodeTextColor;
+  }
+
+  //圆形文字icon默认样式
+  .dist-icon-rounded {
+    background-color:@primary;
+    color: @white !important;
+  }
+
+}
+
+.dist-icon {
+  display:inline-block;
+  width:20px;
+  height:20px;
+  text-align:center;
+  line-height: 20px;
+  font-style:normal;
+}
+
+.dist-icon-rounded {
+  border-radius: 50%;
+  background-color: @primary;
+}
+
+.dist-icon-doc {
+  background-image: url('./images/doc_48px.png');
+  background-size:100%;
+  background-repeat:no-repeat;
+}
+
+.dist-icon-docx {
+  background-image: url('./images/docx_48px.png');
+  background-size:100%;
+  background-repeat:no-repeat;
+}
+
+.dist-icon-dwg {
+  background-image: url('./images/dwg_48px.png');
+  background-size:100%;
+  background-repeat:no-repeat;
+}
+
+.dist-icon-jpg {
+  background-image: url('./images/jpg_48px.png');
+  background-size:100%;
+  background-repeat:no-repeat;
+}
+
+.dist-icon-png {
+  background-image: url('./images/png_48px.png');
+  background-size:100%;
+  background-repeat:no-repeat;
+}
+
+.dist-icon-pdf {
+  background-image: url('./images/pdf_48px.png');
+  background-size:100%;
+  background-repeat:no-repeat;
+}

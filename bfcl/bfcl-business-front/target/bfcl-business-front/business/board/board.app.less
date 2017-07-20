@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+@hover-color: #23B7E5; //hover时字体颜色
+
+.dist-board{
+  .icon{
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+    margin: 2px 5px 0 0;
+  }
+  ul li{
+    padding: 5px;
+    & a:hover{
+      color: @hover-color;
+    }
+  }
+}

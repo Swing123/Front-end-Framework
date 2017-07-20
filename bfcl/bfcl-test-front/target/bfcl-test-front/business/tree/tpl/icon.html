@@ -1,0 +1,7 @@
+<span class="v-middle">
+    <i class="fa" ng-class="{'fa-folder': !model.show, 'fa-folder-open': model.show}" ng-if="config.type == 'folder'"></i>
+
+    <i class="dist-icon dist-icon-{{model.name | fileFilter}}" ng-if="config.type == 'file'"></i>
+
+    <i class="dist-icon dist-icon-rounded" ng-if="config.type && config.type != 'folder' && config.type != 'file'">{{config.type | firstCharacter}}</i>
+</span>

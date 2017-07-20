@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+@tablePadding: null; //table表 padding
+/*thead样式*/
+@headFontSize: 16px;
+@headFontWeight: 600;
+@headFontColor: #fff;
+@headBackground: #23B7E5;
+
+/*tbody样式*/
+@bodyFontSize: null;
+@bodyFontWeight: null;
+@bodyFontColor: null;
+@bodyBackground: null;
+@bodyHoverBackground: null; //hover背景颜色
+@bodyHoverFontColor: null; //hover字体颜色
+
+
+
+.dynamicTable {
+  table tr th{
+    padding: @tablePadding;
+  }
+  table tr td{
+    padding: @tablePadding;
+  }
+  .tableFixed {
+       table-layout: fixed;
+     }
+  .tableFixed tr td, .tableFixed tr th {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+  }
+  .head{
+    font-size: @headFontSize;
+    font-weight: @headFontWeight;
+    color: @headFontColor;
+    background: @headBackground;
+  }
+  .body{
+    font-size: @bodyFontSize;
+    font-weight: @bodyFontWeight;
+    color: @bodyFontColor;
+    background: @bodyBackground;
+    &:hover{
+      background: @bodyHoverBackground;
+      color: @bodyHoverFontColor;
+    }
+  }
+
+}

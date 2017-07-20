@@ -1,0 +1,29 @@
+.padding-left-0{
+    padding-left:0;
+}
+.padding-right-0{
+    padding-right:0;
+}
+.border-right{
+    border-right:solid 1px #dddddd;
+}
+
+.sys-textarea input{
+    text-align:left;
+}
+.sys-textarea button{
+    text-align:right;
+}
+.sys-textarea{
+    text-align:right;
+}
+.sys-warning{
+    border:solid 1px #f05050 !important;
+}
+.sys-correct{
+    border:solid 1px #27c24c !important;
+}
+
+.sys-config .linedwrap{
+    border:1px solid #dee5e7 !important;
+}

@@ -1,0 +1,31 @@
+<div class="dynamicTable">
+    <table class="table table-bordered table-condensed table-hover tableFixed">
+        <thead>
+        <tr class="head">
+            <th ng-repeat="thData in ::tableConfig.thead_List" ng-class="thData.class">
+                {{thData.title}}
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="tdLine in ::itemsShow" class="body">
+            <td ng-repeat="tdData in tdLine" title="{{tdData}}">
+                {{tdData}}
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <nav class="pull-right">
+        <ul class="pagination pagination-sm">
+            <li ng-class="{disabled:isFirstPage()}">
+                <a ng-click="Previous()">上一页</a>
+            </li>
+            <li ng-repeat="page in pageShowList" ng-class="{active:isActivePage(page)}">
+                <a ng-click="selectPage(page)">{{page}}</a>
+            </li>
+            <li ng-class="{disabled:isLastPage()}">
+                <a ng-click="Next()">下一页</a>
+            </li>
+        </ul>
+    </nav>
+</div>

@@ -1,0 +1,60 @@
+<div class="">
+    <!--<div class="wrapper b-b b-light">-->
+    <!--<div class="font-thin h4">Header</div>-->
+    <!--<small class="text-muted">with fluid height</small>-->
+    <!--</div>-->
+    <div class="wrapper  m-t-xxs">
+        <div class="input-group">
+            <input type="text" class="form-control input-sm" placeholder="搜索项目" ng-model="query">
+            <span class="input-group-addon input-sm"><i class="fa fa-search"></i></span>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-4 padding-0 margin-top-5 margin-bottom-5  control-label input-sm line-height-2p5">项目列表<b class="badge bg-info">20</b></label>
+            <!--<button class="col-sm-4 padding-0 margin-top-5 margin-bottom-5 btn btn-default disabled input-sm"><i class="fa fa-bars pull-left"></i>项目列表(2)</button> <i class="fa fa-bars margin-right-3 "></i> (<span class="bg-info">2</span>)-->
+            <div class="col-sm-4 padding-0 margin-top-5 margin-bottom-5">
+                <select name="account" class="form-control  input-sm" ng-model="config.BStates.currentState">
+                    <option ng-repeat="state in config.BStates.states">{{state.name}}</option>
+                </select>
+            </div>
+            <div class="col-sm-4 padding-0 margin-top-5 margin-bottom-5">
+                <dist-tree-select class="treeSelect " tree-data="config.BTree.items" tree-placeholder="{{config.BTree.placeholder}}" tree-confirm-click="confirmClick" ng-disabled="disabled" placeholder="请选择"></dist-tree-select>
+            </div>
+        </div>
+    </div>
+    <div class="row-row">
+        <div class="cell scrollable hover">
+            <div class="cell-inner">
+                <div class="padder">
+                    <div class="list-group">
+                        <a ng-repeat="note in itemLists.lists track by $index" class="list-group-item b-l-{{note.color}} b-l-3x hover-anchor"
+                           ng-class="{'hover': note.selected }"
+                           ng-click="vm.selectNote(note,$index)"
+                           ng-dblclick="vm.doubleListClick(note)">
+                            <div class="row padding-0">
+                                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 padding-0">
+                                    <span class="col-md-7 col-lg-7 col-sm-12 col-xs-12 padding-right-0 block text-ellipsis" title="{{note.content}}">{{ note.content ? note.content : 'Empty note' }}</span>
+                                    <span class="col-md-5 col-lg-5 col-sm-12 col-xs-12 padding-0 ">
+                                        <small class=" col-md-9 col-sm-9 padding-right-0 text-ellipsis text-muted text-align-right" title="{{note.caseCode}}">{{ note.caseCode}}</small>
+                                            <span ng-click='deleteNote(note)' class="col-md-3 col-sm-3 padding-0 text-align-center text-danger">督</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="row padding-0">
+                                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 padding-0">
+                                    <small class="col-md-7 col-lg-7 col-sm-12 col-xs-12 padding-right-0 block text-ellipsis text-muted"  title="{{note.currentLink}}">{{ note.currentLink }}</small>
+                                    <span class="col-md-5 col-lg-5 col-sm-12 col-xs-12 padding-0 ">
+                                        <small class=" col-md-9 col-sm-9 padding-right-0 text-ellipsis  text-align-right  text-{{note.color}}" title="{{note.timeLimit}}"> {{ note.timeLimit}}</small>
+                                        <span ng-click='deleteNote(note)' class=" col-md-3 col-sm-3 padding-0 text-align-center  "><i class="fa fa-heart-o"></i></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="padder b-t b-light text-center">
+        <div class="m-xs input-sm">共<em>20</em>条记录</div>
+    </div>
+</div>

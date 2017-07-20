@@ -1,0 +1,94 @@
+<div simple-object-modify
+     id="id"
+     ok="ok()"
+     cancel="cancel()"
+     preparedata="preparedata"
+     newdata="newdata"
+     config='
+        {
+            "title": "增加应用"
+            , "properties": [
+                {
+                    "name": "name",
+                    "type": "input",
+                    "label": "应用名称",
+                    "placeholder": "：请输入",
+                    "defaultValue": ""
+                }
+                , {
+                    "name": "isAuto",
+                    "type": "radio",
+                    "label": "是否自动执行",
+                    "placeholder": "：请选择",
+                    "defaultValue": "false"
+                }
+                , {
+                    "name": "syncSchedule",
+                    "type": "input",
+                    "label": "同步计划",
+                    "placeholder": "：请使用quartz格式进行设定",
+                    "defaultValue": ""
+                }
+                , {
+                    "name": "displayOrder",
+                    "type": "input",
+                    "label": "显示顺序",
+                    "placeholder": "：值越大,显示越靠前",
+                    "defaultValue": "999"
+                }
+                , {
+                    "name": "ldapServer",
+                    "type": "input",
+                    "label": "ldap服务地址",
+                    "placeholder": "：如：192.168.1.100或ldap.dist.com.cn",
+                    "defaultValue": ""
+                }
+                , {
+                    "name": "ldapPort",
+                    "type": "input",
+                    "label": "ldap服务端口",
+                    "placeholder": "：如：389",
+                    "defaultValue": "389"
+                }
+                , {
+                    "name": "ldapBindUser",
+                    "type": "input",
+                    "label": "ldap连接用户名",
+                    "defaultValue": ""
+                }
+                , {
+                    "name": "ldapBindPassword",
+                    "type": "password",
+                    "label": "ldap连接密码",
+                    "defaultValue": ""
+                }
+                , {
+                    "name": "dbDriver",
+                    "type": "input",
+                    "label": "数据库驱动类全名",
+                    "placeholder": "：如：com.mysql.jdbc.Driver",
+                    "defaultValue": ""
+                }
+                , {
+                    "name": "dbUrl",
+                    "type": "input",
+                    "label": "数据库连接字符串",
+                    "placeholder": "：如：jdbc:mysql://localhost:3306/xmoa?characterEncoding=UTF-8",
+                    "defaultValue": ""
+                }
+                , {
+                    "name": "dbUser",
+                    "type": "input",
+                    "label": "数据库连接用户名",
+                    "defaultValue": ""
+                }
+                , {
+                    "name": "dbPassword",
+                    "type": "password",
+                    "label": "数据库连接密码",
+                    "defaultValue": ""
+                }
+            ]
+        }
+'>
+</div>

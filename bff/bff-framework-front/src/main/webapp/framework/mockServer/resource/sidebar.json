@@ -1,0 +1,44 @@
+
+{
+  "comment":"本条语句为注释——本条JSON数据为模拟侧边导航栏sidebar的配置数据，lists属性值下存放所有的列表数据",
+  "lists": [
+    {
+      "comment":"本条语句为注释语句——本级菜单为一级菜单,Label为每条选项的显示名称；header为导航栏分组标志；icon为菜单显示图标，ui_sref为跳转路由（平台共用路由名称统一为sidebar.content）,params为路由附带传递的参数（url:指定的跳转地址，tabName：对应的tab的名称，tabGroup：对应的tab的分组,为空时不显示，params:跳转该页面传递的参数）",
+      "label": "首页",
+      "header":"业务导航",
+      "icon":"fa fa-list-alt icon text-primary-dker",
+      "ui_sref": "sidebar.content",
+      "params": "{url:'AppCenter-appHome-tpl-home',tabName:'首页',tabGroup:'',params:''}"
+
+    },
+    {
+      "comment":"本条语句为注释语句——本级菜单为一级菜单,Label为每条选项的显示名称；submenu该级目录下的子菜单；icon为菜单显示图标",
+      "label": "规划审批",
+      "icon":"fa fa-th icon text-primary-dker",
+      "submenu": [
+        {
+          "comment":"本条语句为注释语句——本级菜单为二级菜单,Label为每条选项的显示名称；ui_sref为跳转路由；params为附带传递的参数，如一级路由",
+          "label": "一级在办",
+          "ui_sref": "sidebar.content",
+          "params": "{url:'AppCenter-appHome-tpl-home',tabName:'一级在办',tabGroup:'firstGroup',params:''}"
+        },
+        {
+          "label": "二级在办",
+          "submenu": [
+            {
+              "comment":"本条语句为注释语句——本级菜单为三级菜单,Label为每条选项的显示名称；ui_sref为跳转路由；params为附带传递的参数，如一级路由",
+              "label": "三级在办",
+              "ui_sref": "sidebar.content",
+              "params": "{url:'AppCenter-appHome-tpl-home',tabName:'三级在办',tabGroup:'thirdGroup',params:''}"
+            },
+            {
+              "label": "三级已办",
+              "ui_sref": "sidebar.content",
+              "params": "{url:'AppCenter-appHome-tpl-home',tabName:'三级已办',tabGroup:'thirdGroup',params:''}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+<div ng-controller="comTreeController" id="folderTree">
+    <ui-select></ui-select>
+
+    <p>
+        节点之间串联方式有：<b>虚线、实线、无线以及箭头</b>
+    </p>
+    <p>
+        根节点icon可以是：<b>加减号、文件夹、单字母icon</b>
+    </p>
+    <p>
+        子节点icon可以是：<b>文件、不同类型文件icon、单字母icon</b>
+    </p>
+    <dist-tree-project
+            dist-tree-model="projectTreeList"
+            class="tree-no-line tree-arrow"
+            title="项目树 定制指令"
+            fold="true"></dist-tree-project>
+
+    <dist-tree-Folder
+            dist-tree-model="fileTreeList"
+            class="tree-no-line tree-arrow"
+            title="文件袋 定制指令"
+            fold="true"></dist-tree-Folder>
+    <dist-tree-Material
+            dist-tree-model="fileTreeList"
+            class="tree-no-line tree-arrow"
+            title="材料树 定制指令"
+            fold="true"></dist-tree-Material>
+
+    <dist-tree
+            dist-tree-model="projectTreeList"
+            dist-tree-type="materialTree"
+            class="tree-no-line"
+            double-click="onDoubleClickItem"
+            click="onClickItem" title="distTree指令实现 材料树" fold="true"></dist-tree>
+
+    <dist-tree
+            dist-tree-model="projectTreeList"
+            dist-tree-type="projectTree"
+            class="tree-no-line tree-arrow"
+            double-click="onDoubleClickItem"
+            click="onClickItem" title="distTree指令实现 项目树" fold="true"></dist-tree>
+
+    <dist-tree
+            dist-tree-model="projectTreeList"
+            double-click="onDoubleClickItem"
+            click="onClickItem" title="distTree指令 默认树状" fold="true"></dist-tree>
+
+    <dist-tree
+            dist-tree-model="projectTreeList"
+            double-click="onDoubleClickItem"
+            class="tree-no-line"
+            click="onClickItem" title="distTree指令 无线条" fold="true"></dist-tree>
+
+    <dist-tree
+            dist-tree-model="projectTreeList"
+            double-click="onDoubleClickItem"
+            class="tree-no-line tree-arrow"
+            click="onClickItem" title="distTree指令 无线条 带折叠箭头" fold="true"></dist-tree>
+
+    <dist-tree
+            dist-tree-model="projectTreeList"
+            double-click="onDoubleClickItem"
+            class="tree-plus-minus"
+            click="onClickItem" title="distTree指令 加减号折叠" fold="true"></dist-tree>
+
+    <dist-tree
+            dist-tree-model="projectTreeList"
+            double-click="onDoubleClickItem"
+            class="tree-solid-line tree-plus-minus"
+            click="onClickItem" title="distTree指令 加减号折叠 线条为实线" fold="true"></dist-tree>
+
+    <dist-tree
+            dist-tree-model="projectTreeList"
+            double-click="onDoubleClickItem"
+            class="tree-plus-minus tree-no-line"
+            click="onClickItem" title="distTree指令 加减号折叠 无线条" fold="true"></dist-tree>
+
+    <dist-tree
+            dist-tree-model="projectTreeList"
+            double-click="onDoubleClickItem"
+            dist-tree-config="treeConfig"
+            class="tree-no-line"
+            click="onClickItem" title="distTree指令 配置指令" fold="true"></dist-tree>
+
+
+</div>

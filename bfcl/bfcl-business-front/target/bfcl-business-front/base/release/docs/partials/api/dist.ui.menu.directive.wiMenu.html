@@ -1,0 +1,36 @@
+<h1><code ng:non-bindable="">wiMenu</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">dist.ui.menu</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="dist-ui-menu-directive-page dist-ui-menu-directive-wimenu-page"><p>wiMenu 是菜单，其中可以包含一个 DOM 元素以触发弹出固定菜单。</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;wi-menu
+       [wi-right-menu="{boolean}"]
+       [position="{string}"]
+       [adaptable="{boolean}"]
+       [filterable="{boolean}"]
+       dataprovider="{JSON}"
+       [selectitem="{object}"]
+       [onselect="{function}"]&gt;
+&lt;/wi-menu&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>wiRightMenu <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-menu-directive-page dist-ui-menu-directive-wimenu-page"><p>右键菜单标识。固定位置的菜单可省略此属性，或设置为&quot;false&quot;。</p>
+</div></td></tr><tr><td>position <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-menu-directive-page dist-ui-menu-directive-wimenu-page"><p>固定位置的菜单弹出方向，右键菜单此属性无效。<br />
+默认为 &quot;bottom-left&quot;。可选值：<br />
+&quot;bottom-left&quot;/&quot;bottom-right&quot;/&quot;top-left&quot;/&quot;top-right&quot;/&quot;left-top&quot;/&quot;left-bottom&quot;/&quot;right-top&quot;/&quot;right-bottom&quot;</p>
+</div></td></tr><tr><td>adaptable <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-menu-directive-page dist-ui-menu-directive-wimenu-page"><p>第一级菜单是否根据 DOM 可视区域调整弹出方向，默认为 true。</p>
+</div></td></tr><tr><td>filterable <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-menu-directive-page dist-ui-menu-directive-wimenu-page"><p>第一级菜单是否可根据关键字筛选，默认为 false。</p>
+</div></td></tr><tr><td>dataprovider</td><td><a href="" class="label type-hint type-hint-json">JSON</a></td><td><div class="dist-ui-menu-directive-page dist-ui-menu-directive-wimenu-page"><p>菜单数据源，绑定项，只能根据当前 scope 中的变量控制。数据项：<br />
+id: string  菜单项 id<br />
+label: string  菜单项显示内容<br />
+icon: string  可选，菜单项自定义图标<br />
+filterable: boolean  可选，子菜单是否支持搜索<br />
+children: []  可选，子菜单数据源<br />
+enabled: boolean  可选，菜单项是否可用<br />
+event: string  可选，可直接执行的表达式（复杂事件根据点击后的选中菜单项自定义）</p>
+</div></td></tr><tr><td>selectitem <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="dist-ui-menu-directive-page dist-ui-menu-directive-wimenu-page"><p>整个菜单中选中的数据项，绑定项，只能根据当前 scope 中的变量控制 - 将删除此方法。</p>
+</div></td></tr><tr><td>onselect <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="dist-ui-menu-directive-page dist-ui-menu-directive-wimenu-page"><p>选中菜单项后执行的自定义方法，参数为选中项。</p>
+</div></td></tr></tbody></table></div>
+</div>

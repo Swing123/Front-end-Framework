@@ -1,0 +1,16 @@
+<div class="tree-folder" style="display: block;" ng-init="item.$$isChecked=false;item.$$isExpend=true;item.$$isSelected=false;" ng-if="!isLeaf(item)">
+    <div class="tree-folder-header" ng-class="{'tree-selected':item.$$isSelected}" ng-click="itemClick(item, $event);">
+        <i class="fa fa-caret-down" ng-class="{'fa-caret-down':item.$$isExpend,'fa-caret-right':!item.$$isExpend}" ng-click="expendItem(item,$event)"></i>
+        <input type="checkbox" ng-model="item.$$isChecked" ng-checked="item.$$isChecked" ng-click="checkboxClick(item, $event)" />
+        <div class="tree-folder-name">{{item.name}}</div>
+    </div>
+    <div class="tree-folder-content" ng-show="item.$$isExpend">
+        <div ng-repeat="item in item.children" ng-include="'business/treeSelect/tpl/treeItem.html'"></div>
+    </div>
+    <div class="tree-loader" style="display: none;"><img src="images/input-spinner.gif"></div>
+</div>
+<div class="tree-item" style="display: block;" ng-if="isLeaf(item, $event)" ng-class="{'tree-selected':item.$$isSelected}" ng-click="itemClick(item, $event);">
+    <i class="tree-dot"></i>
+    <input type="checkbox" ng-model="item.$$isChecked" />
+    <div class="tree-item-name">{{item.name}}</div>
+</div>

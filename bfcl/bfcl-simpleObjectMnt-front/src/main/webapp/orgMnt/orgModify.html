@@ -1,0 +1,59 @@
+<div list-selector
+     id="id"
+     ok="ok()"
+     cancel="cancel()"
+     preparedata="preparedata"
+     newdata="newdata"
+     config='
+        {
+            "title": "修改机构信息"
+            , "properties": [
+                {
+                    "name": "id",
+                    "type": "input",
+                    "label": "id",
+                    "readonly": "true",
+                },
+                {
+                  "name": "name",
+                  "type": "input",
+                  "label": "名称",
+                  "placeholder": "：机构名称",
+                  "defaultValue": ""
+                },
+                {
+                  "name": "type",
+                  "type": "list",
+                  "label": "类型",
+                  "placeholder": "：请选择",
+                  "data": "types",
+                  "dataMap": {
+                    "id": "type",
+                    "label": "name"
+                  },
+                  "defaultValue": ""
+                },
+                {
+                  "name": "parentId",
+                  "type": "tree",
+                  "label": "上级机构",
+                  "placeholder": "：点击选择",
+                  "data": "orgs",
+                  "dataMap": {
+                    "id": "id",
+                    "label": "name",
+                    "pid": "parentId"
+                  },
+                  "defaultValue": ""
+                },
+                {
+                  "name": "displayOrder",
+                  "type": "input",
+                  "label": "显示顺序",
+                  "placeholder": "：在同级中,显示顺序值越大,显示越靠前",
+                  "defaultValue": "999"
+                }
+            ]
+        }
+'>
+</div>

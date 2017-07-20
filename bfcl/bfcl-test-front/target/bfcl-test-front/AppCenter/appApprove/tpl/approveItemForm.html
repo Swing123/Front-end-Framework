@@ -1,0 +1,172 @@
+<div ng-controller="approveItemFormController" class="item-form">
+    <div class="row">
+        <div class="col-md-12 col-lg-12 col-sm-12" style="margin-top:5px;border-bottom:1px solid #ddd">
+            <div class="col-md-2 col-lg-2 col-sm-2">
+                <button class="btn m-b-xs btn-sm btn-info btn-addon"><i class="fa fa-save" aria-hidden="true"></i>保存</button>
+                <button class="btn m-b-xs btn-sm btn-info btn-addon" ng-click="vm.continueBtnClick()"><i class="fa fa-send" aria-hidden="true"></i>发送</button>
+            </div>
+            <div class="col-md-10 col-lg-10 col-sm-10" style="text-align:right">
+                <button class="btn m-b-xs btn-sm btn-info btn-addon" ng-click="vm.showItemPanel('projectLog')"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>日志</button>
+                <button class="btn m-b-xs btn-sm btn-info btn-addon" ng-click="vm.showItemPanel('projectTree')"><i class="fa  fa-share-alt" aria-hidden="true"></i>项目树</button>
+                <button class="btn m-b-xs btn-sm btn-info btn-addon" ng-click="vm.showItemPanel('projectMaterial')"><i class="fa fa-files-o" aria-hidden="true"></i>材料</button>
+                <button class="btn m-b-xs btn-sm btn-info btn-addon" ng-click="vm.showItemPanel('projectReport')"><i class="fa fa-file-text-o" aria-hidden="true"></i>报表</button>
+                <button class="btn m-b-xs btn-sm btn-info btn-addon" ng-click="vm.showItemPanel('projectImageView')"><i class="fa fa-map" aria-hidden="true"></i>图形浏览</button>
+                <button class="btn m-b-xs btn-sm btn-info btn-addon" ng-click="vm.editRedLine()"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>绘制红线</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-lg-12 col-sm-12" >
+            <div class="col-md-{{vm.layout.mainForm}} panel-form padding-0 " ng-class="{'display-none':vm.layout.mainForm<=0}" style="border-right:solid 1px #ddd">
+                <div class="form-content overflow-auto">
+                    <div class="" style="position:absolute;right:0;top:0;text-align:right;">
+                        <div class=" display-none panel-button bg-info  panel-button-padding  margin-left-10 " ng-if="!(vm.layout.mainForm==12)">
+                            <a href class="" ng-show="vm.layout.mainForm<12" ng-click="vm.horizontalFull('mainForm')"><i class="fa fa-long-arrow-right fa-1  " aria-hidden="true" title="横向全屏"></i></a>
+                            <!--<a href class=""><i class="fa fa-close fa-1  " title="关闭"></i></a>-->
+                        </div>
+                    </div>
+                    <div style="width:800px;height:800px;background-color:#f3f7f9;margin-right:auto;margin-left:auto;overflow:auto;text-align:center">
+                        我是表单页面
+                    </div>
+                </div>
+
+
+            </div>
+            <div  class="col-md-{{vm.layout.projectLog}} panel-form  " ng-class="{'display-none':vm.layout.projectLog<=0}">
+                <div class="form-content overflow-auto">
+                    <div class="" style="position:absolute;right:0;top:0;text-align:right;">
+                        <div class=" display-none panel-button bg-info  panel-button-padding  margin-left-10 ">
+                            <a href class="" ng-click="vm.horizontalFull('projectLog')" ng-show="vm.layout.projectLog<12"><i class="fa fa-long-arrow-left fa-1  " aria-hidden="true" title="全屏模式"></i></a>
+                            <a href class="" ng-click="vm.horizontalShrink('projectLog')" ng-show="vm.layout.projectLog>=12"><i class="fa fa-long-arrow-right fa-1  " aria-hidden="true" title="分栏模式"></i></a>
+                            <a href class="" ng-click="vm.closeItemPanel()"><i class="fa fa-close fa-1  " title="关闭"></i></a>
+                        </div>
+                    </div>
+                    <div style="height:800px;">
+                        <dist-circ-log log-config="vm.projectLogData"></dist-circ-log>
+                    </div>
+                </div>
+            </div>
+            <div  class="col-md-{{vm.layout.projectTree}} panel-form padding-0" ng-class="{'display-none':vm.layout.projectTree<=0}">
+                <div class="form-content overflow-auto">
+                    <div class="" style="position:absolute;right:0;top:0;text-align:right;">
+                        <div class=" display-none panel-button bg-info  panel-button-padding  margin-left-10 ">
+                            <a href class="" ng-click="vm.horizontalFull('projectTree')" ng-show="vm.layout.projectTree<12"><i class="fa fa-long-arrow-left fa-1  " aria-hidden="true" title="全屏模式"></i></a>
+                            <a href class="" ng-click="vm.horizontalShrink('projectTree')" ng-show="vm.layout.projectTree>=12"><i class="fa fa-long-arrow-right fa-1  " aria-hidden="true" title="分栏模式"></i></a>
+                            <a href class="" ng-click="vm.closeItemPanel()"><i class="fa fa-close fa-1  " title="关闭"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-tree-content">
+<!--                        <wi-tree dataProvider="vm.projectTreeData"
+                                 onItemClick="ec.itemClick"
+                                 onBeforeExpand="ec.beforeExpand"
+                                 onExpand="ec.expand"
+                                 onBeforeCollapse="ec.beforeCollapse"
+                                 onCollapse="ec.collapse"
+                                 onSelect="ec.select"
+                                 onCancelSelect="ec.cancelSelect"></wi-tree>-->
+                        <tree-dnd
+                                tree-control="vm.projectTreeControl"
+                                tree-data=" vm.projectTreeData"
+                                primary-key="demographicId"
+                                column-defs="vm.projectTreeColDefs"
+                                expand-on="vm.projectTreeExpandingProperty"
+                                icon-leaf="fa fa-file-o"
+                        ></tree-dnd>
+                    </div>
+                </div>
+            </div>
+            <div  class="col-md-{{vm.layout.projectMaterial}} panel-form padding-0" ng-class="{'display-none':vm.layout.projectMaterial<=0}">
+                <div class="form-content overflow-auto">
+                    <div class="" style="position:absolute;right:0;top:0;text-align:right;">
+                        <div class=" display-none panel-button bg-info  panel-button-padding  margin-left-10 ">
+                            <a href class="" ng-click="vm.horizontalFull('projectMaterial')" ng-show="vm.layout.projectMaterial<12"><i class="fa fa-long-arrow-left fa-1  " aria-hidden="true" title="全屏模式"></i></a>
+                            <a href class="" ng-click="vm.horizontalShrink('projectMaterial')" ng-show="vm.layout.projectMaterial>=12"><i class="fa fa-long-arrow-right fa-1  " aria-hidden="true" title="分栏模式"></i></a>
+                            <a href class="" ng-click="vm.closeItemPanel()"><i class="fa fa-close fa-1  " title="关闭"></i></a>
+                        </div>
+                    </div>
+                    <div class="tree-content">
+                        <tree-dnd
+                                tree-control="vm.projectMaterialTreeControl"
+                                tree-data=" vm.projectMaterialData"
+                                primary-key="demographicId"
+                                column-defs="vm.projectMaterialColDefs"
+                                expand-on="vm.projectMaterialExpandingProperty"
+                                icon-expand="fa fa-folder-open-o"
+                                icon-collapse="fa fa-folder-o"
+                                icon-leaf="fa fa-file-o"
+                        ></tree-dnd>
+                    </div>
+                </div>
+            </div>
+            <div  class="col-md-{{vm.layout.projectReport}} panel-form padding-0" ng-class="{'display-none':vm.layout.projectReport<=0}">
+                <div class="form-content overflow-auto">
+                    <div class="" style="position:absolute;right:0;top:0;text-align:right;">
+                        <div class=" display-none panel-button bg-info  panel-button-padding  margin-left-10 ">
+                            <a href class="" ng-click="vm.horizontalFull('projectReport')" ng-show="vm.layout.projectReport<12"><i class="fa fa-long-arrow-left fa-1  " aria-hidden="true" title="全屏模式"></i></a>
+                            <a href class="" ng-click="vm.horizontalShrink('projectReport')" ng-show="vm.layout.projectReport>=12"><i class="fa fa-long-arrow-right fa-1  " aria-hidden="true" title="分栏模式"></i></a>
+                            <a href class="" ng-click="vm.closeItemPanel()"><i class="fa fa-close fa-1  " title="关闭"></i></a>
+                        </div>
+                    </div>
+                    <div style="height:800px;">
+<!--                        <wi-tree dataProvider="vm.projectReportData"
+                                 onItemClick="ec.itemClick"
+                                 onSelect="ec.select"
+                                 onCancelSelect="ec.cancelSelect"></wi-tree>-->
+                        <tree-dnd
+                                tree-data=" vm.projectReportData"
+                                tree-control="projectReportTreeControl"
+                                primary-key="demographicId"
+                                column-defs="vm.projectReportColDefs"
+                                expand-on="vm.projectReportExpandingProperty"
+                                icon-expand="fa fa-folder-open-o"
+                                icon-collapse="fa fa-folder-o"
+                                icon-leaf="fa fa-file-o"
+                        ></tree-dnd>
+                    </div>
+                </div>
+            </div>
+            <div  class="col-md-{{vm.layout.projectImageView}} panel-form padding-0" ng-class="{'display-none':vm.layout.projectImageView<=0}">
+                <div class="form-content overflow-auto">
+                    <div class="" style="position:absolute;right:0;top:0;text-align:right;">
+                        <div class=" display-none panel-button bg-info  panel-button-padding  margin-left-10 ">
+                            <a href class="" ng-click="vm.horizontalFull('projectImageView')" ng-show="vm.layout.projectImageView<12"><i class="fa fa-long-arrow-left fa-1  " aria-hidden="true" title="全屏模式"></i></a>
+                            <a href class="" ng-click="vm.horizontalShrink('projectImageView')" ng-show="vm.layout.projectImageView>=12"><i class="fa fa-long-arrow-right fa-1  " aria-hidden="true" title="分栏模式"></i></a>
+                            <a href class="" ng-click="vm.closeItemPanel()"><i class="fa fa-close fa-1  " title="关闭"></i></a>
+                        </div>
+                    </div>
+                    <div style="height:800px;">
+                        图形浏览列表
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--    <div style="position: relative; height:600px;">
+&lt;!&ndash;        <div ui-layout="{ flow : 'column',disableToggle:true }"  class="maincontainer" ui-layout-loaded>
+&lt;!&ndash;            <div ui-layout-container="left" size="10%" >{{layout.leftSidebar}}
+                <button ng-click="collapsedRight()"> 收起右侧栏</button>
+            </div>&ndash;&gt;
+            <div ui-layout-container="central" size="70%" max-size="70" collapsed="layout.leftSidebar">123
+                <button ng-click="collapsedRight()"> 收起右侧栏</button>
+            </div>
+            <div ui-layout-container="right" size="330px"   collapsed="layout.leftSidebar" >{{ngWidth}}
+                <button ng-click="collapsedRight()"> 收起右侧栏</button>
+            </div>
+        </div>
+    </div>&ndash;&gt;
+    <div ui-layout="{flow : 'column'}"      >
+        <div ui-layout-container >
+            <div ui-layout="{flow : 'column'}"  ui-layout-loaded>
+                <div ui-layout-container  size="70%">123
+                    <button ng-click="collapsedRight()"> 收起右侧栏</button>
+                </div>
+                <div ui-layout-container size="30%"    >{{layout.leftSidebar}}
+                    <button ng-click="collapsedRight()"> 收起右侧栏1</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>-->
+</div>

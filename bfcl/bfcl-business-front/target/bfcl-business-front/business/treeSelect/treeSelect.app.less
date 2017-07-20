@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+//@width: auto;
+@height: 30px;
+@arrowSize: 20px;
+@optionBgColor: #fff;
+
+.dist-tree-select {
+  position: relative;
+  //width:@width;
+  height:@height;
+  display:inline-block;
+
+  input[type='checkbox'] {
+    width:20px;
+    height:20px;
+    vertical-align: middle;
+    margin-top:0;
+  }
+}
+
+.dist-tree-select-input {
+  position: relative;
+  //width: @width;
+  height: @height;
+  >input {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: @arrowSize;
+  }
+  >i {
+    position: absolute;
+    right: @arrowSize/2;
+    top: 50%;
+    margin-top: -@arrowSize/2;
+    font-size: @arrowSize;
+    cursor: pointer;
+  }
+}
+
+.dist-tree-select-choices {
+  position: absolute;
+  width:100%;
+  min-width: 200*2px;
+  z-index:500;
+  background-color: @optionBgColor;
+  display:none;
+  &.show {
+    display:block;
+  }
+
+  .tree {
+    height: 200px;
+    overflow-y: scroll;
+  }
+}
+
+.dist-tree-select-choices-control {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px dashed rgba(0, 0, 0, .1);
+  >button:first-child {
+    margin-right: 10px;
+  }
+}

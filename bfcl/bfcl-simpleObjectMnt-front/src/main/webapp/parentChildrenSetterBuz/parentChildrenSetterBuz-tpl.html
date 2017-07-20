@@ -1,0 +1,52 @@
+<div
+    config='
+    {
+          "messages": [
+            {
+                  "type": "forward"
+                , "id": "ce924400-8f51-11e6-ac05-d7c34d352416"
+                , "source": "tree-selector-buz"
+                , "sourceMessageName": "nodeChanged"
+                , "targets": [
+                    {
+                          "target": "member-setter-buz"
+                        , "targetMessageName": "parentChange"
+                    }
+                ]
+            }
+        ]
+    }
+    '
+>
+    <div class="col-md-3"
+         tree-selector-buz
+         config='{
+              "id": "tree-selector-buz"
+            , "messages": [
+                {
+                      "type": "out"
+                    , "name": "nodeChanged"
+                    , "id": "ce924400-8f51-11e6-ac05-d7c34d352416"
+                }
+            ]
+         }'
+         param="parentparam"
+    >
+    </div>
+    <div>
+        <div class="col-md-9"
+             member-setter-buz
+             config='{
+                  "messages": [
+                    {
+                          "type": "in"
+                        , "name": "parentChanged"
+                        , "id": "ce924400-8f51-11e6-ac05-d7c34d352416"
+                        , "handler": "_handelMessage_parentChanged"
+                    }
+                ]
+             }'
+             param="memberparam">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+<div
+    config='
+    {
+          "messages": [
+            {
+                  "type": "forward"
+                , "id": "aec4b8b4-9ccc-11e6-8b3d-a6df6c7f39a0"
+                , "source": "simple-object-mnt"
+                , "sourceMessageName": "nodeChanged"
+                , "targets": [
+                    {
+                          "target": "simple-object-mnt"
+                        , "targetMessageName": "parentChange"
+                    }
+                ]
+            }
+        ]
+    }
+    '
+>
+    <div class="col-md-3"
+         simple-object-mnt
+         config='
+        {
+              "messages": [
+                {
+                      "type": "out"
+                    , "name": "nodeChanged"
+                    , "id": "aec4b8b4-9ccc-11e6-8b3d-a6df6c7f39a0"
+                }
+            ]
+        }'
+         param="parentparam"
+    >
+    </div>
+    <div>
+        <div class="col-md-9"
+             simple-object-mnt
+             config='{
+                  "messages": [
+                    {
+                          "type": "in"
+                        , "name": "parentChanged"
+                        , "id": "aec4b8b4-9ccc-11e6-8b3d-a6df6c7f39a0"
+                        , "handler": "_handelMessage_parentChanged"
+                    }
+                ]
+             }'
+             param="childparam">
+        </div>
+    </div>
+</div>

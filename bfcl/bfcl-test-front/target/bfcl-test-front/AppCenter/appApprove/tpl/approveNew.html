@@ -1,0 +1,23 @@
+<div ng-controller="approveNewController" class="approve-new">
+    <div class="row wrapper-md">
+<!--        <accordion close-others="false">
+            <accordion-group heading="{{group.label}}" is-open="true" ng-repeat="group in vm.groupLists">
+                <div ng-repeat="item in group.list" class="list-group-item hover-show-parent">
+                    <span class="">{{item.name}}</span>
+                    <span class="pull-right display-none hover-show-sub" >
+                        <button class="btn btn-info btn-sm" ng-if="item.showNewItem" ng-click="vm.newItemClick(item)">接件</button>
+                        <button class="btn btn-info btn-sm" ng-if="item.showContinueItem" ng-click="vm.continueItemClick(item)">续办</button>
+                    </span>
+                </div>
+            </accordion-group>
+        </accordion>-->
+        <tree-dnd
+                tree-control="vm.projectNewTreeControl"
+                tree-data=" vm.projectNewData"
+                primary-key="demographicId"
+                column-defs="vm.projectNewColDefs"
+                expand-on="vm.projectNewExpandingProperty"
+                icon-leaf="fa fa-file-o"
+        ></tree-dnd>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="nav-tabs-alt header-tab nav-tabs">
+  <ul class="nav nav-tabs"><!--删除了nav-justified-->
+    <li ng-repeat="tab in currentTabData.tabs track by $index" class="overflow-eclipse" title="{{tab.tabName}}" ng-class="{'active': activeTab($index)}">
+      <i class="fa fa-times fa-1" ng-click="clickClose(tab)"></i>
+      <a href class="overflow-eclipse" ng-click="selectTab(tab)">{{tab.tabName}}</a>
+    </li>
+  </ul>
+</div>

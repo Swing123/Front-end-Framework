@@ -1,0 +1,32 @@
+  <!-- navbar -->
+  <!--<div data-ng-include=" 'modules/appLayout/tpl/header.html' " class="app-header navbar"></div>-->
+  <dist-header app-settings="app.settings" app-color="app.color" app-data="vm.data" class="app-header navbar"></dist-header>
+  <!-- / navbar -->
+
+  <!-- menu -->
+  <!--<div data-ng-include=" 'modules/appLayout/tpl/aside.html' " class="app-aside hidden-xs {{app.settings.asideColor}}">-->
+  <!--</div>-->
+  <dist-sidebar config="vm.sidebar" class="app-aside hidden-xs {{app.settings.asideColor}}"></dist-sidebar>
+  <!-- / menu -->
+
+  <!-- content -->
+  <div class="app-content">
+    <!--<dist-project-list config="vm.project"></dist-project-list>-->
+    <!--<div ui-butterbar></div>-->
+    <!--<div ui-butterbar>00</div>-->
+    <div dist-header-tab></div>
+    <a href class="off-screen-toggle hide" ui-toggle-class="off-screen" data-target=".app-aside" ></a>
+    <div class="app-content-body  fade-in-up">
+      <div ng-repeat="item in headerTab.stateItems track by $index" ng-show="headerTab.stateIndex==$index" ng-include="item"></div><!--注headerTab变量定义在$rootScope上，具体变更地址在业务组件headerTab/目录下-->
+    </div>
+  </div>
+  <!-- /content -->
+
+  <!-- footer -->
+  <div class="app-footer wrapper b-t bg-light">
+    <span class="pull-right">{{app.version}} <a href ui-scroll-to="app" class="m-l-sm text-muted"><i class="fa fa-long-arrow-up"></i></a></span>
+    &copy; 2015 Copyright.
+  </div>
+  <!-- / footer -->
+
+  <dist-settings app-settings="app.settings" class="settings panel panel-default"></dist-settings>

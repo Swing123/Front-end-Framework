@@ -1,0 +1,33 @@
+<h1><code ng:non-bindable="">wiTab</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">dist.ui.tabset</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="dist-ui-tabset-directive-page dist-ui-tabset-directive-witab-page"><p>单个标签页定义标签，只能在wiTabset标签内使用</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;wi-tab
+       [wiid="{string}"]
+       [heading="{string}"]
+       [active="{boolean}"]
+       [disable="{boolean}"]
+       [regular="{boolean}"]
+       [icon="{string}"]
+       [src="{string}"]
+       [size="{number|length}"]&gt;
+&lt;/wi-tab&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>wiid <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-tabset-directive-page dist-ui-tabset-directive-witab-page"><p>标签标识id</p>
+</div></td></tr><tr><td>heading <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-tabset-directive-page dist-ui-tabset-directive-witab-page"><p>标签头内容，可以是一个字符串或一段HTML</p>
+</div></td></tr><tr><td>active <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-tabset-directive-page dist-ui-tabset-directive-witab-page"><p>标签初始时是否被选中，默认为 false，若要通过其他方式改变 active 的值，需为 active 指定有意义的初始值</p>
+</div></td></tr><tr><td>disable <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-tabset-directive-page dist-ui-tabset-directive-witab-page"><p>标识标签是否禁用，默认为 false。<br />wi-tabset 若未定义 closeable=false，此属性失效。</p>
+</div></td></tr><tr><td>regular <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-tabset-directive-page dist-ui-tabset-directive-witab-page"><p>是否是固定标签，默认为false。添加此属性且不设置为 false，则为固定 tab，不可关闭。<br />wi-tabset 若定义 closeable=false，此属性失效。</p>
+</div></td></tr><tr><td>icon <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-tabset-directive-page dist-ui-tabset-directive-witab-page"><p>标签页图标的 url</p>
+</div></td></tr><tr><td>src <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-tabset-directive-page dist-ui-tabset-directive-witab-page"><p>标签页内容链接地址，若定义此属性，wi-tabset 中原有的</p>
+</div></td></tr><tr><td>size <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a><a href="" class="label type-hint type-hint-length">length</a></td><td><div class="dist-ui-tabset-directive-page dist-ui-tabset-directive-witab-page"><p>组件宽度（纵向 tabset 为高度），默认由内容撑开。<br />
+number 将自动添加单位 px。<br />
+length 为 number 接长度单位（相对单位和绝对单位）。<br />
+相对单位：em, ex, ch, rem, vw, vh, vm, %<br />
+绝对单位：cm, mm, in, pt, pc, px</p>
+</div></td></tr></tbody></table></div>
+</div>

@@ -1,0 +1,95 @@
+<div simple-object-mnt
+     param='
+        {
+            "title": "任务同步日志"
+            , "serviceUrls": {
+                "list": "ldapTask/logs"
+                , "load": "ldapTaskLogs"
+            }
+            , "buttons": {
+                  "modify": {
+                    "type": "modify",
+                    "name": "查看",
+                    "icon": "",
+                    "css": "",
+                    "title": "任务日志",
+                    "templateUrl": "ldapSync/taskLogView.html"
+                }
+            }
+            , "grid": {
+                "css": ""
+                , "idfield": "id"
+                , "messageButtons": [
+                    {
+                        "name": "执行"
+                        , "messageName": "listDetails"
+                        , "messageId": "00dd9ce9-eeed-4f0c-bded-e20d962b5601"
+                    }
+                ]
+                , "columns": [
+                      {
+                        "css": "width:20%;text-align:center;",
+                        "header": {
+                            "name": "应用名称",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "appName",
+                            "css": "align:middle"
+                        }
+                    }
+                    , {
+                        "css": "width:20%;text-align:center;",
+                        "header": {
+                            "name": "任务名称",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "taskName",
+                            "css": "align:middle"
+                        }
+                    }
+                    , {
+                        "css": "width:20%;text-align:center;",
+                        "header": {
+                            "name": "启动时间",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "startTime",
+                            "css": "align:middle"
+                        }
+                    }
+                    , {
+                        "css": "width:20%;text-align:center;",
+                        "header": {
+                            "name": "执行时间",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "elapsedTime",
+                            "css": "align:middle"
+                        }
+                    }
+                    , {
+                        "css": "width:20%;text-align:center;",
+                        "header": {
+                            "name": "执行结果",
+                            "css": "align:middle"
+                        },
+                        "data": {
+                            "name": "statusName",
+                            "css": "align:middle"
+                        }
+                    }
+                ]
+                , "pagination": {
+                    "total": 5,
+                    "pageNo": 0,
+                    "pageSize": 10
+                }
+            }
+
+        }
+'>
+</div>

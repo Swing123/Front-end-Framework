@@ -1,0 +1,12 @@
+@import (reference) "less-nameset";
+.wi-resizelistener { visibility: hidden; }
+.wi-resizelistener, .wi-resizelistener > div, .wi-resizelistener-in2:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+    overflow: hidden;
+}
+.wi-resizelistener > div { background: #eee; overflow: auto; }
+.wi-resizelistener-in2:before { width: 200%; height: 200%; }

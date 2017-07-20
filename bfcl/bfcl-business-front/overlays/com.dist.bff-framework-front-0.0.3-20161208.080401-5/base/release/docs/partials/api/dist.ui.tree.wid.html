@@ -1,0 +1,94 @@
+<h1><code ng:non-bindable="">wid</code>
+<div><span class="hint">service in module <code ng:non-bindable="">dist.ui.tree</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="dist-ui-tree-wid-page"><p>wiTree 对外开放的接口，双向绑定，使用前需在指令属性中指定 wid=&quot;xx&quot;，并指定 scope.xx={}</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_append">append(nodes, parent)</h3>
+<div class="append"><div class="dist-ui-tree-wid-append-page"><p>向 parent 添加子节点 data</p>
+</div><h5 id="methods_append_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>nodes</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="dist-ui-tree-wid-append-page"><p>要添加的节点 data 数组（需要与 dataprovider 结构相同）</p>
+</div></td></tr><tr><td>parent <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="dist-ui-tree-wid-append-page"><p>添加到的节点 data，默认为根节点</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_collapsenode">collapseNode(node)</h3>
+<div class="collapsenode"><div class="dist-ui-tree-wid-collapsenode-page"><p>折叠指定节点</p>
+</div><h5 id="methods_collapsenode_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>node</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="dist-ui-tree-wid-collapsenode-page"><p>要折叠的节点 data</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_expandnode">expandNode(node)</h3>
+<div class="expandnode"><div class="dist-ui-tree-wid-expandnode-page"><p>展开指定节点</p>
+</div><h5 id="methods_expandnode_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>node</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="dist-ui-tree-wid-expandnode-page"><p>要展开的节点 data</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_getnode">getNode(key, val)</h3>
+<div class="getnode"><div class="dist-ui-tree-wid-getnode-page"><p>获取符合条件的第一个节点</p>
+</div><h5 id="methods_getnode_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-tree-wid-getnode-page"><p>键</p>
+</div></td></tr><tr><td>val</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="dist-ui-tree-wid-getnode-page"><p>值</p>
+</div></td></tr></tbody></table><h5 id="methods_getnode_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="dist-ui-tree-wid-getnode-page"><p>第一个符合 data[key]=val 的节点 data，找不到时为 undefined.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getnodes">getNodes(key, val)</h3>
+<div class="getnodes"><div class="dist-ui-tree-wid-getnodes-page"><p>获取符合条件的所有节点</p>
+</div><h5 id="methods_getnodes_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>key</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="dist-ui-tree-wid-getnodes-page"><p>键</p>
+</div></td></tr><tr><td>val</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="dist-ui-tree-wid-getnodes-page"><p>值</p>
+</div></td></tr></tbody></table><h5 id="methods_getnodes_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="dist-ui-tree-wid-getnodes-page"><p>所有符合 data[key]=val 的节点 data 组成的数组，找不到时为 [].</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getselected">getSelected()</h3>
+<div class="getselected"><div class="dist-ui-tree-wid-getselected-page"><p>获取选中的节点</p>
+</div><h5 id="methods_getselected_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object | Array</a></td><td><div class="dist-ui-tree-wid-getselected-page"><p>单选时为选中节点 data，无选中项时为 undefined；多选时为选中节点 data 组成的数组，无选中项时为 [].</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_loaddata">loadData(data, isTree)</h3>
+<div class="loaddata"><div class="dist-ui-tree-wid-loaddata-page"><p>重置数据源</p>
+</div><h5 id="methods_loaddata_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>data</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="dist-ui-tree-wid-loaddata-page"><p>新的数据源</p>
+</div></td></tr><tr><td>isTree <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="dist-ui-tree-wid-loaddata-page"><p>data 是否为树形，默认为 false</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_options">options()</h3>
+<div class="options"><div class="dist-ui-tree-wid-options-page"><p>获取当前树的配置</p>
+</div><h5 id="methods_options_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="dist-ui-tree-wid-options-page"><p>返回一个包含用户自定义设置的对象。<br /></p>
+<ul>
+<li>idfield id字段.<br /></li>
+<li>pidfield parentid字段.<br /></li>
+<li>labelfield 显示字段.<br /></li>
+<li>cCls 叶子节点图标 class<br /></li>
+<li>pCls 父节点图标 class<br /></li>
+<li>cascade 是否级联父子节点的选中状态.<br /></li>
+<li>isTree 数据源是否为树形.<br /></li>
+<li>itemrenderer 自定义节点渲染.<br /></li>
+<li>multiselect 多选，false|true.<br /></li>
+<li>onbeforecollapse 节点折叠前的回调函数.<br /></li>
+<li>oncollapse 节点折叠时的回调函数.<br /></li>
+<li>onbeforeexpand 节点展开前的回调函数.<br /></li>
+<li>onexpand 节点展开时的回调函数.<br /></li>
+<li>onbeforeselect 节点选中前的回调函数.<br /></li>
+<li>oncancelselect 取消节点选中时的回调函数.<br /></li>
+<li>onitemclick 点击节点时的回调函数.<br /></li>
+<li>onloadbranch 加载延迟节点（isbranch=true 的节点）时的回调函数.<br /></li>
+<li>onselect 节点选中时的回调函数.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_remove">remove(node)</h3>
+<div class="remove"><div class="dist-ui-tree-wid-remove-page"><p>删除节点 node，及其子节点</p>
+</div><h5 id="methods_remove_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>node</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="dist-ui-tree-wid-remove-page"><p>添加到的节点 data</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_select">select(node)</h3>
+<div class="select"><div class="dist-ui-tree-wid-select-page"><p>选中指定节点</p>
+</div><h5 id="methods_select_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>node</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="dist-ui-tree-wid-select-page"><p>要选中的节点 data</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_updatenode">updateNode(node, options)</h3>
+<div class="updatenode"><div class="dist-ui-tree-wid-updatenode-page"><p>重置指定节点设置</p>
+</div><h5 id="methods_updatenode_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>node</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="dist-ui-tree-wid-updatenode-page"><p>要重置的节点 data</p>
+</div></td></tr><tr><td>options</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="dist-ui-tree-wid-updatenode-page"><p>节点设置</p>
+</div></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+</div>
